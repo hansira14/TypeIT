@@ -1,6 +1,6 @@
 ﻿namespace TypeIT
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             main = new Panel();
             content = new Panel();
+            notConnected = new PictureBox();
             device = new Guna.UI2.WinForms.Guna2Panel();
             pictureBox3 = new PictureBox();
             panel1 = new Panel();
@@ -55,6 +56,7 @@
             menu = new PictureBox();
             main.SuspendLayout();
             content.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)notConnected).BeginInit();
             device.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel1.SuspendLayout();
@@ -84,6 +86,7 @@
             // 
             // content
             // 
+            content.Controls.Add(notConnected);
             content.Controls.Add(device);
             content.Dock = DockStyle.Fill;
             content.Location = new Point(0, 108);
@@ -91,6 +94,18 @@
             content.Name = "content";
             content.Size = new Size(1312, 635);
             content.TabIndex = 1;
+            // 
+            // notConnected
+            // 
+            notConnected.Dock = DockStyle.Fill;
+            notConnected.Image = (Image)resources.GetObject("notConnected.Image");
+            notConnected.Location = new Point(0, 0);
+            notConnected.Name = "notConnected";
+            notConnected.Size = new Size(1312, 635);
+            notConnected.SizeMode = PictureBoxSizeMode.Zoom;
+            notConnected.TabIndex = 4;
+            notConnected.TabStop = false;
+            notConnected.Click += notConnected_Click;
             // 
             // device
             // 
@@ -108,6 +123,7 @@
             device.ShadowDecoration.CustomizableEdges = customizableEdges4;
             device.Size = new Size(376, 442);
             device.TabIndex = 0;
+            device.Visible = false;
             // 
             // pictureBox3
             // 
@@ -304,7 +320,7 @@
             menu.TabIndex = 0;
             menu.TabStop = false;
             // 
-            // Form1
+            // Home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
@@ -314,12 +330,14 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
             MinimumSize = new Size(1328, 782);
-            Name = "Form1";
+            Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
+            Text = "w";
             Load += Form1_Load;
             Resize += Form1_Resize;
             main.ResumeLayout(false);
             content.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)notConnected).EndInit();
             device.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
@@ -358,5 +376,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private PictureBox pictureBox4;
         private Panel panel3;
+        private PictureBox notConnected;
     }
 }
