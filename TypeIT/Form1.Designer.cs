@@ -50,6 +50,7 @@
             pictureBox2 = new PictureBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            panel3 = new Panel();
             profile = new PictureBox();
             menu = new PictureBox();
             main.SuspendLayout();
@@ -199,6 +200,7 @@
             // top
             // 
             top.Controls.Add(profileMenu);
+            top.Controls.Add(panel3);
             top.Controls.Add(profile);
             top.Controls.Add(menu);
             top.Dock = DockStyle.Top;
@@ -211,7 +213,6 @@
             // 
             // profileMenu
             // 
-            profileMenu.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             profileMenu.AutoSize = true;
             profileMenu.BorderColor = Color.FromArgb(106, 106, 106);
             profileMenu.BorderRadius = 8;
@@ -220,20 +221,22 @@
             profileMenu.Controls.Add(label1);
             profileMenu.Controls.Add(pictureBox1);
             profileMenu.CustomizableEdges = customizableEdges5;
+            profileMenu.Dock = DockStyle.Right;
             profileMenu.FillColor = Color.FromArgb(17, 17, 17);
-            profileMenu.Location = new Point(910, 32);
+            profileMenu.Location = new Point(872, 30);
             profileMenu.Margin = new Padding(2);
+            profileMenu.MinimumSize = new Size(340, 48);
             profileMenu.Name = "profileMenu";
             profileMenu.Padding = new Padding(12, 6, 12, 6);
             profileMenu.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            profileMenu.Size = new Size(312, 48);
+            profileMenu.Size = new Size(340, 48);
             profileMenu.TabIndex = 2;
             // 
             // pictureBox2
             // 
             pictureBox2.Dock = DockStyle.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(290, 6);
+            pictureBox2.Location = new Point(318, 6);
             pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Padding = new Padding(15);
@@ -266,6 +269,14 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.Dock = DockStyle.Right;
+            panel3.Location = new Point(1212, 30);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(38, 48);
+            panel3.TabIndex = 3;
             // 
             // profile
             // 
@@ -306,6 +317,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Load += Form1_Load;
+            Resize += Form1_Resize;
             main.ResumeLayout(false);
             content.ResumeLayout(false);
             device.ResumeLayout(false);
@@ -345,5 +357,6 @@
         private Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private PictureBox pictureBox4;
+        private Panel panel3;
     }
 }

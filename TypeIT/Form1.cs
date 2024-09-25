@@ -38,5 +38,23 @@ namespace TypeIT
         {
             //Responsive.AdjustWindowSizeForDPI(this);
         }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Get the width and height of the content panel
+            int contentWidth = content.ClientSize.Width;
+            int contentHeight = content.ClientSize.Height;
+
+            // Get the width and height of the device control
+            int deviceWidth = device.Width;
+            int deviceHeight = device.Height;
+
+            // Calculate the new position for the device control to center it
+            int newDeviceX = (contentWidth - deviceWidth) / 2;
+            int newDeviceY = (contentHeight - deviceHeight) / 2-50;
+
+            // Set the new location of the device control
+            device.Location = new Point(newDeviceX, newDeviceY);
+        }
     }
 }
