@@ -65,5 +65,10 @@ namespace TypeIT
         {
             openForm(new BluetoothDevices());
         }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
