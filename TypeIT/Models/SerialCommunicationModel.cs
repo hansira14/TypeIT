@@ -20,17 +20,18 @@ namespace TypeIT.Models
                 _serialPort = new SerialPort(portName, 9600, Parity.None, 8, StopBits.One);
                 _serialPort.DataReceived += SerialPort_DataReceived;
                 _serialPort.Open();
+                
                 return true;
             }
             catch (UnauthorizedAccessException)
             {
-                MessageBox.Show($"Access to COM port {portName} is denied. It might be in use by another application or you might not have the required permissions.",
+                MessageBox.Show($"Access to COM Port {portName} is denied. It might be in use by another application or you might not have the required permissions.",
                                 "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             catch (IOException ioEx)
             {
-                MessageBox.Show($"I/O error while connecting to {bluetoothName} on COM Port {portName}: {ioEx.Message}. Please check if the device is connected and try again.\n\n Please go to your bluetooth devices settings then pair and connect with the device.",
+                MessageBox.Show($"I/O error while connecting to {bluetoothName} on COM Port {portName}: {ioEx.Message}.Please check if the device is connected and try again.\n\nPlease go to your bluetooth devices settings then pair and connect with the device.",
                                 "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }

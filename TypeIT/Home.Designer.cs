@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             main = new Panel();
             content = new Panel();
             notConnected = new PictureBox();
@@ -115,13 +115,13 @@
             device.Controls.Add(pictureBox3);
             device.Controls.Add(panel1);
             device.Controls.Add(panel2);
-            device.CustomizableEdges = customizableEdges9;
+            device.CustomizableEdges = customizableEdges3;
             device.FillColor = Color.FromArgb(33, 34, 37);
             device.Location = new Point(588, 76);
             device.Margin = new Padding(2);
             device.Name = "device";
             device.Padding = new Padding(30);
-            device.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            device.ShadowDecoration.CustomizableEdges = customizableEdges4;
             device.Size = new Size(470, 552);
             device.TabIndex = 0;
             device.Visible = false;
@@ -192,13 +192,13 @@
             guna2Panel1.BorderRadius = 12;
             guna2Panel1.BorderThickness = 2;
             guna2Panel1.Controls.Add(pictureBox4);
-            guna2Panel1.CustomizableEdges = customizableEdges11;
+            guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Right;
             guna2Panel1.Location = new Point(354, 19);
             guna2Panel1.Margin = new Padding(2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.Padding = new Padding(15);
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(56, 56);
             guna2Panel1.TabIndex = 0;
             // 
@@ -237,7 +237,7 @@
             profileMenu.Controls.Add(pictureBox2);
             profileMenu.Controls.Add(label1);
             profileMenu.Controls.Add(pictureBox1);
-            profileMenu.CustomizableEdges = customizableEdges7;
+            profileMenu.CustomizableEdges = customizableEdges5;
             profileMenu.Dock = DockStyle.Right;
             profileMenu.FillColor = Color.FromArgb(17, 17, 17);
             profileMenu.Location = new Point(1089, 38);
@@ -245,7 +245,7 @@
             profileMenu.MinimumSize = new Size(425, 60);
             profileMenu.Name = "profileMenu";
             profileMenu.Padding = new Padding(15, 8, 15, 8);
-            profileMenu.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            profileMenu.ShadowDecoration.CustomizableEdges = customizableEdges6;
             profileMenu.Size = new Size(425, 60);
             profileMenu.TabIndex = 2;
             // 

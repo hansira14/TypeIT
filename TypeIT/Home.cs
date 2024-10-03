@@ -1,4 +1,5 @@
 
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace TypeIT
@@ -7,17 +8,54 @@ namespace TypeIT
     {
         private Form currentForm = null!;
         internal bool isConnected = false;
+        List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
+
         public Home()
         {
             InitializeComponent();
         }
-        private bool checkTypeITConnection()
+
+        private async Task<bool> checkTypeITConnection()
         {
             //FUNCTION TO CHECK IF TYPEIT IS CONNECTED
             //DAPAT AUTOCONECT IF PAIRED NA
+            bool typeITDeviceFound = false, successfulConnection = false; //flag for checking if typeItDevice is found, by default this is false
+
+            BTDevices = await BluetoothDevices.GetBluetoothInfoAsync();
+
+            Debug.WriteLine($"Total number of bluetooth devices found: {BTDevices.Count}");
+            foreach (bluetoothDevice BTDevice in BTDevices) //find "Type IT Wireless Keyboard" from the bluetooth name
+            {
+                if (BTDevice.BluetoothName == "Type It Wireless Keyboard")
+                {
+                    try
+                    {
+                        successfulConnection = await BTDevice.bluetoothAutoConnect();
+                        if (successfulConnection)
+                        {
+                            MessageBox.Show($"Successfully established default connection with \"Type It Wireless Keyboard\".",
+                            "Default Connection Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error creating a default connection to \"Type It Wireless Keyboard\".:\nError Message: {ex.Message}");
+                    }
+                    typeITDeviceFound = true; //found the device
+                    break; //break for loop, already found the device
+                }
+            }
+
+            if (!typeITDeviceFound || !successfulConnection) //If typeITDevice not found from the list of the bluetooth devices or connection is not successful even if the device is found
+            {
+                MessageBox.Show($"Failed to create default connection with \"Type It Wireless Keyboard\".\nEither your bluetooth is turned off or the devices isn't yet successfully paired.",
+                "Default Connection Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             //if false walay device makita
-            return false;
+            return typeITDeviceFound;
         }
+
         [DllImport("DwmApi")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, int[] attrValue, int attrSize);
 
@@ -41,13 +79,14 @@ namespace TypeIT
             newForm.Show();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             //Responsive.AdjustWindowSizeForDPI(this);
 
             //check if autoconnect is successful
-            device.Visible = checkTypeITConnection();
-            notConnected.Visible = !checkTypeITConnection();
+            bool autoconnect = await checkTypeITConnection();
+            device.Visible = autoconnect;
+            notConnected.Visible = !autoconnect;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
