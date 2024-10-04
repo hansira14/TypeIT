@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.IO.Ports" />
   </ItemGroup>
 
 </Project>

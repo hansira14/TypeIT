@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BluetoothDevices));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             top = new Panel();
             profile = new PictureBox();
             menu = new PictureBox();
             title = new Label();
-            devicesList = new Guna.UI2.WinForms.Guna2Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            bluetoothDevice1 = new bluetoothDevice();
-            bluetoothDevice3 = new bluetoothDevice();
+            bluetoothDevicesPanel = new Guna.UI2.WinForms.Guna2Panel();
+            bluetoothDevicesLayoutPanel = new FlowLayoutPanel();
+            RefreshButton = new Guna.UI2.WinForms.Guna2Button();
             top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profile).BeginInit();
             ((System.ComponentModel.ISupportInitialize)menu).BeginInit();
-            devicesList.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            bluetoothDevicesPanel.SuspendLayout();
             SuspendLayout();
             // 
             // top
@@ -97,52 +97,57 @@
             title.Text = "Searching Devices...";
             title.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // devicesList
+            // bluetoothDevicesPanel
             // 
-            devicesList.AutoSize = true;
-            devicesList.BorderColor = Color.FromArgb(106, 106, 106);
-            devicesList.BorderRadius = 8;
-            devicesList.BorderThickness = 2;
-            devicesList.Controls.Add(flowLayoutPanel1);
-            devicesList.CustomizableEdges = customizableEdges1;
-            devicesList.FillColor = Color.FromArgb(17, 17, 17);
-            devicesList.Location = new Point(380, 242);
-            devicesList.Margin = new Padding(2);
-            devicesList.MinimumSize = new Size(340, 48);
-            devicesList.Name = "devicesList";
-            devicesList.Padding = new Padding(14);
-            devicesList.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            devicesList.Size = new Size(547, 241);
-            devicesList.TabIndex = 3;
+            bluetoothDevicesPanel.AutoSize = true;
+            bluetoothDevicesPanel.BorderColor = Color.FromArgb(106, 106, 106);
+            bluetoothDevicesPanel.BorderRadius = 8;
+            bluetoothDevicesPanel.BorderThickness = 2;
+            bluetoothDevicesPanel.Controls.Add(bluetoothDevicesLayoutPanel);
+            bluetoothDevicesPanel.CustomizableEdges = customizableEdges1;
+            bluetoothDevicesPanel.FillColor = Color.FromArgb(17, 17, 17);
+            bluetoothDevicesPanel.Location = new Point(380, 242);
+            bluetoothDevicesPanel.Margin = new Padding(2);
+            bluetoothDevicesPanel.MinimumSize = new Size(340, 48);
+            bluetoothDevicesPanel.Name = "bluetoothDevicesPanel";
+            bluetoothDevicesPanel.Padding = new Padding(14);
+            bluetoothDevicesPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            bluetoothDevicesPanel.Size = new Size(547, 241);
+            bluetoothDevicesPanel.TabIndex = 3;
             // 
-            // flowLayoutPanel1
+            // bluetoothDevicesLayoutPanel
             // 
-            flowLayoutPanel1.BackColor = Color.Transparent;
-            flowLayoutPanel1.Controls.Add(bluetoothDevice1);
-            flowLayoutPanel1.Controls.Add(bluetoothDevice3);
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(14, 14);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(519, 213);
-            flowLayoutPanel1.TabIndex = 0;
+            bluetoothDevicesLayoutPanel.AutoScroll = true;
+            bluetoothDevicesLayoutPanel.BackColor = Color.Transparent;
+            bluetoothDevicesLayoutPanel.Dock = DockStyle.Fill;
+            bluetoothDevicesLayoutPanel.FlowDirection = FlowDirection.TopDown;
+            bluetoothDevicesLayoutPanel.Location = new Point(14, 14);
+            bluetoothDevicesLayoutPanel.Name = "bluetoothDevicesLayoutPanel";
+            bluetoothDevicesLayoutPanel.Size = new Size(519, 213);
+            bluetoothDevicesLayoutPanel.TabIndex = 0;
+            bluetoothDevicesLayoutPanel.WrapContents = false;
             // 
-            // bluetoothDevice1
+            // RefreshButton
             // 
-            bluetoothDevice1.BackColor = Color.Transparent;
-            bluetoothDevice1.ForeColor = Color.White;
-            bluetoothDevice1.Location = new Point(3, 3);
-            bluetoothDevice1.Name = "bluetoothDevice1";
-            bluetoothDevice1.Size = new Size(518, 66);
-            bluetoothDevice1.TabIndex = 0;
-            // 
-            // bluetoothDevice3
-            // 
-            bluetoothDevice3.BackColor = Color.Transparent;
-            bluetoothDevice3.ForeColor = Color.White;
-            bluetoothDevice3.Location = new Point(3, 75);
-            bluetoothDevice3.Name = "bluetoothDevice3";
-            bluetoothDevice3.Size = new Size(518, 66);
-            bluetoothDevice3.TabIndex = 2;
+            RefreshButton.BorderRadius = 5;
+            RefreshButton.CustomizableEdges = customizableEdges3;
+            RefreshButton.DisabledState.BorderColor = Color.DarkGray;
+            RefreshButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            RefreshButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            RefreshButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            RefreshButton.FillColor = Color.DimGray;
+            RefreshButton.Font = new Font("Segoe UI", 9F);
+            RefreshButton.ForeColor = Color.White;
+            RefreshButton.Location = new Point(788, 502);
+            RefreshButton.Margin = new Padding(2);
+            RefreshButton.Name = "RefreshButton";
+            RefreshButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            RefreshButton.Size = new Size(101, 34);
+            RefreshButton.TabIndex = 4;
+            RefreshButton.Text = "Refresh";
+            RefreshButton.Click += RefreshButton_Click;
+            RefreshButton.MouseEnter += RefreshButton_MouseEnter;
+            RefreshButton.MouseLeave += RefreshButton_MouseLeave;
             // 
             // BluetoothDevices
             // 
@@ -150,7 +155,8 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Black;
             ClientSize = new Size(1328, 782);
-            Controls.Add(devicesList);
+            Controls.Add(RefreshButton);
+            Controls.Add(bluetoothDevicesPanel);
             Controls.Add(title);
             Controls.Add(top);
             ForeColor = Color.White;
@@ -161,8 +167,7 @@
             top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)profile).EndInit();
             ((System.ComponentModel.ISupportInitialize)menu).EndInit();
-            devicesList.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
+            bluetoothDevicesPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -173,9 +178,10 @@
         private PictureBox profile;
         private PictureBox menu;
         private Label title;
-        private Guna.UI2.WinForms.Guna2Panel devicesList;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2Panel bluetoothDevicesPanel;
+        private FlowLayoutPanel bluetoothDevicesLayoutPanel;
         private bluetoothDevice bluetoothDevice1;
         private bluetoothDevice bluetoothDevice3;
+        private Guna.UI2.WinForms.Guna2Button RefreshButton;
     }
 }
