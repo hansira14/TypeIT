@@ -9,7 +9,7 @@ namespace TypeIT
         private Form currentForm = null!;
         internal bool isConnected = false;
         List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
-
+        //courtney was here
         public Home()
         {
             InitializeComponent();
