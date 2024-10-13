@@ -47,6 +47,7 @@
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            panel6 = new Panel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             panel3 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -60,7 +61,6 @@
             uC_set8 = new UC_set();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             label4 = new Label();
-            panel6 = new Panel();
             Main.SuspendLayout();
             panel4.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -235,6 +235,16 @@
             guna2Panel1.Size = new Size(460, 657);
             guna2Panel1.TabIndex = 7;
             // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Transparent;
+            panel6.Dock = DockStyle.Top;
+            panel6.Location = new Point(12, 55);
+            panel6.Name = "panel6";
+            panel6.Padding = new Padding(0, 24, 0, 0);
+            panel6.Size = new Size(436, 100);
+            panel6.TabIndex = 7;
+            // 
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.Transparent;
@@ -401,16 +411,6 @@
             label4.Size = new Size(247, 48);
             label4.TabIndex = 6;
             label4.Text = "INFINITY GAUNTLET";
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.Transparent;
-            panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(12, 55);
-            panel6.Name = "panel6";
-            panel6.Padding = new Padding(0, 24, 0, 0);
-            panel6.Size = new Size(436, 100);
-            panel6.TabIndex = 7;
             // 
             // Customize
             // 
