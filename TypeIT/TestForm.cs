@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TypeIT
 {
-    public partial class Customize : Form
+    public partial class TestForm : Form
     {
-        public Customize()
+        public TestForm()
         {
             InitializeComponent();
-        }
-
-        private void uC_set1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

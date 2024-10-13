@@ -109,5 +109,10 @@ namespace TypeIT
         {
 
         }
+
+        private void profile_Click(object sender, EventArgs e)
+        {
+            openForm(new Customize());
+        }
     }
 }
