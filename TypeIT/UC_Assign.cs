@@ -10,18 +10,15 @@ using System.Windows.Forms;
 
 namespace TypeIT
 {
-    public partial class Customize : Form
+    public partial class UC_Assign : UserControl
     {
-        public Customize()
+        public UC_Assign()
         {
             InitializeComponent();
         }
-        bool expand = false;
-
-        private void assignButton_Click(object sender, EventArgs e)
+        private void keyChoices_Leave(object sender, EventArgs e)
         {
-            keySet.Visible = false;
-            assign.Visible = true;
+            keyChoices.Size = MinimumSize;
         }
 
         private void keyChoice_Click(object sender, EventArgs e)
@@ -34,17 +31,6 @@ namespace TypeIT
             {
                 keyChoices.Size = new Size(133, 228);
             }
-        }
-
-        private void keyChoices_Leave(object sender, EventArgs e)
-        {
-            keyChoices.Size = MinimumSize;
-        }
-
-        private void closeAssign_Click(object sender, EventArgs e)
-        {
-            keySet.Visible = true;
-            assign.Visible = false;
         }
     }
 }
