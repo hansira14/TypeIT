@@ -1,6 +1,6 @@
 ﻿namespace TypeIT
 {
-    partial class UC_Key
+    partial class UC_Commands
     {
         /// <summary> 
         /// Required designer variable.

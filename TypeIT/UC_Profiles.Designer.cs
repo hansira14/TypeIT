@@ -1,6 +1,6 @@
 ﻿namespace TypeIT
 {
-    partial class commandList
+    partial class UC_Profiles
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            SuspendLayout();
+            // 
+            // UC_Profiles
+            // 
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Name = "UC_Profiles";
+            Size = new Size(670, 620);
+            ResumeLayout(false);
         }
 
         #endregion

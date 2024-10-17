@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TypeIT
 {
-    public partial class UC_Key : UserControl
+    public partial class UC_Commands : UserControl
     {
-        public UC_Key()
+        public UC_Commands()
         {
             InitializeComponent();
         }
