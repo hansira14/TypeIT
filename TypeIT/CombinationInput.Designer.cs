@@ -1,6 +1,6 @@
 ﻿namespace TypeIT
 {
-    partial class Customize
+    partial class CombinationInput
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customize));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges117 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges118 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -147,27 +146,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges114 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges115 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges116 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges133 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges134 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges119 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges120 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges121 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges122 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges123 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges124 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges131 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges132 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges125 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges126 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges127 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges128 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges129 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges130 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges135 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges136 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CombinationInput));
             Main = new TableLayoutPanel();
-            panelNav = new Panel();
-            pictureBox1 = new PictureBox();
             panelMenu = new Panel();
             assign = new Guna.UI2.WinForms.Guna2Panel();
             keyChoices = new Guna.UI2.WinForms.Guna2Panel();
@@ -242,25 +222,8 @@
             panel9 = new Panel();
             panel6 = new Panel();
             label6 = new Label();
-            panel1 = new Panel();
-            closeAssign = new FontAwesome.Sharp.IconButton();
-            keySet = new Guna.UI2.WinForms.Guna2Panel();
-            blank = new Panel();
-            guna2Button61 = new Guna.UI2.WinForms.Guna2Button();
-            assignButton = new Guna.UI2.WinForms.Guna2Button();
-            label1 = new Label();
-            panel7 = new Panel();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            label3 = new Label();
-            label2 = new Label();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            label4 = new Label();
             panelPreview = new Panel();
+            closeAssign = new FontAwesome.Sharp.IconButton();
             panel12 = new Panel();
             panel13 = new Panel();
             panel14 = new Panel();
@@ -271,16 +234,7 @@
             panel4 = new Panel();
             panel3 = new Panel();
             panel2 = new Panel();
-            panelTop = new Panel();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            label5 = new Label();
-            panel5 = new Panel();
-            pictureBox9 = new PictureBox();
             Main.SuspendLayout();
-            panelNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMenu.SuspendLayout();
             assign.SuspendLayout();
             keyChoices.SuspendLayout();
@@ -289,71 +243,36 @@
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel6.SuspendLayout();
-            panel1.SuspendLayout();
-            keySet.SuspendLayout();
-            blank.SuspendLayout();
-            panel7.SuspendLayout();
-            guna2Panel4.SuspendLayout();
-            guna2Panel3.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             panelPreview.SuspendLayout();
-            panelTop.SuspendLayout();
-            guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             SuspendLayout();
             // 
             // Main
             // 
-            Main.ColumnCount = 3;
-            Main.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 5F));
+            Main.BackColor = Color.FromArgb(16, 17, 19);
+            Main.ColumnCount = 2;
             Main.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            Main.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 65F));
-            Main.Controls.Add(panelNav, 0, 0);
-            Main.Controls.Add(panelMenu, 1, 0);
-            Main.Controls.Add(panelPreview, 2, 0);
+            Main.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            Main.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            Main.Controls.Add(panelMenu, 0, 0);
+            Main.Controls.Add(panelPreview, 1, 0);
             Main.Dock = DockStyle.Fill;
+            Main.ForeColor = Color.White;
             Main.GrowStyle = TableLayoutPanelGrowStyle.FixedSize;
             Main.Location = new Point(0, 0);
             Main.Name = "Main";
             Main.RowCount = 1;
             Main.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            Main.Size = new Size(1311, 772);
-            Main.TabIndex = 2;
-            // 
-            // panelNav
-            // 
-            panelNav.Controls.Add(pictureBox1);
-            panelNav.Dock = DockStyle.Fill;
-            panelNav.Location = new Point(3, 3);
-            panelNav.Name = "panelNav";
-            panelNav.Padding = new Padding(30, 30, 0, 0);
-            panelNav.Size = new Size(59, 766);
-            panelNav.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Top;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(30, 30);
-            pictureBox1.Margin = new Padding(2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(29, 48);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            Main.Size = new Size(1305, 717);
+            Main.TabIndex = 3;
             // 
             // panelMenu
             // 
             panelMenu.Controls.Add(assign);
-            panelMenu.Controls.Add(keySet);
-            panelMenu.Controls.Add(label4);
             panelMenu.Dock = DockStyle.Fill;
-            panelMenu.Location = new Point(68, 3);
+            panelMenu.Location = new Point(3, 3);
             panelMenu.Name = "panelMenu";
             panelMenu.Padding = new Padding(16);
-            panelMenu.Size = new Size(387, 766);
+            panelMenu.Size = new Size(385, 711);
             panelMenu.TabIndex = 12;
             // 
             // assign
@@ -363,15 +282,14 @@
             assign.Controls.Add(flowLayoutPanel3);
             assign.Controls.Add(panel8);
             assign.Controls.Add(panel6);
-            assign.Controls.Add(panel1);
             assign.CustomizableEdges = customizableEdges117;
             assign.Dock = DockStyle.Fill;
             assign.FillColor = Color.FromArgb(33, 34, 37);
-            assign.Location = new Point(16, 64);
+            assign.Location = new Point(16, 16);
             assign.Name = "assign";
             assign.Padding = new Padding(12);
             assign.ShadowDecoration.CustomizableEdges = customizableEdges118;
-            assign.Size = new Size(355, 686);
+            assign.Size = new Size(353, 679);
             assign.TabIndex = 10;
             assign.Visible = false;
             // 
@@ -383,14 +301,13 @@
             keyChoices.Controls.Add(flowLayoutPanel2);
             keyChoices.CustomizableEdges = customizableEdges1;
             keyChoices.FillColor = Color.DarkGray;
-            keyChoices.Location = new Point(200, 45);
+            keyChoices.Location = new Point(198, 21);
             keyChoices.MaximumSize = new Size(133, 228);
             keyChoices.MinimumSize = new Size(133, 38);
             keyChoices.Name = "keyChoices";
             keyChoices.ShadowDecoration.CustomizableEdges = customizableEdges2;
             keyChoices.Size = new Size(133, 38);
             keyChoices.TabIndex = 18;
-            keyChoices.Leave += keyChoices_Leave;
             // 
             // flowLayoutPanel2
             // 
@@ -432,7 +349,6 @@
             iconButton8.TextAlign = ContentAlignment.MiddleLeft;
             iconButton8.TextImageRelation = TextImageRelation.TextBeforeImage;
             iconButton8.UseVisualStyleBackColor = false;
-            iconButton8.Click += keyChoice_Click;
             // 
             // iconButton7
             // 
@@ -455,7 +371,6 @@
             iconButton7.TextAlign = ContentAlignment.MiddleLeft;
             iconButton7.TextImageRelation = TextImageRelation.TextBeforeImage;
             iconButton7.UseVisualStyleBackColor = false;
-            iconButton7.Click += keyChoice_Click;
             // 
             // iconButton2
             // 
@@ -478,7 +393,6 @@
             iconButton2.TextAlign = ContentAlignment.MiddleLeft;
             iconButton2.TextImageRelation = TextImageRelation.TextBeforeImage;
             iconButton2.UseVisualStyleBackColor = false;
-            iconButton2.Click += keyChoice_Click;
             // 
             // iconButton4
             // 
@@ -501,7 +415,6 @@
             iconButton4.TextAlign = ContentAlignment.MiddleLeft;
             iconButton4.TextImageRelation = TextImageRelation.TextBeforeImage;
             iconButton4.UseVisualStyleBackColor = false;
-            iconButton4.Click += keyChoice_Click;
             // 
             // iconButton6
             // 
@@ -524,7 +437,6 @@
             iconButton6.TextAlign = ContentAlignment.MiddleLeft;
             iconButton6.TextImageRelation = TextImageRelation.TextBeforeImage;
             iconButton6.UseVisualStyleBackColor = false;
-            iconButton6.Click += keyChoice_Click;
             // 
             // iconButton3
             // 
@@ -547,7 +459,6 @@
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;
             iconButton3.TextImageRelation = TextImageRelation.TextBeforeImage;
             iconButton3.UseVisualStyleBackColor = false;
-            iconButton3.Click += keyChoice_Click;
             // 
             // flowLayoutPanel3
             // 
@@ -611,10 +522,10 @@
             flowLayoutPanel3.Controls.Add(guna2Button59);
             flowLayoutPanel3.Controls.Add(guna2Button60);
             flowLayoutPanel3.Dock = DockStyle.Fill;
-            flowLayoutPanel3.Location = new Point(12, 134);
+            flowLayoutPanel3.Location = new Point(12, 109);
             flowLayoutPanel3.Name = "flowLayoutPanel3";
             flowLayoutPanel3.Padding = new Padding(0, 14, 0, 0);
-            flowLayoutPanel3.Size = new Size(331, 540);
+            flowLayoutPanel3.Size = new Size(329, 558);
             flowLayoutPanel3.TabIndex = 17;
             // 
             // guna2Button4
@@ -1707,10 +1618,10 @@
             panel8.Controls.Add(Search);
             panel8.Controls.Add(panel9);
             panel8.Dock = DockStyle.Top;
-            panel8.Location = new Point(12, 94);
+            panel8.Location = new Point(12, 69);
             panel8.Margin = new Padding(1);
             panel8.Name = "panel8";
-            panel8.Size = new Size(331, 40);
+            panel8.Size = new Size(329, 40);
             panel8.TabIndex = 9;
             // 
             // pictureBox2
@@ -1746,7 +1657,7 @@
             panel9.Location = new Point(0, 39);
             panel9.Margin = new Padding(1);
             panel9.Name = "panel9";
-            panel9.Size = new Size(331, 1);
+            panel9.Size = new Size(329, 1);
             panel9.TabIndex = 9;
             // 
             // panel6
@@ -1754,10 +1665,10 @@
             panel6.BackColor = Color.Transparent;
             panel6.Controls.Add(label6);
             panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(12, 37);
+            panel6.Location = new Point(12, 12);
             panel6.Name = "panel6";
             panel6.Padding = new Padding(8, 8, 18, 18);
-            panel6.Size = new Size(331, 57);
+            panel6.Size = new Size(329, 57);
             panel6.TabIndex = 7;
             // 
             // label6
@@ -1772,301 +1683,9 @@
             label6.TabIndex = 0;
             label6.Text = "Simply drag a key to a finger \r\nto assign it";
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(closeAssign);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(12, 12);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(331, 25);
-            panel1.TabIndex = 58;
-            // 
-            // closeAssign
-            // 
-            closeAssign.Dock = DockStyle.Right;
-            closeAssign.FlatAppearance.BorderSize = 0;
-            closeAssign.FlatStyle = FlatStyle.Flat;
-            closeAssign.IconChar = FontAwesome.Sharp.IconChar.Close;
-            closeAssign.IconColor = Color.White;
-            closeAssign.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            closeAssign.IconSize = 18;
-            closeAssign.Location = new Point(305, 0);
-            closeAssign.Name = "closeAssign";
-            closeAssign.Size = new Size(26, 25);
-            closeAssign.TabIndex = 0;
-            closeAssign.UseVisualStyleBackColor = true;
-            closeAssign.Click += closeAssign_Click;
-            // 
-            // keySet
-            // 
-            keySet.BackColor = Color.Transparent;
-            keySet.BorderRadius = 14;
-            keySet.Controls.Add(blank);
-            keySet.Controls.Add(panel7);
-            keySet.Controls.Add(guna2Panel3);
-            keySet.CustomizableEdges = customizableEdges133;
-            keySet.Dock = DockStyle.Fill;
-            keySet.FillColor = Color.FromArgb(33, 34, 37);
-            keySet.Location = new Point(16, 64);
-            keySet.Name = "keySet";
-            keySet.Padding = new Padding(12);
-            keySet.ShadowDecoration.CustomizableEdges = customizableEdges134;
-            keySet.Size = new Size(355, 686);
-            keySet.TabIndex = 9;
-            // 
-            // blank
-            // 
-            blank.Controls.Add(guna2Button61);
-            blank.Controls.Add(assignButton);
-            blank.Controls.Add(label1);
-            blank.Dock = DockStyle.Top;
-            blank.Location = new Point(12, 124);
-            blank.Name = "blank";
-            blank.Size = new Size(331, 153);
-            blank.TabIndex = 17;
-            // 
-            // guna2Button61
-            // 
-            guna2Button61.BorderRadius = 4;
-            guna2Button61.CustomizableEdges = customizableEdges119;
-            guna2Button61.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button61.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button61.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button61.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button61.FillColor = Color.FromArgb(16, 17, 19);
-            guna2Button61.Font = new Font("Segoe UI", 9F);
-            guna2Button61.ForeColor = Color.White;
-            guna2Button61.Location = new Point(143, 83);
-            guna2Button61.Name = "guna2Button61";
-            guna2Button61.ShadowDecoration.CustomizableEdges = customizableEdges120;
-            guna2Button61.Size = new Size(145, 29);
-            guna2Button61.TabIndex = 8;
-            guna2Button61.Text = "Add Combination";
-            // 
-            // assignButton
-            // 
-            assignButton.BorderRadius = 4;
-            assignButton.CustomizableEdges = customizableEdges121;
-            assignButton.DisabledState.BorderColor = Color.DarkGray;
-            assignButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            assignButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            assignButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            assignButton.Font = new Font("Segoe UI", 9F);
-            assignButton.ForeColor = Color.White;
-            assignButton.Location = new Point(50, 83);
-            assignButton.Name = "assignButton";
-            assignButton.ShadowDecoration.CustomizableEdges = customizableEdges122;
-            assignButton.Size = new Size(87, 29);
-            assignButton.TabIndex = 4;
-            assignButton.Text = "Assign";
-            assignButton.Click += assignButton_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(108, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(115, 15);
-            label1.TabIndex = 3;
-            label1.Text = "No key assigned yet!";
-            // 
-            // panel7
-            // 
-            panel7.AutoSize = true;
-            panel7.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel7.BackColor = Color.Transparent;
-            panel7.Controls.Add(guna2Panel4);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(12, 52);
-            panel7.Name = "panel7";
-            panel7.Padding = new Padding(0, 14, 0, 14);
-            panel7.Size = new Size(331, 72);
-            panel7.TabIndex = 16;
-            // 
-            // guna2Panel4
-            // 
-            guna2Panel4.BackColor = Color.Transparent;
-            guna2Panel4.BorderColor = Color.Transparent;
-            guna2Panel4.BorderRadius = 6;
-            guna2Panel4.Controls.Add(label3);
-            guna2Panel4.Controls.Add(label2);
-            guna2Panel4.CustomizableEdges = customizableEdges123;
-            guna2Panel4.Dock = DockStyle.Bottom;
-            guna2Panel4.FillColor = Color.FromArgb(16, 17, 19);
-            guna2Panel4.Location = new Point(0, 14);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges124;
-            guna2Panel4.Size = new Size(331, 44);
-            guna2Panel4.TabIndex = 14;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Right;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(19, 150, 255);
-            label3.Location = new Point(146, 0);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Padding = new Padding(12);
-            label3.Size = new Size(185, 41);
-            label3.TabIndex = 5;
-            label3.Text = "LPinky + LRing + LMiddle";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Left;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(0, 0);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Padding = new Padding(12);
-            label2.Size = new Size(85, 43);
-            label2.TabIndex = 4;
-            label2.Text = "Activate:";
-            // 
-            // guna2Panel3
-            // 
-            guna2Panel3.Controls.Add(flowLayoutPanel1);
-            guna2Panel3.Controls.Add(iconButton1);
-            guna2Panel3.CustomBorderColor = Color.FromArgb(64, 65, 66);
-            guna2Panel3.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            guna2Panel3.CustomizableEdges = customizableEdges131;
-            guna2Panel3.Dock = DockStyle.Top;
-            guna2Panel3.Location = new Point(12, 12);
-            guna2Panel3.Margin = new Padding(0);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges132;
-            guna2Panel3.Size = new Size(331, 40);
-            guna2Panel3.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(guna2Button1);
-            flowLayoutPanel1.Controls.Add(guna2Button2);
-            flowLayoutPanel1.Controls.Add(guna2Button3);
-            flowLayoutPanel1.Dock = DockStyle.Top;
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Margin = new Padding(0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(246, 82);
-            flowLayoutPanel1.TabIndex = 3;
-            flowLayoutPanel1.WrapContents = false;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.BorderColor = Color.Transparent;
-            guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            guna2Button1.Checked = true;
-            guna2Button1.CheckedState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button1.CustomBorderColor = Color.Transparent;
-            guna2Button1.CustomBorderThickness = new Padding(0, 0, 0, 2);
-            guna2Button1.CustomizableEdges = customizableEdges125;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Transparent;
-            guna2Button1.Font = new Font("Segoe UI", 9F);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.HoverState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button1.Location = new Point(0, 0);
-            guna2Button1.Margin = new Padding(0);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges126;
-            guna2Button1.Size = new Size(60, 40);
-            guna2Button1.TabIndex = 0;
-            guna2Button1.Text = "Set 1";
-            // 
-            // guna2Button2
-            // 
-            guna2Button2.BorderColor = Color.Transparent;
-            guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            guna2Button2.CheckedState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button2.CustomBorderColor = Color.Transparent;
-            guna2Button2.CustomBorderThickness = new Padding(0, 0, 0, 2);
-            guna2Button2.CustomizableEdges = customizableEdges127;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Transparent;
-            guna2Button2.Font = new Font("Segoe UI", 9F);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.HoverState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button2.Location = new Point(60, 0);
-            guna2Button2.Margin = new Padding(0);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges128;
-            guna2Button2.Size = new Size(60, 40);
-            guna2Button2.TabIndex = 1;
-            guna2Button2.Text = "Set 1";
-            // 
-            // guna2Button3
-            // 
-            guna2Button3.BorderColor = Color.Transparent;
-            guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            guna2Button3.CheckedState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button3.CustomBorderColor = Color.Transparent;
-            guna2Button3.CustomBorderThickness = new Padding(0, 0, 0, 2);
-            guna2Button3.CustomizableEdges = customizableEdges129;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.Transparent;
-            guna2Button3.Font = new Font("Segoe UI", 9F);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.HoverState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button3.Location = new Point(120, 0);
-            guna2Button3.Margin = new Padding(0);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges130;
-            guna2Button3.Size = new Size(60, 40);
-            guna2Button3.TabIndex = 2;
-            guna2Button3.Text = "Set 1";
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.Transparent;
-            iconButton1.Dock = DockStyle.Right;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.Transparent;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Add;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            iconButton1.IconSize = 12;
-            iconButton1.Location = new Point(246, 0);
-            iconButton1.Margin = new Padding(0);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(85, 40);
-            iconButton1.TabIndex = 4;
-            iconButton1.Text = "  Add set";
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Top;
-            label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(16, 16);
-            label4.Margin = new Padding(0);
-            label4.Name = "label4";
-            label4.Padding = new Padding(0, 0, 0, 16);
-            label4.Size = new Size(247, 48);
-            label4.TabIndex = 6;
-            label4.Text = "INFINITY GAUNTLET";
-            // 
             // panelPreview
             // 
+            panelPreview.Controls.Add(closeAssign);
             panelPreview.Controls.Add(panel12);
             panelPreview.Controls.Add(panel13);
             panelPreview.Controls.Add(panel14);
@@ -2077,12 +1696,25 @@
             panelPreview.Controls.Add(panel4);
             panelPreview.Controls.Add(panel3);
             panelPreview.Controls.Add(panel2);
-            panelPreview.Controls.Add(panelTop);
             panelPreview.Dock = DockStyle.Fill;
-            panelPreview.Location = new Point(461, 3);
+            panelPreview.Location = new Point(394, 3);
             panelPreview.Name = "panelPreview";
-            panelPreview.Size = new Size(847, 766);
+            panelPreview.Size = new Size(908, 711);
             panelPreview.TabIndex = 13;
+            // 
+            // closeAssign
+            // 
+            closeAssign.FlatAppearance.BorderSize = 0;
+            closeAssign.FlatStyle = FlatStyle.Flat;
+            closeAssign.IconChar = FontAwesome.Sharp.IconChar.Close;
+            closeAssign.IconColor = Color.White;
+            closeAssign.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            closeAssign.IconSize = 18;
+            closeAssign.Location = new Point(861, 16);
+            closeAssign.Name = "closeAssign";
+            closeAssign.Size = new Size(26, 25);
+            closeAssign.TabIndex = 21;
+            closeAssign.UseVisualStyleBackColor = true;
             // 
             // panel12
             // 
@@ -2164,114 +1796,16 @@
             panel2.Size = new Size(73, 37);
             panel2.TabIndex = 13;
             // 
-            // panelTop
-            // 
-            panelTop.Controls.Add(guna2Panel2);
-            panelTop.Controls.Add(panel5);
-            panelTop.Controls.Add(pictureBox9);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(0, 0);
-            panelTop.Margin = new Padding(2);
-            panelTop.Name = "panelTop";
-            panelTop.Padding = new Padding(30);
-            panelTop.Size = new Size(847, 108);
-            panelTop.TabIndex = 12;
-            // 
-            // guna2Panel2
-            // 
-            guna2Panel2.AutoSize = true;
-            guna2Panel2.BorderColor = Color.FromArgb(106, 106, 106);
-            guna2Panel2.BorderRadius = 8;
-            guna2Panel2.BorderThickness = 1;
-            guna2Panel2.Controls.Add(pictureBox7);
-            guna2Panel2.Controls.Add(pictureBox8);
-            guna2Panel2.Controls.Add(label5);
-            guna2Panel2.CustomizableEdges = customizableEdges135;
-            guna2Panel2.Dock = DockStyle.Right;
-            guna2Panel2.FillColor = Color.FromArgb(17, 17, 17);
-            guna2Panel2.Location = new Point(407, 30);
-            guna2Panel2.Margin = new Padding(2);
-            guna2Panel2.MinimumSize = new Size(340, 48);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.Padding = new Padding(12, 6, 12, 6);
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges136;
-            guna2Panel2.Size = new Size(340, 48);
-            guna2Panel2.TabIndex = 8;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Dock = DockStyle.Right;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(318, 6);
-            pictureBox7.Margin = new Padding(2);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Padding = new Padding(15);
-            pictureBox7.Size = new Size(10, 36);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 5;
-            pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Dock = DockStyle.Left;
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(12, 6);
-            pictureBox8.Margin = new Padding(2);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Padding = new Padding(15);
-            pictureBox8.Size = new Size(32, 36);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 2;
-            pictureBox8.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.FlatStyle = FlatStyle.Flat;
-            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(71, 13);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(63, 21);
-            label5.TabIndex = 3;
-            label5.Text = "Default";
-            // 
-            // panel5
-            // 
-            panel5.Dock = DockStyle.Right;
-            panel5.Location = new Point(747, 30);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(38, 48);
-            panel5.TabIndex = 7;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Dock = DockStyle.Right;
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(785, 30);
-            pictureBox9.Margin = new Padding(2);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Padding = new Padding(15);
-            pictureBox9.Size = new Size(32, 48);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 6;
-            pictureBox9.TabStop = false;
-            // 
-            // Customize
+            // CombinationInput
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(16, 17, 19);
-            ClientSize = new Size(1311, 772);
+            ClientSize = new Size(1305, 717);
             Controls.Add(Main);
-            ForeColor = Color.White;
-            Name = "Customize";
-            Text = "Customize";
+            Name = "CombinationInput";
+            Text = "CombinationInput";
             Main.ResumeLayout(false);
-            panelNav.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMenu.ResumeLayout(false);
-            panelMenu.PerformLayout();
             assign.ResumeLayout(false);
             keyChoices.ResumeLayout(false);
             flowLayoutPanel2.ResumeLayout(false);
@@ -2281,50 +1815,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            panel1.ResumeLayout(false);
-            keySet.ResumeLayout(false);
-            keySet.PerformLayout();
-            blank.ResumeLayout(false);
-            blank.PerformLayout();
-            panel7.ResumeLayout(false);
-            guna2Panel4.ResumeLayout(false);
-            guna2Panel4.PerformLayout();
-            guna2Panel3.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
             panelPreview.ResumeLayout(false);
-            panelTop.ResumeLayout(false);
-            panelTop.PerformLayout();
-            guna2Panel2.ResumeLayout(false);
-            guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
         private TableLayoutPanel Main;
-        private Panel panelNav;
-        private PictureBox pictureBox1;
         private Panel panelMenu;
-        private Label label4;
-        private UC_Key uC_Key1;
-        private UC_Key uC_Key2;
-        private UC_Key uC_Key3;
-        private UC_Key uC_Key4;
-        private UC_Key uC_Key5;
-        private Guna.UI2.WinForms.Guna2Panel keySet;
-        private Panel blank;
-        private Label label1;
-        private Panel panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Label label3;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private Guna.UI2.WinForms.Guna2Panel assign;
         private Guna.UI2.WinForms.Guna2Panel keyChoices;
         private FlowLayoutPanel flowLayoutPanel2;
@@ -2398,28 +1896,17 @@
         private Panel panel9;
         private Panel panel6;
         private Label label6;
-        private Panel panel1;
-        private FontAwesome.Sharp.IconButton closeAssign;
-        private Guna.UI2.WinForms.Guna2Button assignButton;
-        private Guna.UI2.WinForms.Guna2Button guna2Button61;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Panel panelPreview;
-        private Panel panelTop;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private Label label5;
-        private Panel panel5;
-        private PictureBox pictureBox9;
-        private Panel panel11;
-        private Panel panel10;
-        private Panel panel4;
-        private Panel panel3;
-        private Panel panel2;
         private Panel panel12;
         private Panel panel13;
         private Panel panel14;
         private Panel panel15;
         private Panel panel16;
+        private Panel panel11;
+        private Panel panel10;
+        private Panel panel4;
+        private Panel panel3;
+        private Panel panel2;
+        private FontAwesome.Sharp.IconButton closeAssign;
     }
 }
