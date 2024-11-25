@@ -1,6 +1,8 @@
 
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Text.Json;
+using TypeIT.Models;
 
 namespace TypeIT
 {
@@ -9,10 +11,35 @@ namespace TypeIT
         private Form currentForm = null!;
         internal bool isConnected = false;
         List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
+
         //courtney was here
         public Home()
         {
             InitializeComponent();
+            PopulateKeyMappingProfileComboBox();
+        }
+
+        private void PopulateKeyMappingProfileComboBox()
+        {
+            // First, preload the profiles (this is assuming that PreloadDefaultKeyMappingProfiles is called before this)
+            // Populate the ComboBox with the names of the KeyMappingProfiles
+            KeyMappingProfileSelection.Items.Clear();  // Clear any existing items in the ComboBox
+
+            foreach (var profile in Program.KeyMappingProfiles)
+            {
+                KeyMappingProfileSelection.Items.Add(profile.Name); // Add the profile name to the ComboBox
+            }
+
+            // Optionally, you can set the selected profile if needed, for example:
+            if (Program.CurrentSelectedMappingProfile != null)
+            {
+                KeyMappingProfileSelection.SelectedItem = Program.CurrentSelectedMappingProfile.Name;
+            }
+            else if (KeyMappingProfileSelection.Items.Count > 0)
+            {
+                // Set the first item as selected if no profile is set
+                KeyMappingProfileSelection.SelectedIndex = 0;
+            }
         }
 
         private async Task<bool> checkTypeITConnection()
@@ -39,7 +66,7 @@ namespace TypeIT
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error creating a default connection to \"Type It Wireless Keyboard\".:\nError Message: {ex.Message}");
+                        MessageBox.Show($"Error creating a default connection to \"Type It Wireless Keyboard\".:\nError Message: {ex.Message}", "Default Connection Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     typeITDeviceFound = true; //found the device
                     break; //break for loop, already found the device
@@ -108,11 +135,6 @@ namespace TypeIT
         private void menu_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void profile_Click(object sender, EventArgs e)
-        {
-            openForm(new Customize());
         }
     }
 }
