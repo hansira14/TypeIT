@@ -1,13 +1,13 @@
 ﻿namespace TypeIT
 {
-    partial class UC_Profiles
+    partial class TestForm
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,22 +20,26 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             SuspendLayout();
             // 
-            // UC_Profiles
+            // TestForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "UC_Profiles";
-            Size = new Size(670, 620);
+            ClientSize = new Size(1381, 1003);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "TestForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "TestForm";
+            TransparencyKey = Color.Fuchsia;
             ResumeLayout(false);
         }
 

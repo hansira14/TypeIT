@@ -1,4 +1,3 @@
-
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text.Json;
@@ -11,34 +10,42 @@ namespace TypeIT
         private Form currentForm = null!;
         internal bool isConnected = false;
         List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
+        private UC_ProfileList profileList;
 
         //courtney was here
         public Home()
         {
             InitializeComponent();
             PopulateKeyMappingProfileComboBox();
+            
+            profileList = new UC_ProfileList(Program.CurrentSelectedMappingProfile, Program.KeyMappingProfiles);
+            main.Controls.Add(profileList);
+            profileList.Location = new Point(1600, 68);
+            profileList.Width = 632;
+            main.Controls.SetChildIndex(profileList, 0);
         }
 
         private void PopulateKeyMappingProfileComboBox()
         {
             // First, preload the profiles (this is assuming that PreloadDefaultKeyMappingProfiles is called before this)
             // Populate the ComboBox with the names of the KeyMappingProfiles
-            KeyMappingProfileSelection.Items.Clear();  // Clear any existing items in the ComboBox
+            
+            //KeyMappingProfileSelection.Items.Clear();  // Clear any existing items in the ComboBox
 
             foreach (var profile in Program.KeyMappingProfiles)
             {
-                KeyMappingProfileSelection.Items.Add(profile.Name); // Add the profile name to the ComboBox
+                //KeyMappingProfileSelection.Items.Add(profile.Name); // Add the profile name to the ComboBox
             }
 
             // Optionally, you can set the selected profile if needed, for example:
             if (Program.CurrentSelectedMappingProfile != null)
             {
-                KeyMappingProfileSelection.SelectedItem = Program.CurrentSelectedMappingProfile.Name;
+                //KeyMappingProfileSelection.SelectedItem = Program.CurrentSelectedMappingProfile.Name;
             }
-            else if (KeyMappingProfileSelection.Items.Count > 0)
+            //else if (KeyMappingProfileSelection.Items.Count > 0)
             {
                 // Set the first item as selected if no profile is set
-                KeyMappingProfileSelection.SelectedIndex = 0;
+                //KeyMappingProfileSelection.SelectedIndex = 0;
             }
         }
 

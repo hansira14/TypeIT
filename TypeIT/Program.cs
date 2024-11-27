@@ -25,7 +25,7 @@ namespace TypeIT
 
         private static void PreloadDefaultKeyMappingProfiles()
         {
-            string projectFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
+            string projectFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.Parent.FullName;
 
             // Relative path to the DefaultKeyMappingProfiles folder
             string folderPath = Path.Combine(projectFolder, "DefaultKeyMappingProfiles");
