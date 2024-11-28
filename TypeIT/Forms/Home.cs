@@ -20,8 +20,8 @@ namespace TypeIT
             
             profileList = new UC_ProfileList(Program.CurrentSelectedMappingProfile, Program.KeyMappingProfiles);
             main.Controls.Add(profileList);
-            profileList.Location = new Point(1600, 68);
-            profileList.Width = 632;
+            profileList.Location = new Point(profile.Location.X - profileList.Width - 50, profile.Location.Y);
+            profileList.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             main.Controls.SetChildIndex(profileList, 0);
         }
 
@@ -101,14 +101,14 @@ namespace TypeIT
 
         private void openForm(Form newForm)
         {
-            main.Controls.Clear();
+            content.Controls.Clear();
             if (currentForm != null) currentForm.Close();
             currentForm = newForm;
             newForm.TopLevel = false;
             newForm.FormBorderStyle = FormBorderStyle.None;
             newForm.Dock = DockStyle.Fill;
-            main.Controls.Add(newForm);
-            main.Tag = newForm;
+            content.Controls.Add(newForm);
+            content.Tag = newForm;
             newForm.BringToFront();
             newForm.Show();
         }

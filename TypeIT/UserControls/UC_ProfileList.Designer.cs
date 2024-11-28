@@ -48,10 +48,11 @@
             otherProfiles.BackColor = Color.FromArgb(17, 17, 17);
             otherProfiles.CustomizableEdges = customizableEdges1;
             otherProfiles.Dock = DockStyle.Fill;
-            otherProfiles.Location = new Point(0, 102);
+            otherProfiles.Location = new Point(0, 48);
+            otherProfiles.Margin = new Padding(2, 1, 2, 1);
             otherProfiles.Name = "otherProfiles";
             otherProfiles.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            otherProfiles.Size = new Size(632, 0);
+            otherProfiles.Size = new Size(340, 0);
             otherProfiles.TabIndex = 7;
             // 
             // currentProf
@@ -68,11 +69,11 @@
             currentProf.FillColor = Color.FromArgb(17, 17, 17);
             currentProf.Location = new Point(0, 0);
             currentProf.Margin = new Padding(0);
-            currentProf.MinimumSize = new Size(632, 102);
+            currentProf.MinimumSize = new Size(340, 48);
             currentProf.Name = "currentProf";
-            currentProf.Padding = new Padding(23, 13, 23, 13);
+            currentProf.Padding = new Padding(12, 6, 12, 6);
             currentProf.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            currentProf.Size = new Size(632, 102);
+            currentProf.Size = new Size(340, 48);
             currentProf.TabIndex = 8;
             currentProf.Click += currentProf_Click;
             // 
@@ -80,11 +81,11 @@
             // 
             pictureBox2.Dock = DockStyle.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(591, 13);
-            pictureBox2.Margin = new Padding(3, 5, 3, 5);
+            pictureBox2.Location = new Point(318, 6);
+            pictureBox2.Margin = new Padding(2, 2, 2, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Padding = new Padding(28, 32, 28, 32);
-            pictureBox2.Size = new Size(18, 76);
+            pictureBox2.Padding = new Padding(15, 15, 15, 15);
+            pictureBox2.Size = new Size(10, 36);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
@@ -95,9 +96,10 @@
             currentProfileName.FlatStyle = FlatStyle.Flat;
             currentProfileName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             currentProfileName.ForeColor = Color.White;
-            currentProfileName.Location = new Point(137, 29);
+            currentProfileName.Location = new Point(62, 14);
+            currentProfileName.Margin = new Padding(2, 0, 2, 0);
             currentProfileName.Name = "currentProfileName";
-            currentProfileName.Size = new Size(127, 45);
+            currentProfileName.Size = new Size(63, 21);
             currentProfileName.TabIndex = 3;
             currentProfileName.Text = "Default";
             currentProfileName.Click += currentProfileName_Click;
@@ -106,25 +108,26 @@
             // 
             pictureBox1.Dock = DockStyle.Left;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(23, 13);
-            pictureBox1.Margin = new Padding(3, 5, 3, 5);
+            pictureBox1.Location = new Point(12, 6);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Padding = new Padding(28, 32, 28, 32);
-            pictureBox1.Size = new Size(60, 76);
+            pictureBox1.Padding = new Padding(15, 15, 15, 15);
+            pictureBox1.Size = new Size(32, 36);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // UC_ProfileList
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(otherProfiles);
             Controls.Add(currentProf);
-            MinimumSize = new Size(632, 102);
+            Margin = new Padding(2, 1, 2, 1);
+            MinimumSize = new Size(340, 48);
             Name = "UC_ProfileList";
-            Size = new Size(632, 102);
+            Size = new Size(340, 48);
             currentProf.ResumeLayout(false);
             currentProf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

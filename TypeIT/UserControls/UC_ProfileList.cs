@@ -62,11 +62,9 @@ namespace TypeIT
             }
             else
             {
-                // Get height of a single profile control (they should all be the same height)
-                int profileHeight = 102; // Default height from UC_Profile.Designer.cs
+                int profileHeight = currentProf.Height;
 
-                // Calculate total height needed based on number of other profiles
-                int totalHeight = 102 +
+                int totalHeight = currentProf.Height +
                     (otherProfiles.Controls.Count * profileHeight);
 
                 this.Size = new Size(this.Width, totalHeight);
