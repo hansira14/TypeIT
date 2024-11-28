@@ -11,14 +11,18 @@ namespace TypeIT
         internal bool isConnected = false;
         List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
         private UC_ProfileList profileList;
+        private static PictureBox _menuControl;
+        public static PictureBox MenuControl => _menuControl;
 
         //courtney was here
         public Home()
         {
             InitializeComponent();
+            _menuControl = menu;
             PopulateKeyMappingProfileComboBox();
-            
+
             profileList = new UC_ProfileList(Program.CurrentSelectedMappingProfile, Program.KeyMappingProfiles);
+            profileList.ProfileSelected += ProfileList_ProfileSelected;
             main.Controls.Add(profileList);
             profileList.Location = new Point(profile.Location.X - profileList.Width - 50, profile.Location.Y);
             profileList.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -29,7 +33,7 @@ namespace TypeIT
         {
             // First, preload the profiles (this is assuming that PreloadDefaultKeyMappingProfiles is called before this)
             // Populate the ComboBox with the names of the KeyMappingProfiles
-            
+
             //KeyMappingProfileSelection.Items.Clear();  // Clear any existing items in the ComboBox
 
             foreach (var profile in Program.KeyMappingProfiles)
@@ -109,7 +113,6 @@ namespace TypeIT
             newForm.Dock = DockStyle.Fill;
             content.Controls.Add(newForm);
             content.Tag = newForm;
-            newForm.BringToFront();
             newForm.Show();
         }
 
@@ -132,6 +135,8 @@ namespace TypeIT
             int newDeviceX = (contentWidth - deviceWidth) / 2;
             int newDeviceY = (contentHeight - deviceHeight) / 2 - 50;
             device.Location = new Point(newDeviceX, newDeviceY);
+
+            content.Height = (int)(this.Height - (profileList.Height * 1.5 + profileList.Location.Y));
         }
 
         private void notConnected_Click(object sender, EventArgs e)
@@ -142,6 +147,24 @@ namespace TypeIT
         private void menu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void profile_Click(object sender, EventArgs e)
+        {
+            openForm(new Customize());
+        }
+
+        private void ProfileList_ProfileSelected(object sender, KeyMappingProfile selectedProfile)
+        {
+            // Update the current selected profile
+            Program.CurrentSelectedMappingProfile = selectedProfile;
+            
+            // If you need to refresh any UI elements that depend on the current profile
+            if (currentForm is Customize customizeForm)
+            {
+                // Refresh the customize form if it's open
+                customizeForm.PopulateSets();
+            }
         }
     }
 }

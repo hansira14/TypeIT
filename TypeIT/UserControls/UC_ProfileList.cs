@@ -17,6 +17,8 @@ namespace TypeIT
         KeyMappingProfile currentProfile;
         List<KeyMappingProfile> allProfiles;
 
+        public event EventHandler<KeyMappingProfile> ProfileSelected;
+
         public UC_ProfileList(KeyMappingProfile currentProfile, List<KeyMappingProfile> allProfiles)
         {
             InitializeComponent();
@@ -26,9 +28,17 @@ namespace TypeIT
             this.allProfiles = allProfiles;
 
             // Set current profile name
-            currentProfileName.Text = currentProfile?.Name ?? "null";
+            UpdateCurrentProfile(currentProfile);
 
             // Populate other profiles
+            PopulateOtherProfiles();
+        }
+
+        // Add this new method to update the current profile
+        public void UpdateCurrentProfile(KeyMappingProfile newProfile)
+        {
+            this.currentProfile = newProfile;
+            currentProfileName.Text = currentProfile?.Name ?? "null";
             PopulateOtherProfiles();
         }
 
@@ -43,6 +53,14 @@ namespace TypeIT
                 if (profile.Name != currentProfile.Name)
                 {
                     var profileControl = new UC_Profile(profile);
+                    profileControl.ProfileClicked += (s, selectedProfile) =>
+                    {
+                        // Update the current profile
+                        UpdateCurrentProfile(selectedProfile);
+
+                        // Notify parent about the selection
+                        ProfileSelected?.Invoke(this, selectedProfile);
+                    };
                     profileControl.Dock = DockStyle.Top;
                     otherProfiles.Controls.Add(profileControl);
                 }
@@ -75,6 +93,17 @@ namespace TypeIT
         private void currentProfileName_Click(object sender, EventArgs e)
         {
             isExpanded = !isExpanded;
+            update_UI();
+        }
+
+        protected virtual void OnProfileSelected(KeyMappingProfile profile)
+        {
+            ProfileSelected?.Invoke(this, profile);
+        }
+
+        private void UC_ProfileList_Leave_1(object sender, EventArgs e)
+        {
+            isExpanded = false;
             update_UI();
         }
     }

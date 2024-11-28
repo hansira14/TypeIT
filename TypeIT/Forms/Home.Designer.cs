@@ -85,6 +85,7 @@
             profile.SizeMode = PictureBoxSizeMode.Zoom;
             profile.TabIndex = 5;
             profile.TabStop = false;
+            profile.Click += profile_Click;
             // 
             // menu
             // 
@@ -102,11 +103,11 @@
             // 
             content.Controls.Add(device);
             content.Controls.Add(notConnected);
-            content.Dock = DockStyle.Fill;
-            content.Location = new Point(0, 0);
+            content.Dock = DockStyle.Bottom;
+            content.Location = new Point(0, 84);
             content.Margin = new Padding(2);
             content.Name = "content";
-            content.Size = new Size(1321, 728);
+            content.Size = new Size(1321, 644);
             content.TabIndex = 1;
             // 
             // device
@@ -219,7 +220,7 @@
             // 
             notConnected.Dock = DockStyle.Bottom;
             notConnected.Image = (Image)resources.GetObject("notConnected.Image");
-            notConnected.Location = new Point(0, 53);
+            notConnected.Location = new Point(0, -31);
             notConnected.Name = "notConnected";
             notConnected.Size = new Size(1321, 675);
             notConnected.SizeMode = PictureBoxSizeMode.Zoom;
@@ -271,7 +272,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private PictureBox pictureBox4;
         private PictureBox profile;
-        private PictureBox menu;
         private PictureBox notConnected;
+        public PictureBox menu;
     }
 }

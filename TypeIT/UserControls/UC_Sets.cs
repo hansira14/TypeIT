@@ -12,9 +12,31 @@ namespace TypeIT
 {
     public partial class UC_Sets : UserControl
     {
-        public UC_Sets()
+        public bool isSelected = false;
+        public string SetName { get; private set; }
+        public event EventHandler SetSelected;
+
+        public UC_Sets(string setName, bool selected = false, string displayName="??")
         {
             InitializeComponent();
+            SetName = setName;
+            isSelected = selected;
+            set.Text = displayName;
+            UpdateSelection();
+            
+            set.Click += Set_Click;
+        }
+
+        private void Set_Click(object sender, EventArgs e)
+        {
+            SetSelected?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void UpdateSelection()
+        {
+            set.CustomBorderThickness = isSelected ? 
+                new Padding(0, 0, 0, 2) : 
+                new Padding(0, 0, 0, 0);
         }
     }
 }

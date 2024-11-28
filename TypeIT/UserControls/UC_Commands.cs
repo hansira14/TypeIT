@@ -12,16 +12,29 @@ namespace TypeIT
 {
     public partial class UC_Commands : UserControl
     {
+        public string KeyCombination { get; private set; }
+        public string Command { get; private set; }
+
         public UC_Commands()
         {
             InitializeComponent();
         }
 
+        public UC_Commands(string keyCombination, string command)
+        {
+            InitializeComponent();
+            KeyCombination = keyCombination;
+            Command = command;
+            
+            mapping.Text = keyCombination;
+            output.Text = command;
+        }
+
         private void UC_Key_Load(object sender, EventArgs e)
         {
             //label1 and label2 shold be centered vertically inside their parent containers
-            label1.Top = (this.Height - label1.Height) / 2;
-            label2.Top = (this.Height - label2.Height) / 2;
+            mapping.Top = (this.Height - mapping.Height) / 2;
+            output.Top = (this.Height - output.Height) / 2;
         }
     }
 }

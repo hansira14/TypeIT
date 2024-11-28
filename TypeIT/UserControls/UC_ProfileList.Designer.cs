@@ -82,9 +82,9 @@
             pictureBox2.Dock = DockStyle.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(318, 6);
-            pictureBox2.Margin = new Padding(2, 2, 2, 2);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Padding = new Padding(15, 15, 15, 15);
+            pictureBox2.Padding = new Padding(15);
             pictureBox2.Size = new Size(10, 36);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 5;
@@ -109,9 +109,9 @@
             pictureBox1.Dock = DockStyle.Left;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 6);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Padding = new Padding(15, 15, 15, 15);
+            pictureBox1.Padding = new Padding(15);
             pictureBox1.Size = new Size(32, 36);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
@@ -128,6 +128,7 @@
             MinimumSize = new Size(340, 48);
             Name = "UC_ProfileList";
             Size = new Size(340, 48);
+            Leave += UC_ProfileList_Leave_1;
             currentProf.ResumeLayout(false);
             currentProf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

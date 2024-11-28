@@ -30,9 +30,9 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            label1 = new Label();
+            mapping = new Label();
             panel2 = new Panel();
-            label2 = new Label();
+            output = new Label();
             panel3 = new Panel();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(mapping);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
@@ -67,20 +67,20 @@
             panel1.Size = new Size(246, 33);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // mapping
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(19, 150, 255);
-            label1.Location = new Point(4, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Ctrl + V";
+            mapping.AutoSize = true;
+            mapping.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mapping.ForeColor = Color.FromArgb(19, 150, 255);
+            mapping.Location = new Point(4, 9);
+            mapping.Name = "mapping";
+            mapping.Size = new Size(47, 15);
+            mapping.TabIndex = 1;
+            mapping.Text = "Ctrl + V";
             // 
             // panel2
             // 
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(output);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(246, 0);
             panel2.Margin = new Padding(0);
@@ -88,16 +88,16 @@
             panel2.Size = new Size(246, 33);
             panel2.TabIndex = 1;
             // 
-            // label2
+            // output
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F);
-            label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(7, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(35, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Paste";
+            output.AutoSize = true;
+            output.Font = new Font("Segoe UI", 9F);
+            output.ForeColor = Color.DimGray;
+            output.Location = new Point(7, 9);
+            output.Name = "output";
+            output.Size = new Size(35, 15);
+            output.TabIndex = 1;
+            output.Text = "Paste";
             // 
             // panel3
             // 
@@ -109,7 +109,7 @@
             panel3.Size = new Size(492, 1);
             panel3.TabIndex = 2;
             // 
-            // UC_Key
+            // UC_Commands
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -117,7 +117,7 @@
             Controls.Add(panel3);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(0);
-            Name = "UC_Key";
+            Name = "UC_Commands";
             Size = new Size(492, 34);
             Load += UC_Key_Load;
             tableLayoutPanel1.ResumeLayout(false);
@@ -131,9 +131,9 @@
         #endregion
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
-        private Label label1;
+        private Label mapping;
         private Panel panel2;
-        private Label label2;
+        private Label output;
         private Panel panel3;
     }
 }

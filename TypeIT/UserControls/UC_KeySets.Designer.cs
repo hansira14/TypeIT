@@ -76,7 +76,7 @@
             guna2Panel1.FillColor = Color.FromArgb(33, 34, 37);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Padding = new Padding(12, 12, 12, 12);
+            guna2Panel1.Padding = new Padding(12);
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Panel1.Size = new Size(408, 830);
             guna2Panel1.TabIndex = 8;
@@ -156,7 +156,7 @@
             label3.Location = new Point(199, 0);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Padding = new Padding(12, 12, 12, 12);
+            label3.Padding = new Padding(12);
             label3.Size = new Size(185, 41);
             label3.TabIndex = 5;
             label3.Text = "LPinky + LRing + LMiddle";
@@ -170,7 +170,7 @@
             label2.Location = new Point(0, 0);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Padding = new Padding(12, 12, 12, 12);
+            label2.Padding = new Padding(12);
             label2.Size = new Size(85, 43);
             label2.TabIndex = 4;
             label2.Text = "Activate:";
