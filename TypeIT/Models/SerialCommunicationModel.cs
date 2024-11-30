@@ -13,6 +13,13 @@ namespace TypeIT.Models
     {
         private SerialPort _serialPort;
         private StringBuilder _dataBuffer = new StringBuilder(); // Buffer to store incomplete data
+        private string _previousKeyCommand = "";
+        private string _currentKeyCommand = "";
+        private long? _previousTime = null;
+        private long? _currentTime = null;
+        //private DateTime? _previousTime = null;
+        //private DateTime? _currentTime = null;
+        private Stopwatch _stopwatch = Stopwatch.StartNew();
 
 
 
@@ -143,11 +150,53 @@ namespace TypeIT.Models
                     // Log or process the complete message
                     //Debug.WriteLine($"Complete Message: {completeMessage}");
 
-                    // Remove the processed message from the buffer
-                    buffer = buffer.Substring(endIndex + 1);
+                    //For measuring milliseconds time span difference
+                    _previousTime = _currentTime;
+                    _currentTime = _stopwatch.ElapsedMilliseconds;
 
-                    // The command code needed for handling the keystroke or macros to execute on the PC
-                    HandleKeyStrokeOrMacro(completeMessage);
+
+                    //For message comparison
+                    _previousKeyCommand = _currentKeyCommand;
+                    _currentKeyCommand = completeMessage;
+
+                    if (_currentTime != null && _previousTime != null && !string.IsNullOrEmpty(_previousKeyCommand))
+                    {
+                        // Calculate the elapsed time
+                        //TimeSpan elapsedTime = _currentTime.Value - _previousTime.Value;
+                        long elapsedTime = _currentTime.Value - _previousTime.Value;
+                        if (elapsedTime <= 100)
+                        {
+                            //Debug.Print($"Elapsed Time: {elapsedTime}");
+                            if(HasInput1MoreOnes(_previousKeyCommand, _currentKeyCommand) && PerformBitwiseAnd(_previousKeyCommand, _currentKeyCommand)) 
+                            {
+                                //Capture intent of releasing multiple button key press
+                                Debug.WriteLine("Releasing Buttons...");
+                                Debug.WriteLine($"Elapsed Time: {elapsedTime} ms");
+                                Debug.WriteLine($"Previous Key Command: {_previousKeyCommand}");
+                                Debug.WriteLine($"Current Key Command: {_currentKeyCommand}");
+                                HandleKeyStrokeOrMacro(_previousKeyCommand);
+                                
+                            }
+                            else if(HasInput1MoreOnes(_currentKeyCommand, _previousKeyCommand) && PerformBitwiseAnd(_previousKeyCommand, _currentKeyCommand)) 
+                            {
+                                //Capture intent of pressing multiple button key press
+                                Debug.WriteLine("Pressing Buttons...");
+                                Debug.WriteLine($"Elapsed Time: {elapsedTime} ms");
+                                Debug.WriteLine($"Previous Key Command: {_previousKeyCommand}");
+                                Debug.WriteLine($"Current Key Command: {_currentKeyCommand}");
+                                 HandleKeyStrokeOrMacro(_currentKeyCommand);
+                            }
+                        }
+                        else
+                        {
+                            // The command code needed for handling the keystroke or macros to execute on the PC
+                        HandleKeyStrokeOrMacro(completeMessage);
+                        }
+
+
+                        // Remove the processed message from the buffer
+                        buffer = buffer.Substring(endIndex + 1);
+                    }
                 }
                 else
                 {
@@ -171,6 +220,39 @@ namespace TypeIT.Models
             // Update the buffer with remaining unprocessed data
             _dataBuffer.Clear();
             _dataBuffer.Append(buffer);
+        }
+
+        private static bool HasInput1MoreOnes(string input1, string input2)
+        {
+            // Step 1: Count the number of '1's in each cleaned input
+            int onesCount1 = input1.Count(c => c == '1');
+            int onesCount2 = input2.Count(c => c == '1');
+
+            // Step 2: Return true if input1 has more 1s than input2
+            return onesCount1 > onesCount2;
+        }
+
+        private static bool PerformBitwiseAnd(string input1, string input2)
+        {
+            // Task to clean and convert the first input
+            var task1 = Task.Run(() =>
+            {
+                string cleanedInput1 = input1.Substring(1, input1.Length - 2); // Remove "S" and "E"
+                return Convert.ToInt32(cleanedInput1, 2); // Convert to integer
+            });
+
+            // Task to clean and convert the second input
+            var task2 = Task.Run(() =>
+            {
+                string cleanedInput2 = input2.Substring(1, input2.Length - 2); // Remove "S" and "E"
+                return Convert.ToInt32(cleanedInput2, 2); // Convert to integer
+            });
+
+            // Wait for both tasks to complete
+            Task.WaitAll(task1, task2);
+
+            // Perform the bitwise AND operation and check if any bits survived
+            return (task1.Result & task2.Result) > 0;
         }
 
         private void HandleKeyStrokeOrMacro(string keyCommand)
@@ -209,7 +291,7 @@ namespace TypeIT.Models
                                 //}
                             }
                             else
-                            {
+                            { 
                                 Debug.WriteLine($"Key Command '{keyCommand}' not found in current mapping set.");
                             }
                         }

@@ -84,5 +84,40 @@ namespace TypeIT.Models
             return profile;
         }
 
+
+        // Method to serialize a KeyMappingProfile to JSON and save to a file
+        public void ToJsonFile(string filePath)
+        {
+            try
+            {
+                // Create a structured object for serialization
+                var jsonObject = new
+                {
+                    name = this.Name,
+                    sets = this.Sets.Select(kvp => new
+                    {
+                        activationKey = kvp.Key,
+                        mappings = kvp.Value.KeyMappings
+                    }).ToArray()
+                };
+
+                // Serialize to JSON with indented formatting
+                string jsonContent = JsonSerializer.Serialize(jsonObject, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+
+                // Save the JSON to the specified file
+                File.WriteAllText(filePath, jsonContent);
+
+                // Optional: Debug log
+                Debug.WriteLine($"KeyMappingProfile serialized and saved to {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error during serialization: {ex.Message}");
+            }
+        }
+
     }
 }
