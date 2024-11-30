@@ -37,13 +37,13 @@ namespace TypeIT
 
                 setControls.Add(setControl);
                 setList.Controls.Add(setControl);
-                
+
                 // Set the initial activation key label for the current set
                 if (isCurrentSet)
                 {
                     setActivationKey.Text = KeyCodeConverter.ConvertToFingerCombination(Program.CurrentSelectedMappingProfile.CurrentMappingsSelected.ActivationKey);
                 }
-                
+
                 setIndex++;
             }
 
@@ -69,15 +69,13 @@ namespace TypeIT
             {
                 var fingerCombination = KeyCodeConverter.ConvertToFingerCombination(mapping.Key);
                 var command = string.Join(" + ", mapping.Value);
-                
+
                 var commandControl = new UC_Commands(fingerCombination, command);
                 commandControl.Dock = DockStyle.Top;
                 keyMaps.Controls.Add(commandControl);
             }
-
-            KeyCodeConverter.removeScrollbar(keyMaps);
             keyMaps.PerformLayout();
-            keyMaps.Visible= true;
+            keyMaps.Visible = true;
         }
         private void SetControl_Selected(object sender, EventArgs e)
         {
@@ -95,10 +93,10 @@ namespace TypeIT
             {
                 Program.CurrentSelectedMappingProfile.CurrentMappingsSelected = mappingSet;
                 currentSet = mappingSet;
-                
+
                 // Update the activation key label
                 setActivationKey.Text = KeyCodeConverter.ConvertToFingerCombination(mappingSet.ActivationKey);
-                
+
                 // Populate the key mappings
                 PopulateKeyMappings(mappingSet);
             }
@@ -106,7 +104,7 @@ namespace TypeIT
         private void assignButton_Click(object sender, EventArgs e)
         {
             keySet.Visible = false;
-            assign.Visible = true;
+            assignSingleKey.Visible = true;
         }
 
         private void keyChoice_Click(object sender, EventArgs e)
@@ -129,7 +127,7 @@ namespace TypeIT
         private void closeAssign_Click(object sender, EventArgs e)
         {
             keySet.Visible = true;
-            assign.Visible = false;
+            assignSingleKey.Visible = false;
         }
 
         private void Customize_Paint(object sender, PaintEventArgs e)
@@ -140,6 +138,38 @@ namespace TypeIT
                 //Main.Padding = new Padding(homeForm.menu.Location.X + (int)(homeForm.menu.Width * 1.2), 0, 0, 0);
                 Main.Padding = new Padding(homeForm.menu.Location.X, 0, 0, 0);
             }
+        }
+
+        private void keyMaps_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HideAssignOptions()
+        {
+            if (assignOptions.Visible)
+            {
+                assignOptions.Visible = false;
+                keySet.Visible = true;
+                assignSingleKey.Visible = false;
+            }
+        }
+
+        protected override void OnDeactivate(EventArgs e)
+        {
+            base.OnDeactivate(e);
+            HideAssignOptions();
+        }
+
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+            HideAssignOptions();
+        }
+
+        private void assignMapping_Click(object sender, EventArgs e)
+        {
+            assignOptions.Visible = !assignOptions.Visible;
         }
     }
 }

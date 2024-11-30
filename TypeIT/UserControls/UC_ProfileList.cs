@@ -23,18 +23,13 @@ namespace TypeIT
         {
             InitializeComponent();
 
-            // Store the profiles
             this.currentProfile = currentProfile;
             this.allProfiles = allProfiles;
 
-            // Set current profile name
             UpdateCurrentProfile(currentProfile);
-
-            // Populate other profiles
             PopulateOtherProfiles();
         }
 
-        // Add this new method to update the current profile
         public void UpdateCurrentProfile(KeyMappingProfile newProfile)
         {
             this.currentProfile = newProfile;
@@ -44,10 +39,7 @@ namespace TypeIT
 
         private void PopulateOtherProfiles()
         {
-            // Clear existing controls
             otherProfiles.Controls.Clear();
-
-            // Add each profile except the current one
             foreach (var profile in allProfiles)
             {
                 if (profile.Name != currentProfile.Name)
@@ -55,10 +47,7 @@ namespace TypeIT
                     var profileControl = new UC_Profile(profile);
                     profileControl.ProfileClicked += (s, selectedProfile) =>
                     {
-                        // Update the current profile
                         UpdateCurrentProfile(selectedProfile);
-
-                        // Notify parent about the selection
                         ProfileSelected?.Invoke(this, selectedProfile);
                     };
                     profileControl.Dock = DockStyle.Top;
@@ -82,7 +71,7 @@ namespace TypeIT
             {
                 int profileHeight = currentProf.Height;
 
-                int totalHeight = currentProf.Height +
+                int totalHeight = (currentProf.Height*2) +
                     (otherProfiles.Controls.Count * profileHeight);
 
                 this.Size = new Size(this.Width, totalHeight);
@@ -105,6 +94,11 @@ namespace TypeIT
         {
             isExpanded = false;
             update_UI();
+        }
+
+        private void addProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

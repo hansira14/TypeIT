@@ -46,14 +46,5 @@ namespace TypeIT.Models
 
             return activeFingers.Count > 0 ? string.Join(" + ", activeFingers) : "None";
         }
-        public static void removeScrollbar(Panel control)
-        {
-            control.AutoScroll = false;
-            control.VerticalScroll.Maximum = 0;
-            control.VerticalScroll.Visible = false;
-            control.HorizontalScroll.Maximum = 0;
-            control.HorizontalScroll.Visible = false;
-            control.AutoScroll = true;
-        }
     }
 } 

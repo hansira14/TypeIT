@@ -124,6 +124,7 @@ namespace TypeIT
             bool autoconnect = await checkTypeITConnection();
             device.Visible = autoconnect;
             notConnected.Visible = !autoconnect;
+            content.Height = (int)(this.Height - (profileList.Height * 1.5 + profileList.Location.Y));
         }
 
         private void Form1_Resize(object sender, EventArgs e)

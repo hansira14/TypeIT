@@ -32,7 +32,6 @@ namespace TypeIT
 
         private void UC_Key_Load(object sender, EventArgs e)
         {
-            //label1 and label2 shold be centered vertically inside their parent containers
             mapping.Top = (this.Height - mapping.Height) / 2;
             output.Top = (this.Height - output.Height) / 2;
         }

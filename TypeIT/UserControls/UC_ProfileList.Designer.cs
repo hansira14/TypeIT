@@ -33,14 +33,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ProfileList));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             otherProfiles = new Guna.UI2.WinForms.Guna2Panel();
             currentProf = new Guna.UI2.WinForms.Guna2Panel();
             pictureBox2 = new PictureBox();
             currentProfileName = new Label();
             pictureBox1 = new PictureBox();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            addProfile = new Label();
             currentProf.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // otherProfiles
@@ -49,7 +54,7 @@
             otherProfiles.CustomizableEdges = customizableEdges1;
             otherProfiles.Dock = DockStyle.Fill;
             otherProfiles.Location = new Point(0, 48);
-            otherProfiles.Margin = new Padding(2, 1, 2, 1);
+            otherProfiles.Margin = new Padding(0);
             otherProfiles.Name = "otherProfiles";
             otherProfiles.ShadowDecoration.CustomizableEdges = customizableEdges2;
             otherProfiles.Size = new Size(340, 0);
@@ -117,6 +122,36 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // guna2Panel1
+            // 
+            guna2Panel1.AutoSize = true;
+            guna2Panel1.BorderColor = Color.FromArgb(106, 106, 106);
+            guna2Panel1.Controls.Add(addProfile);
+            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.Dock = DockStyle.Bottom;
+            guna2Panel1.FillColor = Color.FromArgb(17, 17, 17);
+            guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(0);
+            guna2Panel1.MinimumSize = new Size(340, 48);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.Padding = new Padding(12, 6, 12, 6);
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.Size = new Size(340, 48);
+            guna2Panel1.TabIndex = 10;
+            // 
+            // addProfile
+            // 
+            addProfile.AutoSize = true;
+            addProfile.FlatStyle = FlatStyle.Flat;
+            addProfile.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addProfile.ForeColor = Color.FromArgb(94, 148, 255);
+            addProfile.Location = new Point(74, 14);
+            addProfile.Margin = new Padding(2, 0, 2, 0);
+            addProfile.Name = "addProfile";
+            addProfile.Size = new Size(94, 21);
+            addProfile.TabIndex = 3;
+            addProfile.Text = "Add profile";
+            // 
             // UC_ProfileList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -124,6 +159,7 @@
             BackColor = Color.Transparent;
             Controls.Add(otherProfiles);
             Controls.Add(currentProf);
+            Controls.Add(guna2Panel1);
             Margin = new Padding(2, 1, 2, 1);
             MinimumSize = new Size(340, 48);
             Name = "UC_ProfileList";
@@ -133,15 +169,19 @@
             currentProf.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel otherProfiles;
-        private Guna.UI2.WinForms.Guna2Panel currentProf;
         private PictureBox pictureBox2;
         private Label currentProfileName;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Label addProfile;
+        public Guna.UI2.WinForms.Guna2Panel otherProfiles;
+        public Guna.UI2.WinForms.Guna2Panel currentProf;
     }
 }

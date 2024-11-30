@@ -152,7 +152,7 @@
             assign = new Guna.UI2.WinForms.Guna2Panel();
             keyChoices = new Guna.UI2.WinForms.Guna2Panel();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            iconButton8 = new FontAwesome.Sharp.IconButton();
+            keyTypes = new FontAwesome.Sharp.IconButton();
             iconButton7 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -313,7 +313,7 @@
             // 
             flowLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             flowLayoutPanel2.BackColor = Color.Transparent;
-            flowLayoutPanel2.Controls.Add(iconButton8);
+            flowLayoutPanel2.Controls.Add(keyTypes);
             flowLayoutPanel2.Controls.Add(iconButton7);
             flowLayoutPanel2.Controls.Add(iconButton2);
             flowLayoutPanel2.Controls.Add(iconButton4);
@@ -328,27 +328,27 @@
             flowLayoutPanel2.Size = new Size(133, 38);
             flowLayoutPanel2.TabIndex = 11;
             // 
-            // iconButton8
+            // keyTypes
             // 
-            iconButton8.BackColor = Color.Transparent;
-            iconButton8.FlatAppearance.BorderSize = 0;
-            iconButton8.FlatStyle = FlatStyle.Flat;
-            iconButton8.Font = new Font("Segoe UI", 9F);
-            iconButton8.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            iconButton8.IconColor = Color.White;
-            iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton8.IconSize = 18;
-            iconButton8.ImageAlign = ContentAlignment.MiddleRight;
-            iconButton8.Location = new Point(0, 0);
-            iconButton8.Margin = new Padding(0);
-            iconButton8.Name = "iconButton8";
-            iconButton8.Padding = new Padding(14, 0, 12, 0);
-            iconButton8.Size = new Size(133, 38);
-            iconButton8.TabIndex = 16;
-            iconButton8.Text = "Keys";
-            iconButton8.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton8.TextImageRelation = TextImageRelation.TextBeforeImage;
-            iconButton8.UseVisualStyleBackColor = false;
+            keyTypes.BackColor = Color.Transparent;
+            keyTypes.FlatAppearance.BorderSize = 0;
+            keyTypes.FlatStyle = FlatStyle.Flat;
+            keyTypes.Font = new Font("Segoe UI", 9F);
+            keyTypes.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            keyTypes.IconColor = Color.White;
+            keyTypes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            keyTypes.IconSize = 18;
+            keyTypes.ImageAlign = ContentAlignment.MiddleRight;
+            keyTypes.Location = new Point(0, 0);
+            keyTypes.Margin = new Padding(0);
+            keyTypes.Name = "keyTypes";
+            keyTypes.Padding = new Padding(14, 0, 12, 0);
+            keyTypes.Size = new Size(133, 38);
+            keyTypes.TabIndex = 16;
+            keyTypes.Text = "Keys";
+            keyTypes.TextAlign = ContentAlignment.MiddleLeft;
+            keyTypes.TextImageRelation = TextImageRelation.TextBeforeImage;
+            keyTypes.UseVisualStyleBackColor = false;
             // 
             // iconButton7
             // 
@@ -1679,9 +1679,9 @@
             label6.Location = new Point(8, 8);
             label6.Margin = new Padding(1, 0, 1, 0);
             label6.Name = "label6";
-            label6.Size = new Size(160, 30);
+            label6.Size = new Size(149, 30);
             label6.TabIndex = 0;
-            label6.Text = "Simply drag a key to a finger \r\nto assign it";
+            label6.Text = "Assign a key, command, \r\nor macro to a combination";
             // 
             // panelPreview
             // 
@@ -1826,7 +1826,7 @@
         private Guna.UI2.WinForms.Guna2Panel assign;
         private Guna.UI2.WinForms.Guna2Panel keyChoices;
         private FlowLayoutPanel flowLayoutPanel2;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton keyTypes;
         private FontAwesome.Sharp.IconButton iconButton7;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton4;

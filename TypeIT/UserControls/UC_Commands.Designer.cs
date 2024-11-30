@@ -48,13 +48,13 @@
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Top;
-            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Location = new Point(10, 0);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(492, 33);
+            tableLayoutPanel1.Size = new Size(472, 33);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -64,7 +64,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(246, 33);
+            panel1.Size = new Size(236, 33);
             panel1.TabIndex = 0;
             // 
             // mapping
@@ -72,7 +72,7 @@
             mapping.AutoSize = true;
             mapping.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             mapping.ForeColor = Color.FromArgb(19, 150, 255);
-            mapping.Location = new Point(4, 9);
+            mapping.Location = new Point(1, 9);
             mapping.Name = "mapping";
             mapping.Size = new Size(47, 15);
             mapping.TabIndex = 1;
@@ -82,10 +82,10 @@
             // 
             panel2.Controls.Add(output);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(246, 0);
+            panel2.Location = new Point(236, 0);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(246, 33);
+            panel2.Size = new Size(236, 33);
             panel2.TabIndex = 1;
             // 
             // output
@@ -101,12 +101,12 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(64, 65, 66);
+            panel3.BackColor = Color.FromArgb(125, 64, 65, 66);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 33);
+            panel3.Location = new Point(10, 33);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(492, 1);
+            panel3.Size = new Size(472, 1);
             panel3.TabIndex = 2;
             // 
             // UC_Commands
@@ -118,6 +118,7 @@
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(0);
             Name = "UC_Commands";
+            Padding = new Padding(10, 0, 10, 0);
             Size = new Size(492, 34);
             Load += UC_Key_Load;
             tableLayoutPanel1.ResumeLayout(false);
