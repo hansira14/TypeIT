@@ -18,10 +18,12 @@ namespace TypeIT
         public KeyMappingSet currentSet;
         private List<UC_Sets> setControls = new List<UC_Sets>();
         private string currentKeyMapType = "Keys";
-        public Customize()
+        private Home home;
+        public Customize(Home home)
         {
             InitializeComponent();
             PopulateSets();
+            this.home = home;
         }
         bool expand = false;
         public void PopulateSets()
@@ -218,18 +220,16 @@ namespace TypeIT
 
         private void discardChanges_Click(object sender, EventArgs e)
         {
-            // Remove the temporary profile
             var tempProfile = Program.CurrentSelectedMappingProfile;
             Program.KeyMappingProfiles.Remove(tempProfile);
             
-            // Revert to previous profile
             var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
             Program.CurrentSelectedMappingProfile = previousProfile;
             
-            // Update UI
             PopulateSets();
             saveChanges.Visible = false;
             discardChanges.Visible = false;
+            home.profileList.UpdateCurrentProfile(previousProfile);
         }
 
         private void saveChanges_Click(object sender, EventArgs e)

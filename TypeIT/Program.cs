@@ -61,7 +61,6 @@ namespace TypeIT
                             foreach (var mapping in profile.CurrentMappingsSelected.KeyMappings)
                             {
                                 string values = string.Join(", ", mapping.Value);
-                                // Process the key mapping
                                 Debug.WriteLine($"Key: {mapping.Key}, Value: {values}");
                             }
                         }

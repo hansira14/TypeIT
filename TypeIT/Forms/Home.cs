@@ -10,9 +10,10 @@ namespace TypeIT
         private Form currentForm = null!;
         internal bool isConnected = false;
         List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
-        private UC_ProfileList profileList;
+        public UC_ProfileList profileList;
         private static PictureBox _menuControl;
         public static PictureBox MenuControl => _menuControl;
+        public Customize customizeForm;
 
         //courtney was here
         public Home()
@@ -21,7 +22,7 @@ namespace TypeIT
             _menuControl = menu;
             PopulateKeyMappingProfileComboBox();
 
-            profileList = new UC_ProfileList(Program.CurrentSelectedMappingProfile, Program.KeyMappingProfiles);
+            profileList = new UC_ProfileList(Program.CurrentSelectedMappingProfile, Program.KeyMappingProfiles, this);
             profileList.ProfileSelected += ProfileList_ProfileSelected;
             main.Controls.Add(profileList);
             profileList.Location = new Point(profile.Location.X - profileList.Width - 50, profile.Location.Y);
@@ -103,10 +104,20 @@ namespace TypeIT
                 DwmSetWindowAttribute(Handle, 20, new[] { 1 }, 4);
         }
 
-        private void openForm(Form newForm)
+        public void openForm(Form newForm)
         {
             content.Controls.Clear();
-            if (currentForm != null) currentForm.Close();
+            if (currentForm != null)
+            {
+                if (currentForm is Customize)
+                {
+                    currentForm.Hide();
+                }
+                else
+                {
+                    currentForm.Close();
+                }
+            }
             currentForm = newForm;
             newForm.TopLevel = false;
             newForm.FormBorderStyle = FormBorderStyle.None;
@@ -152,7 +163,11 @@ namespace TypeIT
 
         private void profile_Click(object sender, EventArgs e)
         {
-            openForm(new Customize());
+            if (customizeForm == null || customizeForm.IsDisposed)
+            {
+                customizeForm = new Customize(this);
+            }
+            openForm(customizeForm);
         }
 
         private void ProfileList_ProfileSelected(object sender, KeyMappingProfile selectedProfile)

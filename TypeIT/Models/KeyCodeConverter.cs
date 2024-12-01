@@ -27,6 +27,7 @@ namespace TypeIT.Models
         public static string ConvertToFingerCombination(string keyCode)
         {
             // Remove 'S' prefix and 'E' suffix
+            if (string.IsNullOrEmpty(keyCode)) return "Please set activation";
             if (keyCode.Length != 12 || !keyCode.StartsWith("S") || !keyCode.EndsWith("E"))
                 return keyCode; // Return original if invalid format
 

@@ -17,16 +17,17 @@ namespace TypeIT
         bool isExpanded = false;
         KeyMappingProfile currentProfile;
         List<KeyMappingProfile> allProfiles;
+        private Home home;
 
         public event EventHandler<KeyMappingProfile> ProfileSelected;
 
-        public UC_ProfileList(KeyMappingProfile currentProfile, List<KeyMappingProfile> allProfiles)
+        public UC_ProfileList(KeyMappingProfile currentProfile, List<KeyMappingProfile> allProfiles, Home home)
         {
             InitializeComponent();
 
             this.currentProfile = currentProfile;
             this.allProfiles = allProfiles;
-
+            this.home = home;
             UpdateCurrentProfile(currentProfile);
             PopulateOtherProfiles();
         }
@@ -120,26 +121,29 @@ namespace TypeIT
                         // Add initial set
                         var initialSet = new KeyMappingSet
                         {
-                            ActivationKey = "1",
                             KeyMappings = new Dictionary<string, List<string>>()
                         };
                         tempProfile.Sets.Add("Set 1", initialSet);
                         tempProfile.CurrentMappingsSelected = initialSet;
-                        Program.CurrentSelectedMappingProfile = tempProfile;
-                        // Add to profiles list
+
                         Program.KeyMappingProfiles.Add(tempProfile);
-                        
+                        Program.CurrentSelectedMappingProfile = tempProfile;
+                        tempProfile.CurrentMappingsSelected = initialSet;
+
                         // Update UI
                         UpdateCurrentProfile(tempProfile);
                         
-                        // Access first child of homeForm.content
-                        var customizeForm = homeForm.content.Controls[0] as Customize;
-                        if (customizeForm != null)
+                        // Ensure Customize form is displayed
+                        if (homeForm.customizeForm == null || homeForm.customizeForm.IsDisposed)
                         {
-                            customizeForm.PopulateSets();
-                            customizeForm.saveChanges.Visible = true;
-                            customizeForm.discardChanges.Visible = true;
+                            homeForm.customizeForm = new Customize(homeForm);
                         }
+                        homeForm.openForm(homeForm.customizeForm);
+                        
+                        // Now we can safely access and update the customize form
+                        homeForm.customizeForm.PopulateSets();
+                        homeForm.customizeForm.saveChanges.Visible = true;
+                        homeForm.customizeForm.discardChanges.Visible = true;
                     }
                 };
                 inputForm.ShowDialog();
