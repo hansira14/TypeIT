@@ -56,6 +56,7 @@ namespace TypeIT
                 if (isCurrentSet)
                 {
                     setActivationKey.Text = KeyCodeConverter.ConvertToFingerCombination(Program.CurrentSelectedMappingProfile.CurrentMappingsSelected.ActivationKey);
+                    currentSet = Program.CurrentSelectedMappingProfile.CurrentMappingsSelected;
                 }
 
                 setIndex++;
