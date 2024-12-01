@@ -129,9 +129,6 @@ namespace TypeIT
 
         private async void Form1_Load(object sender, EventArgs e)
         {
-            //Responsive.AdjustWindowSizeForDPI(this);
-
-            //check if autoconnect is successful
             bool autoconnect = await checkTypeITConnection();
             device.Visible = autoconnect;
             notConnected.Visible = !autoconnect;

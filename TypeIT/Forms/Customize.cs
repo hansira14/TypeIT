@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TypeIT.Models;
 using System.Text.Json;
 using System.IO;
+using TypeIT.UserControls;
 
 namespace TypeIT
 {
@@ -19,10 +20,17 @@ namespace TypeIT
         private List<UC_Sets> setControls = new List<UC_Sets>();
         private string currentKeyMapType = "Keys";
         private Home home;
+        private static readonly Color BasicKeysColor = Color.FromArgb(83, 83, 83);
+        private static readonly Color FunctionKeysColor = Color.FromArgb(128, 64, 64);
+        private static readonly Color SpecialKeysColor = Color.FromArgb(64, 128, 64);
+        private static readonly Color ModifierKeysColor = Color.FromArgb(64, 64, 128);
+        private static readonly Color CommandsColor = Color.FromArgb(128, 128, 64);
+
         public Customize(Home home)
         {
             InitializeComponent();
             PopulateSets();
+            PopulateToBeAssignedList();
             this.home = home;
         }
         bool expand = false;
@@ -205,9 +213,12 @@ namespace TypeIT
             currentKeyMapType = ((Button)sender).Text;
             currentKeyType.Text = currentKeyMapType;
             ((Button)sender).Visible = false;
-            keyTypeButton.Visible=(currentKeyType.Text != "Keys");
+            keyTypeButton.Visible = (currentKeyType.Text != "Keys");
             commandTypeButton.Visible = (currentKeyType.Text != "Commands");
             macroTypeButton.Visible = (currentKeyType.Text != "Macros");
+            
+            PopulateToBeAssignedList();
+            
             if (keyChoices.Size == keyChoices.MaximumSize)
             {
                 keyChoices.Size = keyChoices.MinimumSize;
@@ -291,18 +302,15 @@ namespace TypeIT
             // Create a new empty mapping set
             var newSet = new KeyMappingSet
             {
-                ActivationKey = $"Set{nextSetNumber}Key", // Default activation key
+                ActivationKey = "", // Default activation key
                 KeyMappings = new Dictionary<string, List<string>>()
             };
             
-            // Add the new set to the current profile
             Program.CurrentSelectedMappingProfile.Sets.Add(newSet.ActivationKey, newSet);
             
-            // Show save/discard buttons since we've modified the profile
             saveChanges.Visible = true;
             discardChanges.Visible = true;
             
-            // Refresh the sets display
             PopulateSets();
         }
 
@@ -312,6 +320,62 @@ namespace TypeIT
                 .Parent.Parent.Parent.Parent.FullName;
             string folderPath = Path.Combine(projectFolder, "DefaultKeyMappingProfiles");
             return Path.Combine(folderPath, $"{profileName}.json");
+        }
+
+        private void PopulateToBeAssignedList()
+        {
+            toBeAssignedList.Controls.Clear();
+
+            switch (currentKeyMapType)
+            {
+                case "Keys":
+                    // Basic Keys
+                    foreach (var key in KeyboardConstants.BasicKeys)
+                    {
+                        AddKeyControl(key.Key, key.Value, BasicKeysColor);
+                    }
+
+                    // Function Keys
+                    foreach (var key in KeyboardConstants.FunctionKeys)
+                    {
+                        AddKeyControl(key.Key, key.Value, FunctionKeysColor);
+                    }
+
+                    // Special Keys
+                    foreach (var key in KeyboardConstants.SpecialKeys)
+                    {
+                        AddKeyControl(key.Key, key.Value, SpecialKeysColor);
+                    }
+
+                    // Modifier Keys
+                    foreach (var key in KeyboardConstants.ModifierKeys)
+                    {
+                        AddKeyControl(key.Key, key.Value, ModifierKeysColor);
+                    }
+                    break;
+
+                case "Commands":
+                    foreach (var command in KeyboardConstants.CommonCombinations)
+                    {
+                        var commandControl = new UC_Commands(command.Key, string.Join(" + ", command.Value));
+                        commandControl.Dock= DockStyle.Top;
+                        toBeAssignedList.Controls.Add(commandControl);
+                    }
+                    break;
+
+                case "Macros":
+                    // To be implemented later
+                    break;
+            }
+        }
+
+        private void AddKeyControl(string text, string value, Color color)
+        {
+            var keyControl = new UC_KeyCharacter();
+            keyControl.SetKeyDetails(text, value, color);
+            keyControl.Margin = new Padding(0, 0, 15, 17);
+            keyControl.Size = new Size(82, 96);
+            toBeAssignedList.Controls.Add(keyControl);
         }
     }
 }

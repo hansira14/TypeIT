@@ -94,8 +94,8 @@ namespace TypeIT
 
         private void UC_ProfileList_Leave_1(object sender, EventArgs e)
         {
-            isExpanded = false;
-            update_UI();
+            //isExpanded = false;
+            //update_UI();
         }
 
         private void addProfile_Click(object sender, EventArgs e)
