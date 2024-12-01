@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             cancelProfile = new Guna.UI2.WinForms.Guna2Button();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             profileName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,7 +46,7 @@
             // 
             cancelProfile.BackColor = Color.Transparent;
             cancelProfile.BorderRadius = 4;
-            cancelProfile.CustomizableEdges = customizableEdges9;
+            cancelProfile.CustomizableEdges = customizableEdges1;
             cancelProfile.DisabledState.BorderColor = Color.DarkGray;
             cancelProfile.DisabledState.CustomBorderColor = Color.DarkGray;
             cancelProfile.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -57,17 +57,18 @@
             cancelProfile.Location = new Point(191, 328);
             cancelProfile.Margin = new Padding(6);
             cancelProfile.Name = "cancelProfile";
-            cancelProfile.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cancelProfile.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cancelProfile.Size = new Size(147, 79);
             cancelProfile.TabIndex = 17;
             cancelProfile.Text = "Cancel";
+            cancelProfile.Click += cancelProfile_Click;
             // 
             // guna2TextBox2
             // 
             guna2TextBox2.BackColor = Color.Transparent;
             guna2TextBox2.BorderColor = Color.Transparent;
             guna2TextBox2.BorderThickness = 0;
-            guna2TextBox2.CustomizableEdges = customizableEdges11;
+            guna2TextBox2.CustomizableEdges = customizableEdges3;
             guna2TextBox2.DefaultText = "Input name of new profile";
             guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -85,7 +86,7 @@
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.ReadOnly = true;
             guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox2.Size = new Size(322, 69);
             guna2TextBox2.TabIndex = 16;
             // 
@@ -94,7 +95,7 @@
             profileName.BackColor = Color.Transparent;
             profileName.BorderColor = Color.Transparent;
             profileName.BorderRadius = 6;
-            profileName.CustomizableEdges = customizableEdges13;
+            profileName.CustomizableEdges = customizableEdges5;
             profileName.DefaultText = "";
             profileName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             profileName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -110,14 +111,14 @@
             profileName.PasswordChar = '\0';
             profileName.PlaceholderText = "";
             profileName.SelectedText = "";
-            profileName.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            profileName.ShadowDecoration.CustomizableEdges = customizableEdges6;
             profileName.Size = new Size(421, 128);
             profileName.TabIndex = 15;
             // 
             // saveProfileName
             // 
             saveProfileName.BorderRadius = 4;
-            saveProfileName.CustomizableEdges = customizableEdges15;
+            saveProfileName.CustomizableEdges = customizableEdges7;
             saveProfileName.DisabledState.BorderColor = Color.DarkGray;
             saveProfileName.DisabledState.CustomBorderColor = Color.DarkGray;
             saveProfileName.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -127,10 +128,11 @@
             saveProfileName.Location = new Point(359, 328);
             saveProfileName.Margin = new Padding(6);
             saveProfileName.Name = "saveProfileName";
-            saveProfileName.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            saveProfileName.ShadowDecoration.CustomizableEdges = customizableEdges8;
             saveProfileName.Size = new Size(147, 79);
             saveProfileName.TabIndex = 18;
             saveProfileName.Text = "Next";
+            saveProfileName.Click += saveProfileName_Click;
             // 
             // InputProfileName
             // 

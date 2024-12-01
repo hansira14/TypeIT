@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TypeIT.Models;
+using System.Text.Json;
+using System.IO;
 
 namespace TypeIT
 {
@@ -211,6 +213,50 @@ namespace TypeIT
             else
             {
                 keyChoices.Size = keyChoices.MaximumSize;
+            }
+        }
+
+        private void discardChanges_Click(object sender, EventArgs e)
+        {
+            // Remove the temporary profile
+            var tempProfile = Program.CurrentSelectedMappingProfile;
+            Program.KeyMappingProfiles.Remove(tempProfile);
+            
+            // Revert to previous profile
+            var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
+            Program.CurrentSelectedMappingProfile = previousProfile;
+            
+            // Update UI
+            PopulateSets();
+            saveChanges.Visible = false;
+            discardChanges.Visible = false;
+        }
+
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            // Save the current profile to JSON
+            string projectFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)
+                .Parent.Parent.Parent.Parent.FullName;
+            string folderPath = Path.Combine(projectFolder, "DefaultKeyMappingProfiles");
+            string fileName = $"{Program.CurrentSelectedMappingProfile.Name}.json";
+            string filePath = Path.Combine(folderPath, fileName);
+
+            try
+            {
+                string jsonContent = JsonSerializer.Serialize(Program.CurrentSelectedMappingProfile, 
+                    new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(filePath, jsonContent);
+                
+                saveChanges.Visible = false;
+                discardChanges.Visible = false;
+                
+                MessageBox.Show("Profile saved successfully!", "Success", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving profile: {ex.Message}", "Error", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

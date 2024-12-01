@@ -263,7 +263,6 @@
         #endregion
 
         private Panel main;
-        private Panel content;
         private Guna.UI2.WinForms.Guna2Panel device;
         private Panel panel1;
         private PictureBox pictureBox3;
@@ -275,5 +274,6 @@
         private PictureBox profile;
         private PictureBox notConnected;
         public PictureBox menu;
+        public Panel content;
     }
 }

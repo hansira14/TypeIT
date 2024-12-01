@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TypeIT.Forms;
 using TypeIT.Models;
 
 namespace TypeIT
@@ -98,7 +99,51 @@ namespace TypeIT
 
         private void addProfile_Click(object sender, EventArgs e)
         {
+            var inputForm = new InputProfileName();
+            var homeForm = Application.OpenForms.OfType<Home>().FirstOrDefault();
+            
+            if (homeForm != null)
+            {
+                homeForm.Enabled = false;
+                inputForm.FormClosed += (s, args) => 
+                {
+                    homeForm.Enabled = true;
+                    if (inputForm.DialogResult == DialogResult.OK && !string.IsNullOrWhiteSpace(inputForm.ProfileName))
+                    {
+                        // Create temporary profile
+                        var tempProfile = new KeyMappingProfile
+                        {
+                            Name = inputForm.ProfileName,
+                            Sets = new Dictionary<string, KeyMappingSet>()
+                        };
 
+                        // Add initial set
+                        var initialSet = new KeyMappingSet
+                        {
+                            ActivationKey = "1",
+                            KeyMappings = new Dictionary<string, List<string>>()
+                        };
+                        tempProfile.Sets.Add("Set 1", initialSet);
+                        tempProfile.CurrentMappingsSelected = initialSet;
+                        Program.CurrentSelectedMappingProfile = tempProfile;
+                        // Add to profiles list
+                        Program.KeyMappingProfiles.Add(tempProfile);
+                        
+                        // Update UI
+                        UpdateCurrentProfile(tempProfile);
+                        
+                        // Access first child of homeForm.content
+                        var customizeForm = homeForm.content.Controls[0] as Customize;
+                        if (customizeForm != null)
+                        {
+                            customizeForm.PopulateSets();
+                            customizeForm.saveChanges.Visible = true;
+                            customizeForm.discardChanges.Visible = true;
+                        }
+                    }
+                };
+                inputForm.ShowDialog();
+            }
         }
     }
 

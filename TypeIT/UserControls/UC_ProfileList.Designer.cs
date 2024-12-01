@@ -53,11 +53,11 @@
             otherProfiles.BackColor = Color.FromArgb(17, 17, 17);
             otherProfiles.CustomizableEdges = customizableEdges1;
             otherProfiles.Dock = DockStyle.Fill;
-            otherProfiles.Location = new Point(0, 48);
+            otherProfiles.Location = new Point(0, 102);
             otherProfiles.Margin = new Padding(0);
             otherProfiles.Name = "otherProfiles";
             otherProfiles.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            otherProfiles.Size = new Size(340, 0);
+            otherProfiles.Size = new Size(631, 0);
             otherProfiles.TabIndex = 7;
             // 
             // currentProf
@@ -74,11 +74,11 @@
             currentProf.FillColor = Color.FromArgb(17, 17, 17);
             currentProf.Location = new Point(0, 0);
             currentProf.Margin = new Padding(0);
-            currentProf.MinimumSize = new Size(340, 48);
+            currentProf.MinimumSize = new Size(631, 102);
             currentProf.Name = "currentProf";
-            currentProf.Padding = new Padding(12, 6, 12, 6);
+            currentProf.Padding = new Padding(22, 13, 22, 13);
             currentProf.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            currentProf.Size = new Size(340, 48);
+            currentProf.Size = new Size(631, 102);
             currentProf.TabIndex = 8;
             currentProf.Click += currentProf_Click;
             // 
@@ -86,11 +86,11 @@
             // 
             pictureBox2.Dock = DockStyle.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(318, 6);
-            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Location = new Point(590, 13);
+            pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Padding = new Padding(15);
-            pictureBox2.Size = new Size(10, 36);
+            pictureBox2.Padding = new Padding(28, 32, 28, 32);
+            pictureBox2.Size = new Size(19, 76);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
@@ -101,10 +101,10 @@
             currentProfileName.FlatStyle = FlatStyle.Flat;
             currentProfileName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             currentProfileName.ForeColor = Color.White;
-            currentProfileName.Location = new Point(62, 14);
-            currentProfileName.Margin = new Padding(2, 0, 2, 0);
+            currentProfileName.Location = new Point(115, 30);
+            currentProfileName.Margin = new Padding(4, 0, 4, 0);
             currentProfileName.Name = "currentProfileName";
-            currentProfileName.Size = new Size(63, 21);
+            currentProfileName.Size = new Size(127, 45);
             currentProfileName.TabIndex = 3;
             currentProfileName.Text = "Default";
             currentProfileName.Click += currentProfileName_Click;
@@ -113,11 +113,11 @@
             // 
             pictureBox1.Dock = DockStyle.Left;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 6);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Location = new Point(22, 13);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Padding = new Padding(15);
-            pictureBox1.Size = new Size(32, 36);
+            pictureBox1.Padding = new Padding(28, 32, 28, 32);
+            pictureBox1.Size = new Size(59, 76);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -132,11 +132,11 @@
             guna2Panel1.FillColor = Color.FromArgb(17, 17, 17);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(0);
-            guna2Panel1.MinimumSize = new Size(340, 48);
+            guna2Panel1.MinimumSize = new Size(631, 102);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Padding = new Padding(12, 6, 12, 6);
+            guna2Panel1.Padding = new Padding(22, 13, 22, 13);
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel1.Size = new Size(340, 48);
+            guna2Panel1.Size = new Size(631, 102);
             guna2Panel1.TabIndex = 10;
             // 
             // addProfile
@@ -145,25 +145,26 @@
             addProfile.FlatStyle = FlatStyle.Flat;
             addProfile.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             addProfile.ForeColor = Color.FromArgb(94, 148, 255);
-            addProfile.Location = new Point(74, 14);
-            addProfile.Margin = new Padding(2, 0, 2, 0);
+            addProfile.Location = new Point(137, 30);
+            addProfile.Margin = new Padding(4, 0, 4, 0);
             addProfile.Name = "addProfile";
-            addProfile.Size = new Size(94, 21);
+            addProfile.Size = new Size(181, 45);
             addProfile.TabIndex = 3;
             addProfile.Text = "Add profile";
+            addProfile.Click += addProfile_Click;
             // 
             // UC_ProfileList
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(otherProfiles);
             Controls.Add(currentProf);
             Controls.Add(guna2Panel1);
-            Margin = new Padding(2, 1, 2, 1);
-            MinimumSize = new Size(340, 48);
+            Margin = new Padding(4, 2, 4, 2);
+            MinimumSize = new Size(631, 102);
             Name = "UC_ProfileList";
-            Size = new Size(340, 48);
+            Size = new Size(631, 102);
             Leave += UC_ProfileList_Leave_1;
             currentProf.ResumeLayout(false);
             currentProf.PerformLayout();
