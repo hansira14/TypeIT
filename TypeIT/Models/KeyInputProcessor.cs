@@ -10,14 +10,14 @@ namespace TypeIT.Models
         private const int COMBINATION_WINDOW_MS = 50; // Time window for combining keypresses
         private string currentState = "S0000000000E";
         private string pendingState = "S0000000000E";
-        private Timer combinationTimer;
+        private System.Timers.Timer combinationTimer;
         private bool isProcessing = false;
 
         public event EventHandler<string> KeyStateProcessed;
 
         public KeyInputProcessor()
         {
-            combinationTimer = new Timer(COMBINATION_WINDOW_MS);
+            combinationTimer = new System.Timers.Timer(COMBINATION_WINDOW_MS);
             combinationTimer.AutoReset = false;
             combinationTimer.Elapsed += ProcessPendingState;
         }

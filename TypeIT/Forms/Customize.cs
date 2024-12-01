@@ -171,5 +171,28 @@ namespace TypeIT
         {
             assignOptions.Visible = !assignOptions.Visible;
         }
+
+        private void singleKeyButton_Click(object sender, EventArgs e)
+        {
+            assignSingleKey.Visible = true;
+            keySet.Visible = false;
+            recordCombination.Visible = false;
+            assignOptions.Visible = false;
+        }
+
+        private void combinationButton_Click(object sender, EventArgs e)
+        {
+            recordCombination.Visible = true;
+            keySet.Visible = false;
+            assignSingleKey.Visible = false;
+            assignOptions.Visible = false;
+        }
+
+        private void cancelRecord_Click(object sender, EventArgs e)
+        {
+            keySet.Visible = true;
+            recordCombination.Visible = false;
+            assignSingleKey.Visible = false;
+        }
     }
 }
