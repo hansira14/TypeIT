@@ -30,8 +30,23 @@ namespace TypeIT.UserControls
 
         private void UC_Finger_DragDrop(object sender, DragEventArgs e)
         {
-            string keyValue = (string)e.Data.GetData(typeof(string));
-            mapping.Text = keyValue;
+            string displayText = null;
+            string commandValue = null;
+
+            // Check if this is a command drag-drop
+            if (e.Data.GetDataPresent("DisplayText") && e.Data.GetDataPresent("Command"))
+            {
+                displayText = (string)e.Data.GetData("DisplayText");
+                commandValue = (string)e.Data.GetData("Command");
+            }
+            else
+            {
+                // Handle regular key drag-drop
+                commandValue = (string)e.Data.GetData(typeof(string));
+                displayText = commandValue;
+            }
+
+            mapping.Text = displayText;
             e.Effect = DragDropEffects.All;
 
             if (_parentForm?.currentSet != null)
@@ -39,14 +54,14 @@ namespace TypeIT.UserControls
                 // Get the finger mapping based on the control name
                 string fingerMapping = _parentForm.UpdateFingerMapping(this.Name);
                 
-                // Update or add the mapping
+                // Update or add the mapping using the actual command value
                 if (_parentForm.currentSet.KeyMappings.ContainsKey(fingerMapping))
                 {
-                    _parentForm.currentSet.KeyMappings[fingerMapping] = new List<string> { keyValue };
+                    _parentForm.currentSet.KeyMappings[fingerMapping] = new List<string> { commandValue };
                 }
                 else
                 {
-                    _parentForm.currentSet.KeyMappings.Add(fingerMapping, new List<string> { keyValue });
+                    _parentForm.currentSet.KeyMappings.Add(fingerMapping, new List<string> { commandValue });
                 }
 
                 // Show save/discard buttons

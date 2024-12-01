@@ -38,7 +38,12 @@ namespace TypeIT
 
         private void command_MouseDown(object sender, MouseEventArgs e)
         {
-            DoDragDrop(KeyCombination, DragDropEffects.All);
+            // Create a custom data object that contains both the display text and actual command
+            var dragData = new DataObject();
+            dragData.SetData("DisplayText", KeyCombination);
+            dragData.SetData("Command", Command);
+            
+            DoDragDrop(dragData, DragDropEffects.All);
         }
     }
 }

@@ -66,6 +66,8 @@ namespace TypeIT
             {
                 PopulateKeyMappings(Program.CurrentSelectedMappingProfile.CurrentMappingsSelected);
             }
+
+            UpdateFingerMappingsDisplay();
         }
         public void PopulateKeyMappings(KeyMappingSet mappingSet)
         {
@@ -90,6 +92,8 @@ namespace TypeIT
             }
             keyMaps.PerformLayout();
             keyMaps.Visible = true;
+
+            UpdateFingerMappingsDisplay();
         }
         private void SetControl_Selected(object sender, EventArgs e)
         {
@@ -114,6 +118,8 @@ namespace TypeIT
                 // Populate the key mappings
                 PopulateKeyMappings(mappingSet);
             }
+
+            UpdateFingerMappingsDisplay();
         }
         private void assignButton_Click(object sender, EventArgs e)
         {
@@ -419,6 +425,56 @@ namespace TypeIT
             rightMiddle.ParentForm = this;
             rightRing.ParentForm = this;
             rightPinky.ParentForm = this;
+        }
+
+        public void UpdateFingerMappingsDisplay()
+        {
+            // Clear all finger displays first
+            leftPinky.mapping.Text = "";
+            leftRing.mapping.Text = "";
+            leftMiddle.mapping.Text = "";
+            leftIndex.mapping.Text = "";
+            leftThumb.mapping.Text = "";
+            rightThumb.mapping.Text = "";
+            rightIndex.mapping.Text = "";
+            rightMiddle.mapping.Text = "";
+            rightRing.mapping.Text = "";
+            rightPinky.mapping.Text = "";
+
+            if (currentSet?.KeyMappings == null) return;
+
+            // Dictionary to map finger positions to controls
+            var fingerControls = new Dictionary<int, UC_Finger>
+            {
+                {1, leftPinky},
+                {2, leftRing},
+                {3, leftMiddle},
+                {4, leftIndex},
+                {5, leftThumb},
+                {6, rightThumb},
+                {7, rightIndex},
+                {8, rightMiddle},
+                {9, rightRing},
+                {10, rightPinky}
+            };
+
+            foreach (var mapping in currentSet.KeyMappings)
+            {
+                string fingerCode = mapping.Key;
+                if (fingerCode.Length != 12 || !fingerCode.StartsWith("S") || !fingerCode.EndsWith("E"))
+                    continue;
+
+                // Find which finger position has '1'
+                for (int i = 1; i <= 10; i++)
+                {
+                    if (fingerCode[i] == '1' && fingerControls.ContainsKey(i))
+                    {
+                        // Display the first command/key for this finger
+                        fingerControls[i].mapping.Text = string.Join(" + ", mapping.Value);
+                        break;
+                    }
+                }
+            }
         }
     }
 }
