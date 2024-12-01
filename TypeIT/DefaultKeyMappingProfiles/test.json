@@ -23,7 +23,11 @@
     },
     {
       "activation key": "Set2Key",
-      "mappings": {}
+      "mappings": {
+        "S0000100000E": [
+          "^ \u002B Z"
+        ]
+      }
     }
   ]
 }

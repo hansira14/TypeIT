@@ -28,6 +28,7 @@ namespace TypeIT
             profileList.Location = new Point(profile.Location.X - profileList.Width - 50, profile.Location.Y);
             profileList.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             main.Controls.SetChildIndex(profileList, 0);
+            content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
         }
 
         private void PopulateKeyMappingProfileComboBox()
@@ -132,7 +133,6 @@ namespace TypeIT
             bool autoconnect = await checkTypeITConnection();
             device.Visible = autoconnect;
             notConnected.Visible = !autoconnect;
-            content.Height = (int)(this.Height - (profileList.Height * 1.5 + profileList.Location.Y));
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace TypeIT
             int newDeviceY = (contentHeight - deviceHeight) / 2 - 50;
             device.Location = new Point(newDeviceX, newDeviceY);
 
-            content.Height = (int)(this.Height - (profileList.Height * 1.5 + profileList.Location.Y));
+            content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
         }
 
         private void notConnected_Click(object sender, EventArgs e)
