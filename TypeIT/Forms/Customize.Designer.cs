@@ -185,7 +185,8 @@
             panelMenu = new Panel();
             assignSingleKey = new Guna.UI2.WinForms.Guna2Panel();
             keyChoices = new Guna.UI2.WinForms.Guna2Panel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
+            keyTypeList = new FlowLayoutPanel();
+            currentKeyType = new FontAwesome.Sharp.IconButton();
             keyTypeButton = new FontAwesome.Sharp.IconButton();
             commandTypeButton = new FontAwesome.Sharp.IconButton();
             macroTypeButton = new FontAwesome.Sharp.IconButton();
@@ -296,7 +297,7 @@
             panelMenu.SuspendLayout();
             assignSingleKey.SuspendLayout();
             keyChoices.SuspendLayout();
-            flowLayoutPanel2.SuspendLayout();
+            keyTypeList.SuspendLayout();
             toBeAssignedList.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -369,12 +370,12 @@
             keyChoices.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             keyChoices.BackColor = Color.Transparent;
             keyChoices.BorderRadius = 4;
-            keyChoices.Controls.Add(flowLayoutPanel2);
+            keyChoices.Controls.Add(keyTypeList);
             keyChoices.CustomizableEdges = customizableEdges1;
             keyChoices.FillColor = Color.DarkGray;
             keyChoices.Location = new Point(471, 96);
             keyChoices.Margin = new Padding(6);
-            keyChoices.MaximumSize = new Size(247, 486);
+            keyChoices.MaximumSize = new Size(247, 248);
             keyChoices.MinimumSize = new Size(247, 81);
             keyChoices.Name = "keyChoices";
             keyChoices.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -382,21 +383,45 @@
             keyChoices.TabIndex = 18;
             keyChoices.Leave += keyChoices_Leave;
             // 
-            // flowLayoutPanel2
+            // keyTypeList
             // 
-            flowLayoutPanel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            flowLayoutPanel2.BackColor = Color.Transparent;
-            flowLayoutPanel2.Controls.Add(keyTypeButton);
-            flowLayoutPanel2.Controls.Add(commandTypeButton);
-            flowLayoutPanel2.Controls.Add(macroTypeButton);
-            flowLayoutPanel2.Dock = DockStyle.Fill;
-            flowLayoutPanel2.Location = new Point(0, 0);
-            flowLayoutPanel2.Margin = new Padding(2);
-            flowLayoutPanel2.MaximumSize = new Size(247, 486);
-            flowLayoutPanel2.MinimumSize = new Size(247, 81);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(247, 81);
-            flowLayoutPanel2.TabIndex = 11;
+            keyTypeList.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            keyTypeList.BackColor = Color.Transparent;
+            keyTypeList.Controls.Add(currentKeyType);
+            keyTypeList.Controls.Add(keyTypeButton);
+            keyTypeList.Controls.Add(commandTypeButton);
+            keyTypeList.Controls.Add(macroTypeButton);
+            keyTypeList.Dock = DockStyle.Fill;
+            keyTypeList.Location = new Point(0, 0);
+            keyTypeList.Margin = new Padding(2);
+            keyTypeList.MaximumSize = new Size(247, 486);
+            keyTypeList.MinimumSize = new Size(247, 81);
+            keyTypeList.Name = "keyTypeList";
+            keyTypeList.Size = new Size(247, 81);
+            keyTypeList.TabIndex = 11;
+            // 
+            // currentKeyType
+            // 
+            currentKeyType.BackColor = Color.Transparent;
+            currentKeyType.FlatAppearance.BorderSize = 0;
+            currentKeyType.FlatStyle = FlatStyle.Flat;
+            currentKeyType.Font = new Font("Segoe UI", 9F);
+            currentKeyType.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            currentKeyType.IconColor = Color.White;
+            currentKeyType.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            currentKeyType.IconSize = 18;
+            currentKeyType.ImageAlign = ContentAlignment.MiddleRight;
+            currentKeyType.Location = new Point(0, 0);
+            currentKeyType.Margin = new Padding(0);
+            currentKeyType.Name = "currentKeyType";
+            currentKeyType.Padding = new Padding(26, 0, 22, 0);
+            currentKeyType.Size = new Size(247, 81);
+            currentKeyType.TabIndex = 16;
+            currentKeyType.Text = "Keys";
+            currentKeyType.TextAlign = ContentAlignment.MiddleLeft;
+            currentKeyType.TextImageRelation = TextImageRelation.TextBeforeImage;
+            currentKeyType.UseVisualStyleBackColor = false;
+            currentKeyType.Click += keyChoice_Click;
             // 
             // keyTypeButton
             // 
@@ -405,21 +430,22 @@
             keyTypeButton.FlatStyle = FlatStyle.Flat;
             keyTypeButton.Font = new Font("Segoe UI", 9F);
             keyTypeButton.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            keyTypeButton.IconColor = Color.White;
+            keyTypeButton.IconColor = Color.Transparent;
             keyTypeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             keyTypeButton.IconSize = 18;
             keyTypeButton.ImageAlign = ContentAlignment.MiddleRight;
-            keyTypeButton.Location = new Point(0, 0);
+            keyTypeButton.Location = new Point(0, 81);
             keyTypeButton.Margin = new Padding(0);
             keyTypeButton.Name = "keyTypeButton";
             keyTypeButton.Padding = new Padding(26, 0, 22, 0);
             keyTypeButton.Size = new Size(247, 81);
-            keyTypeButton.TabIndex = 16;
+            keyTypeButton.TabIndex = 18;
             keyTypeButton.Text = "Keys";
             keyTypeButton.TextAlign = ContentAlignment.MiddleLeft;
             keyTypeButton.TextImageRelation = TextImageRelation.TextBeforeImage;
             keyTypeButton.UseVisualStyleBackColor = false;
-            keyTypeButton.Click += keyChoice_Click;
+            keyTypeButton.Visible = false;
+            keyTypeButton.Click += keyTypeButton_Click;
             // 
             // commandTypeButton
             // 
@@ -432,7 +458,7 @@
             commandTypeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             commandTypeButton.IconSize = 18;
             commandTypeButton.ImageAlign = ContentAlignment.MiddleRight;
-            commandTypeButton.Location = new Point(0, 81);
+            commandTypeButton.Location = new Point(0, 162);
             commandTypeButton.Margin = new Padding(0);
             commandTypeButton.Name = "commandTypeButton";
             commandTypeButton.Padding = new Padding(26, 0, 22, 0);
@@ -442,7 +468,7 @@
             commandTypeButton.TextAlign = ContentAlignment.MiddleLeft;
             commandTypeButton.TextImageRelation = TextImageRelation.TextBeforeImage;
             commandTypeButton.UseVisualStyleBackColor = false;
-            commandTypeButton.Click += keyChoice_Click;
+            commandTypeButton.Click += keyTypeButton_Click;
             // 
             // macroTypeButton
             // 
@@ -455,7 +481,7 @@
             macroTypeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             macroTypeButton.IconSize = 18;
             macroTypeButton.ImageAlign = ContentAlignment.MiddleRight;
-            macroTypeButton.Location = new Point(0, 162);
+            macroTypeButton.Location = new Point(0, 243);
             macroTypeButton.Margin = new Padding(0);
             macroTypeButton.Name = "macroTypeButton";
             macroTypeButton.Padding = new Padding(26, 0, 22, 0);
@@ -465,7 +491,7 @@
             macroTypeButton.TextAlign = ContentAlignment.MiddleLeft;
             macroTypeButton.TextImageRelation = TextImageRelation.TextBeforeImage;
             macroTypeButton.UseVisualStyleBackColor = false;
-            macroTypeButton.Click += keyChoice_Click;
+            macroTypeButton.Click += keyTypeButton_Click;
             // 
             // toBeAssignedList
             // 
@@ -2307,7 +2333,7 @@
             panelMenu.PerformLayout();
             assignSingleKey.ResumeLayout(false);
             keyChoices.ResumeLayout(false);
-            flowLayoutPanel2.ResumeLayout(false);
+            keyTypeList.ResumeLayout(false);
             toBeAssignedList.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
@@ -2349,8 +2375,8 @@
         private FontAwesome.Sharp.IconButton addSet;
         private Guna.UI2.WinForms.Guna2Panel assignSingleKey;
         private Guna.UI2.WinForms.Guna2Panel keyChoices;
-        private FlowLayoutPanel flowLayoutPanel2;
-        private FontAwesome.Sharp.IconButton keyTypeButton;
+        private FlowLayoutPanel keyTypeList;
+        private FontAwesome.Sharp.IconButton currentKeyType;
         private FontAwesome.Sharp.IconButton commandTypeButton;
         private FontAwesome.Sharp.IconButton macroTypeButton;
         private FlowLayoutPanel toBeAssignedList;
@@ -2445,5 +2471,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button discardChanges;
         private Guna.UI2.WinForms.Guna2Button saveChanges;
+        private FontAwesome.Sharp.IconButton keyTypeButton;
     }
 }

@@ -15,6 +15,7 @@ namespace TypeIT
     {
         public KeyMappingSet currentSet;
         private List<UC_Sets> setControls = new List<UC_Sets>();
+        private string currentKeyMapType = "Keys";
         public Customize()
         {
             InitializeComponent();
@@ -109,13 +110,13 @@ namespace TypeIT
 
         private void keyChoice_Click(object sender, EventArgs e)
         {
-            if (keyChoices.Size == new Size(133, 228))
+            if (keyChoices.Size == keyChoices.MaximumSize)
             {
-                keyChoices.Size = new Size(133, 38);
+                keyChoices.Size = keyChoices.MinimumSize;
             }
             else
             {
-                keyChoices.Size = new Size(133, 228);
+                keyChoices.Size = keyChoices.MaximumSize;
             }
         }
 
@@ -193,6 +194,24 @@ namespace TypeIT
             keySet.Visible = true;
             recordCombination.Visible = false;
             assignSingleKey.Visible = false;
+        }
+
+        private void keyTypeButton_Click(object sender, EventArgs e)
+        {
+            currentKeyMapType = ((Button)sender).Text;
+            currentKeyType.Text = currentKeyMapType;
+            ((Button)sender).Visible = false;
+            keyTypeButton.Visible=(currentKeyType.Text != "Keys");
+            commandTypeButton.Visible = (currentKeyType.Text != "Commands");
+            macroTypeButton.Visible = (currentKeyType.Text != "Macros");
+            if (keyChoices.Size == keyChoices.MaximumSize)
+            {
+                keyChoices.Size = keyChoices.MinimumSize;
+            }
+            else
+            {
+                keyChoices.Size = keyChoices.MaximumSize;
+            }
         }
     }
 }
