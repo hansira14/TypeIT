@@ -25,7 +25,7 @@ namespace TypeIT
             InitializeComponent();
             KeyCombination = keyCombination;
             Command = command;
-            
+
             mapping.Text = keyCombination;
             output.Text = command;
         }
@@ -34,6 +34,11 @@ namespace TypeIT
         {
             mapping.Top = (this.Height - mapping.Height) / 2;
             output.Top = (this.Height - output.Height) / 2;
+        }
+
+        private void command_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(KeyCombination, DragDropEffects.All);
         }
     }
 }

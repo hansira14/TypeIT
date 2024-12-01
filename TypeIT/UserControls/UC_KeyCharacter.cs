@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TypeIT.UserControls
 {
-    public partial class UC_KeyCharacter: UserControl
+    public partial class UC_KeyCharacter : UserControl
     {
         public string KeyText { get; private set; }
         public string KeyValue { get; private set; }
@@ -28,6 +28,11 @@ namespace TypeIT.UserControls
             KeyColor = color;
             guna2Button4.Text = text;
             guna2Button4.FillColor = color;
+        }
+
+        private void guna2Button4_MouseDown(object sender, MouseEventArgs e)
+        {
+            DoDragDrop(KeyText, DragDropEffects.All);
         }
     }
 }

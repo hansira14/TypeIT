@@ -101,21 +101,12 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             panelPreview = new Panel();
+            uC_Finger1 = new UserControls.UC_Finger();
             discardChanges = new Guna.UI2.WinForms.Guna2Button();
             saveChanges = new Guna.UI2.WinForms.Guna2Button();
             assignOptions = new Guna.UI2.WinForms.Guna2Panel();
             combinationButton = new Guna.UI2.WinForms.Guna2Button();
             singleKeyButton = new Guna.UI2.WinForms.Guna2Button();
-            rightPinky = new Panel();
-            rightRing = new Panel();
-            rightMiddle = new Panel();
-            rightIndex = new Panel();
-            rightThumb = new Panel();
-            leftThumb = new Panel();
-            leftIndex = new Panel();
-            leftMiddle = new Panel();
-            leftRing = new Panel();
-            leftPinky = new Panel();
             Main.SuspendLayout();
             panelMenu.SuspendLayout();
             assignSingleKey.SuspendLayout();
@@ -745,25 +736,26 @@
             // 
             // panelPreview
             // 
+            panelPreview.Controls.Add(uC_Finger1);
             panelPreview.Controls.Add(discardChanges);
             panelPreview.Controls.Add(saveChanges);
             panelPreview.Controls.Add(assignOptions);
-            panelPreview.Controls.Add(rightPinky);
-            panelPreview.Controls.Add(rightRing);
-            panelPreview.Controls.Add(rightMiddle);
-            panelPreview.Controls.Add(rightIndex);
-            panelPreview.Controls.Add(rightThumb);
-            panelPreview.Controls.Add(leftThumb);
-            panelPreview.Controls.Add(leftIndex);
-            panelPreview.Controls.Add(leftMiddle);
-            panelPreview.Controls.Add(leftRing);
-            panelPreview.Controls.Add(leftPinky);
             panelPreview.Dock = DockStyle.Fill;
             panelPreview.Location = new Point(777, 6);
             panelPreview.Margin = new Padding(6);
             panelPreview.Name = "panelPreview";
             panelPreview.Size = new Size(1420, 1328);
             panelPreview.TabIndex = 13;
+            // 
+            // uC_Finger1
+            // 
+            uC_Finger1.AllowDrop = true;
+            uC_Finger1.Location = new Point(580, 624);
+            uC_Finger1.MaximumSize = new Size(205, 100);
+            uC_Finger1.MinimumSize = new Size(205, 100);
+            uC_Finger1.Name = "uC_Finger1";
+            uC_Finger1.Size = new Size(205, 100);
+            uC_Finger1.TabIndex = 24;
             // 
             // discardChanges
             // 
@@ -871,96 +863,6 @@
             singleKeyButton.Text = "Single Key";
             singleKeyButton.Click += singleKeyButton_Click;
             // 
-            // rightPinky
-            // 
-            rightPinky.BackColor = Color.Red;
-            rightPinky.Location = new Point(992, 979);
-            rightPinky.Margin = new Padding(6);
-            rightPinky.Name = "rightPinky";
-            rightPinky.Size = new Size(136, 79);
-            rightPinky.TabIndex = 20;
-            // 
-            // rightRing
-            // 
-            rightRing.BackColor = Color.Red;
-            rightRing.Location = new Point(938, 873);
-            rightRing.Margin = new Padding(6);
-            rightRing.Name = "rightRing";
-            rightRing.Size = new Size(136, 79);
-            rightRing.TabIndex = 17;
-            // 
-            // rightMiddle
-            // 
-            rightMiddle.BackColor = Color.Red;
-            rightMiddle.Location = new Point(758, 847);
-            rightMiddle.Margin = new Padding(6);
-            rightMiddle.Name = "rightMiddle";
-            rightMiddle.Size = new Size(136, 79);
-            rightMiddle.TabIndex = 18;
-            // 
-            // rightIndex
-            // 
-            rightIndex.BackColor = Color.Red;
-            rightIndex.Location = new Point(587, 873);
-            rightIndex.Margin = new Padding(6);
-            rightIndex.Name = "rightIndex";
-            rightIndex.Size = new Size(136, 79);
-            rightIndex.TabIndex = 19;
-            // 
-            // rightThumb
-            // 
-            rightThumb.BackColor = Color.Red;
-            rightThumb.Location = new Point(492, 979);
-            rightThumb.Margin = new Padding(6);
-            rightThumb.Name = "rightThumb";
-            rightThumb.Size = new Size(136, 79);
-            rightThumb.TabIndex = 16;
-            // 
-            // leftThumb
-            // 
-            leftThumb.BackColor = Color.Red;
-            leftThumb.Location = new Point(975, 585);
-            leftThumb.Margin = new Padding(6);
-            leftThumb.Name = "leftThumb";
-            leftThumb.Size = new Size(136, 79);
-            leftThumb.TabIndex = 15;
-            // 
-            // leftIndex
-            // 
-            leftIndex.BackColor = Color.Red;
-            leftIndex.Location = new Point(921, 478);
-            leftIndex.Margin = new Padding(6);
-            leftIndex.Name = "leftIndex";
-            leftIndex.Size = new Size(136, 79);
-            leftIndex.TabIndex = 14;
-            // 
-            // leftMiddle
-            // 
-            leftMiddle.BackColor = Color.Red;
-            leftMiddle.Location = new Point(741, 452);
-            leftMiddle.Margin = new Padding(6);
-            leftMiddle.Name = "leftMiddle";
-            leftMiddle.Size = new Size(136, 79);
-            leftMiddle.TabIndex = 14;
-            // 
-            // leftRing
-            // 
-            leftRing.BackColor = Color.Red;
-            leftRing.Location = new Point(570, 478);
-            leftRing.Margin = new Padding(6);
-            leftRing.Name = "leftRing";
-            leftRing.Size = new Size(136, 79);
-            leftRing.TabIndex = 14;
-            // 
-            // leftPinky
-            // 
-            leftPinky.BackColor = Color.Red;
-            leftPinky.Location = new Point(475, 585);
-            leftPinky.Margin = new Padding(6);
-            leftPinky.Name = "leftPinky";
-            leftPinky.Size = new Size(136, 79);
-            leftPinky.TabIndex = 13;
-            // 
             // Customize
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -1032,16 +934,6 @@
         private Panel panel1;
         private FontAwesome.Sharp.IconButton closeAssign;
         private Panel panelPreview;
-        private Panel leftThumb;
-        private Panel leftIndex;
-        private Panel leftMiddle;
-        private Panel leftRing;
-        private Panel leftPinky;
-        private Panel rightPinky;
-        private Panel rightRing;
-        private Panel rightMiddle;
-        private Panel rightIndex;
-        private Panel rightThumb;
         private Guna.UI2.WinForms.Guna2Panel keyMaps;
         private Guna.UI2.WinForms.Guna2Button assignMapping;
         private Guna.UI2.WinForms.Guna2Panel assignOptions;
@@ -1057,5 +949,6 @@
         public Guna.UI2.WinForms.Guna2Button discardChanges;
         public Guna.UI2.WinForms.Guna2Button saveChanges;
         private FlowLayoutPanel toBeAssignedList;
+        private UserControls.UC_Finger uC_Finger1;
     }
 }

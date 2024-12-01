@@ -36,6 +36,7 @@
             // guna2Button4
             // 
             guna2Button4.BorderRadius = 4;
+            guna2Button4.Cursor = Cursors.Hand;
             guna2Button4.CustomizableEdges = customizableEdges1;
             guna2Button4.DisabledState.BorderColor = Color.DarkGray;
             guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -51,6 +52,7 @@
             guna2Button4.Size = new Size(82, 96);
             guna2Button4.TabIndex = 1;
             guna2Button4.Text = "A";
+            guna2Button4.MouseDown += guna2Button4_MouseDown;
             // 
             // UC_KeyCharacter
             // 

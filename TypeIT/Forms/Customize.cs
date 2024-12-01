@@ -216,9 +216,9 @@ namespace TypeIT
             keyTypeButton.Visible = (currentKeyType.Text != "Keys");
             commandTypeButton.Visible = (currentKeyType.Text != "Commands");
             macroTypeButton.Visible = (currentKeyType.Text != "Macros");
-            
+
             PopulateToBeAssignedList();
-            
+
             if (keyChoices.Size == keyChoices.MaximumSize)
             {
                 keyChoices.Size = keyChoices.MinimumSize;
@@ -236,7 +236,7 @@ namespace TypeIT
             {
                 var tempProfile = Program.CurrentSelectedMappingProfile;
                 Program.KeyMappingProfiles.Remove(tempProfile);
-                
+
                 var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
                 Program.CurrentSelectedMappingProfile = previousProfile;
                 home.profileList.UpdateCurrentProfile(previousProfile);
@@ -246,7 +246,7 @@ namespace TypeIT
                 // Reload the profile from file
                 string jsonContent = File.ReadAllText(GetProfilePath(Program.CurrentSelectedMappingProfile.Name));
                 var originalProfile = KeyMappingProfile.FromJsonManual(jsonContent);
-                
+
                 // Replace the current profile with the original
                 int index = Program.KeyMappingProfiles.FindIndex(p => p.Name == originalProfile.Name);
                 if (index != -1)
@@ -256,7 +256,7 @@ namespace TypeIT
                     home.profileList.UpdateCurrentProfile(originalProfile);
                 }
             }
-            
+
             PopulateSets();
             saveChanges.Visible = false;
             discardChanges.Visible = false;
@@ -267,29 +267,29 @@ namespace TypeIT
             try
             {
                 string filePath = GetProfilePath(Program.CurrentSelectedMappingProfile.Name);
-                
+
                 // Convert to our JSON-friendly format
                 var jsonProfile = KeyMappingProfileJson.FromKeyMappingProfile(Program.CurrentSelectedMappingProfile);
-                
+
                 // Serialize with proper formatting
-                var options = new JsonSerializerOptions 
-                { 
+                var options = new JsonSerializerOptions
+                {
                     WriteIndented = true,
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase
                 };
-                
+
                 string jsonContent = JsonSerializer.Serialize(jsonProfile, options);
                 File.WriteAllText(filePath, jsonContent);
-                
+
                 saveChanges.Visible = false;
                 discardChanges.Visible = false;
-                
-                MessageBox.Show("Profile saved successfully!", "Success", 
+
+                MessageBox.Show("Profile saved successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving profile: {ex.Message}", "Error", 
+                MessageBox.Show($"Error saving profile: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -298,19 +298,19 @@ namespace TypeIT
         {
             // Get the next set number
             int nextSetNumber = Program.CurrentSelectedMappingProfile.Sets.Count + 1;
-            
+
             // Create a new empty mapping set
             var newSet = new KeyMappingSet
             {
                 ActivationKey = "", // Default activation key
                 KeyMappings = new Dictionary<string, List<string>>()
             };
-            
+
             Program.CurrentSelectedMappingProfile.Sets.Add(newSet.ActivationKey, newSet);
-            
+
             saveChanges.Visible = true;
             discardChanges.Visible = true;
-            
+
             PopulateSets();
         }
 
@@ -358,7 +358,7 @@ namespace TypeIT
                     foreach (var command in KeyboardConstants.CommonCombinations)
                     {
                         var commandControl = new UC_Commands(command.Key, string.Join(" + ", command.Value));
-                        commandControl.Dock= DockStyle.Top;
+                        commandControl.Dock = DockStyle.Top;
                         toBeAssignedList.Controls.Add(commandControl);
                     }
                     break;
