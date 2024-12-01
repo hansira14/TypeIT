@@ -45,6 +45,7 @@
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.IndianRed;
             Controls.Add(mapping);
             MaximumSize = new Size(205, 100);
             MinimumSize = new Size(205, 100);

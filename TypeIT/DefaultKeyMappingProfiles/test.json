@@ -3,7 +3,14 @@
   "sets": [
     {
       "activation key": "Set1Key",
-      "mappings": {}
+      "mappings": {
+        "S1000000000E": [
+          "A"
+        ],
+        "S0010000000E": [
+          "Cut"
+        ]
+      }
     },
     {
       "activation key": "Set2Key",

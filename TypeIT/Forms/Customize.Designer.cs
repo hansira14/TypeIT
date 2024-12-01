@@ -101,7 +101,16 @@
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             panelPreview = new Panel();
-            uC_Finger1 = new UserControls.UC_Finger();
+            rightPinky = new UserControls.UC_Finger();
+            rightRing = new UserControls.UC_Finger();
+            rightMiddle = new UserControls.UC_Finger();
+            rightIndex = new UserControls.UC_Finger();
+            rightThumb = new UserControls.UC_Finger();
+            leftThumb = new UserControls.UC_Finger();
+            leftIndex = new UserControls.UC_Finger();
+            leftRing = new UserControls.UC_Finger();
+            leftMiddle = new UserControls.UC_Finger();
+            leftPinky = new UserControls.UC_Finger();
             discardChanges = new Guna.UI2.WinForms.Guna2Button();
             saveChanges = new Guna.UI2.WinForms.Guna2Button();
             assignOptions = new Guna.UI2.WinForms.Guna2Panel();
@@ -736,7 +745,16 @@
             // 
             // panelPreview
             // 
-            panelPreview.Controls.Add(uC_Finger1);
+            panelPreview.Controls.Add(rightPinky);
+            panelPreview.Controls.Add(rightRing);
+            panelPreview.Controls.Add(rightMiddle);
+            panelPreview.Controls.Add(rightIndex);
+            panelPreview.Controls.Add(rightThumb);
+            panelPreview.Controls.Add(leftThumb);
+            panelPreview.Controls.Add(leftIndex);
+            panelPreview.Controls.Add(leftRing);
+            panelPreview.Controls.Add(leftMiddle);
+            panelPreview.Controls.Add(leftPinky);
             panelPreview.Controls.Add(discardChanges);
             panelPreview.Controls.Add(saveChanges);
             panelPreview.Controls.Add(assignOptions);
@@ -747,15 +765,125 @@
             panelPreview.Size = new Size(1420, 1328);
             panelPreview.TabIndex = 13;
             // 
-            // uC_Finger1
+            // rightPinky
             // 
-            uC_Finger1.AllowDrop = true;
-            uC_Finger1.Location = new Point(580, 624);
-            uC_Finger1.MaximumSize = new Size(205, 100);
-            uC_Finger1.MinimumSize = new Size(205, 100);
-            uC_Finger1.Name = "uC_Finger1";
-            uC_Finger1.Size = new Size(205, 100);
-            uC_Finger1.TabIndex = 24;
+            rightPinky.AllowDrop = true;
+            rightPinky.BackColor = Color.IndianRed;
+            rightPinky.Location = new Point(1100, 883);
+            rightPinky.MaximumSize = new Size(205, 100);
+            rightPinky.MinimumSize = new Size(205, 100);
+            rightPinky.Name = "rightPinky";
+            rightPinky.ParentForm = null;
+            rightPinky.Size = new Size(205, 100);
+            rightPinky.TabIndex = 33;
+            // 
+            // rightRing
+            // 
+            rightRing.AllowDrop = true;
+            rightRing.BackColor = Color.IndianRed;
+            rightRing.Location = new Point(943, 757);
+            rightRing.MaximumSize = new Size(205, 100);
+            rightRing.MinimumSize = new Size(205, 100);
+            rightRing.Name = "rightRing";
+            rightRing.ParentForm = null;
+            rightRing.Size = new Size(205, 100);
+            rightRing.TabIndex = 32;
+            // 
+            // rightMiddle
+            // 
+            rightMiddle.AllowDrop = true;
+            rightMiddle.BackColor = Color.IndianRed;
+            rightMiddle.Location = new Point(765, 624);
+            rightMiddle.MaximumSize = new Size(205, 100);
+            rightMiddle.MinimumSize = new Size(205, 100);
+            rightMiddle.Name = "rightMiddle";
+            rightMiddle.ParentForm = null;
+            rightMiddle.Size = new Size(205, 100);
+            rightMiddle.TabIndex = 31;
+            // 
+            // rightIndex
+            // 
+            rightIndex.AllowDrop = true;
+            rightIndex.BackColor = Color.IndianRed;
+            rightIndex.Location = new Point(640, 757);
+            rightIndex.MaximumSize = new Size(205, 100);
+            rightIndex.MinimumSize = new Size(205, 100);
+            rightIndex.Name = "rightIndex";
+            rightIndex.ParentForm = null;
+            rightIndex.Size = new Size(205, 100);
+            rightIndex.TabIndex = 30;
+            // 
+            // rightThumb
+            // 
+            rightThumb.AllowDrop = true;
+            rightThumb.BackColor = Color.IndianRed;
+            rightThumb.Location = new Point(411, 844);
+            rightThumb.MaximumSize = new Size(205, 100);
+            rightThumb.MinimumSize = new Size(205, 100);
+            rightThumb.Name = "rightThumb";
+            rightThumb.ParentForm = null;
+            rightThumb.Size = new Size(205, 100);
+            rightThumb.TabIndex = 29;
+            // 
+            // leftThumb
+            // 
+            leftThumb.AllowDrop = true;
+            leftThumb.BackColor = Color.IndianRed;
+            leftThumb.Location = new Point(1084, 403);
+            leftThumb.MaximumSize = new Size(205, 100);
+            leftThumb.MinimumSize = new Size(205, 100);
+            leftThumb.Name = "leftThumb";
+            leftThumb.ParentForm = null;
+            leftThumb.Size = new Size(205, 100);
+            leftThumb.TabIndex = 28;
+            // 
+            // leftIndex
+            // 
+            leftIndex.AllowDrop = true;
+            leftIndex.BackColor = Color.IndianRed;
+            leftIndex.Location = new Point(927, 277);
+            leftIndex.MaximumSize = new Size(205, 100);
+            leftIndex.MinimumSize = new Size(205, 100);
+            leftIndex.Name = "leftIndex";
+            leftIndex.ParentForm = null;
+            leftIndex.Size = new Size(205, 100);
+            leftIndex.TabIndex = 27;
+            // 
+            // leftRing
+            // 
+            leftRing.AllowDrop = true;
+            leftRing.BackColor = Color.IndianRed;
+            leftRing.Location = new Point(749, 144);
+            leftRing.MaximumSize = new Size(205, 100);
+            leftRing.MinimumSize = new Size(205, 100);
+            leftRing.Name = "leftRing";
+            leftRing.ParentForm = null;
+            leftRing.Size = new Size(205, 100);
+            leftRing.TabIndex = 26;
+            // 
+            // leftMiddle
+            // 
+            leftMiddle.AllowDrop = true;
+            leftMiddle.BackColor = Color.IndianRed;
+            leftMiddle.Location = new Point(624, 277);
+            leftMiddle.MaximumSize = new Size(205, 100);
+            leftMiddle.MinimumSize = new Size(205, 100);
+            leftMiddle.Name = "leftMiddle";
+            leftMiddle.ParentForm = null;
+            leftMiddle.Size = new Size(205, 100);
+            leftMiddle.TabIndex = 25;
+            // 
+            // leftPinky
+            // 
+            leftPinky.AllowDrop = true;
+            leftPinky.BackColor = Color.IndianRed;
+            leftPinky.Location = new Point(395, 364);
+            leftPinky.MaximumSize = new Size(205, 100);
+            leftPinky.MinimumSize = new Size(205, 100);
+            leftPinky.Name = "leftPinky";
+            leftPinky.ParentForm = null;
+            leftPinky.Size = new Size(205, 100);
+            leftPinky.TabIndex = 24;
             // 
             // discardChanges
             // 
@@ -949,6 +1077,15 @@
         public Guna.UI2.WinForms.Guna2Button discardChanges;
         public Guna.UI2.WinForms.Guna2Button saveChanges;
         private FlowLayoutPanel toBeAssignedList;
-        private UserControls.UC_Finger uC_Finger1;
+        private UserControls.UC_Finger leftPinky;
+        private UserControls.UC_Finger leftMiddle;
+        private UserControls.UC_Finger rightPinky;
+        private UserControls.UC_Finger rightRing;
+        private UserControls.UC_Finger rightMiddle;
+        private UserControls.UC_Finger rightIndex;
+        private UserControls.UC_Finger rightThumb;
+        private UserControls.UC_Finger leftThumb;
+        private UserControls.UC_Finger leftIndex;
+        private UserControls.UC_Finger leftRing;
     }
 }

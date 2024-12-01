@@ -32,6 +32,7 @@ namespace TypeIT
             PopulateSets();
             PopulateToBeAssignedList();
             this.home = home;
+            setParent();
         }
         bool expand = false;
         public void PopulateSets()
@@ -66,7 +67,7 @@ namespace TypeIT
                 PopulateKeyMappings(Program.CurrentSelectedMappingProfile.CurrentMappingsSelected);
             }
         }
-        private void PopulateKeyMappings(KeyMappingSet mappingSet)
+        public void PopulateKeyMappings(KeyMappingSet mappingSet)
         {
             keyMaps.Visible = false;
             keyMaps.Controls.Clear();
@@ -376,6 +377,48 @@ namespace TypeIT
             keyControl.Margin = new Padding(0, 0, 15, 17);
             keyControl.Size = new Size(82, 96);
             toBeAssignedList.Controls.Add(keyControl);
+        }
+
+        public string UpdateFingerMapping(string fingerName)
+        {
+            // Initialize a char array with '0's and 'S' prefix and 'E' suffix
+            char[] mapping = "S0000000000E".ToCharArray();
+            
+            // Map finger names to their positions (1-based index)
+            Dictionary<string, int> fingerPositions = new Dictionary<string, int>
+            {
+                {"leftPinky", 1},
+                {"leftRing", 2},
+                {"leftMiddle", 3},
+                {"leftIndex", 4},
+                {"leftThumb", 5},
+                {"rightThumb", 6},
+                {"rightIndex", 7},
+                {"rightMiddle", 8},
+                {"rightRing", 9},
+                {"rightPinky", 10}
+            };
+
+            // Set the corresponding position to '1'
+            if (fingerPositions.TryGetValue(fingerName, out int position))
+            {
+                mapping[position] = '1';
+            }
+
+            return new string(mapping);
+        }
+        private void setParent()
+        {
+            leftPinky.ParentForm = this;
+            leftRing.ParentForm = this;
+            leftMiddle.ParentForm = this;
+            leftIndex.ParentForm = this;
+            leftThumb.ParentForm = this;
+            rightThumb.ParentForm = this;
+            rightIndex.ParentForm = this;
+            rightMiddle.ParentForm = this;
+            rightRing.ParentForm = this;
+            rightPinky.ParentForm = this;
         }
     }
 }
