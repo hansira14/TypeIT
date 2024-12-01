@@ -28,61 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BluetoothDevices));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            top = new Panel();
-            profile = new PictureBox();
-            menu = new PictureBox();
             title = new Label();
             bluetoothDevicesPanel = new Guna.UI2.WinForms.Guna2Panel();
             bluetoothDevicesLayoutPanel = new FlowLayoutPanel();
             RefreshButton = new Guna.UI2.WinForms.Guna2Button();
-            top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)profile).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)menu).BeginInit();
             bluetoothDevicesPanel.SuspendLayout();
             SuspendLayout();
-            // 
-            // top
-            // 
-            top.Controls.Add(profile);
-            top.Controls.Add(menu);
-            top.Dock = DockStyle.Top;
-            top.Location = new Point(0, 0);
-            top.Margin = new Padding(2);
-            top.Name = "top";
-            top.Padding = new Padding(30);
-            top.Size = new Size(1328, 108);
-            top.TabIndex = 1;
-            // 
-            // profile
-            // 
-            profile.Dock = DockStyle.Right;
-            profile.Image = (Image)resources.GetObject("profile.Image");
-            profile.Location = new Point(1266, 30);
-            profile.Margin = new Padding(2);
-            profile.Name = "profile";
-            profile.Padding = new Padding(15);
-            profile.Size = new Size(32, 48);
-            profile.SizeMode = PictureBoxSizeMode.Zoom;
-            profile.TabIndex = 1;
-            profile.TabStop = false;
-            // 
-            // menu
-            // 
-            menu.Dock = DockStyle.Left;
-            menu.Image = (Image)resources.GetObject("menu.Image");
-            menu.Location = new Point(30, 30);
-            menu.Margin = new Padding(2);
-            menu.Name = "menu";
-            menu.Padding = new Padding(15);
-            menu.Size = new Size(20, 48);
-            menu.SizeMode = PictureBoxSizeMode.Zoom;
-            menu.TabIndex = 0;
-            menu.TabStop = false;
             // 
             // title
             // 
@@ -158,25 +113,17 @@
             Controls.Add(RefreshButton);
             Controls.Add(bluetoothDevicesPanel);
             Controls.Add(title);
-            Controls.Add(top);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             Name = "BluetoothDevices";
             Text = "BluetoothDevices";
             Load += BluetoothDevices_Load;
-            top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)profile).EndInit();
-            ((System.ComponentModel.ISupportInitialize)menu).EndInit();
             bluetoothDevicesPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel top;
-        private PictureBox profile;
-        private PictureBox menu;
         private Label title;
         private Guna.UI2.WinForms.Guna2Panel bluetoothDevicesPanel;
         private FlowLayoutPanel bluetoothDevicesLayoutPanel;

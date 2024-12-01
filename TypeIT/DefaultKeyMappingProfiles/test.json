@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "sets": [
+    {
+      "activation key": "Set1Key",
+      "mappings": {
+        "S1000000000E": [
+          "A"
+        ],
+        "S0010000000E": [
+          "Cut"
+        ],
+        "S0100000000E": [
+          "^ \u002B C"
+        ],
+        "S0001000000E": [
+          "L"
+        ],
+        "S0000100000E": [
+          "N"
+        ]
+      }
+    },
+    {
+      "activation key": "Set2Key",
+      "mappings": {}
+    }
+  ]
+}

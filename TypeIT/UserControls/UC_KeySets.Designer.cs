@@ -75,11 +75,10 @@
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.FillColor = Color.FromArgb(33, 34, 37);
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(6, 6, 6, 6);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Padding = new Padding(22, 26, 22, 26);
+            guna2Panel1.Padding = new Padding(12);
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel1.Size = new Size(758, 1771);
+            guna2Panel1.Size = new Size(408, 830);
             guna2Panel1.TabIndex = 8;
             // 
             // blank
@@ -87,10 +86,9 @@
             blank.Controls.Add(guna2Button4);
             blank.Controls.Add(label1);
             blank.Dock = DockStyle.Top;
-            blank.Location = new Point(22, 265);
-            blank.Margin = new Padding(6, 6, 6, 6);
+            blank.Location = new Point(12, 124);
             blank.Name = "blank";
-            blank.Size = new Size(714, 326);
+            blank.Size = new Size(384, 153);
             blank.TabIndex = 17;
             // 
             // guna2Button4
@@ -103,21 +101,19 @@
             guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             guna2Button4.Font = new Font("Segoe UI", 9F);
             guna2Button4.ForeColor = Color.White;
-            guna2Button4.Location = new Point(251, 154);
-            guna2Button4.Margin = new Padding(6, 6, 6, 6);
+            guna2Button4.Location = new Point(135, 72);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button4.Size = new Size(214, 62);
+            guna2Button4.Size = new Size(115, 29);
             guna2Button4.TabIndex = 2;
             guna2Button4.Text = "Assign";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(251, 94);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(135, 44);
             label1.Name = "label1";
-            label1.Size = new Size(237, 32);
+            label1.Size = new Size(115, 15);
             label1.TabIndex = 1;
             label1.Text = "No key assigned yet!";
             // 
@@ -128,11 +124,10 @@
             panel7.BackColor = Color.Transparent;
             panel7.Controls.Add(guna2Panel4);
             panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(22, 111);
-            panel7.Margin = new Padding(6, 6, 6, 6);
+            panel7.Location = new Point(12, 52);
             panel7.Name = "panel7";
-            panel7.Padding = new Padding(0, 30, 0, 30);
-            panel7.Size = new Size(714, 154);
+            panel7.Padding = new Padding(0, 14, 0, 14);
+            panel7.Size = new Size(384, 72);
             panel7.TabIndex = 16;
             // 
             // guna2Panel4
@@ -145,11 +140,10 @@
             guna2Panel4.CustomizableEdges = customizableEdges3;
             guna2Panel4.Dock = DockStyle.Bottom;
             guna2Panel4.FillColor = Color.FromArgb(16, 17, 19);
-            guna2Panel4.Location = new Point(0, 30);
-            guna2Panel4.Margin = new Padding(6, 6, 6, 6);
+            guna2Panel4.Location = new Point(0, 14);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel4.Size = new Size(714, 94);
+            guna2Panel4.Size = new Size(384, 44);
             guna2Panel4.TabIndex = 14;
             // 
             // label3
@@ -159,11 +153,11 @@
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(19, 150, 255);
-            label3.Location = new Point(350, 0);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(199, 0);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Padding = new Padding(22, 26, 22, 26);
-            label3.Size = new Size(364, 88);
+            label3.Padding = new Padding(12);
+            label3.Size = new Size(185, 41);
             label3.TabIndex = 5;
             label3.Text = "LPinky + LRing + LMiddle";
             // 
@@ -174,10 +168,10 @@
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Segoe UI", 10F);
             label2.Location = new Point(0, 0);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Padding = new Padding(22, 26, 22, 26);
-            label2.Size = new Size(162, 89);
+            label2.Padding = new Padding(12);
+            label2.Size = new Size(85, 43);
             label2.TabIndex = 4;
             label2.Text = "Activate:";
             // 
@@ -189,11 +183,11 @@
             guna2Panel2.CustomBorderThickness = new Padding(0, 0, 0, 1);
             guna2Panel2.CustomizableEdges = customizableEdges11;
             guna2Panel2.Dock = DockStyle.Top;
-            guna2Panel2.Location = new Point(22, 26);
+            guna2Panel2.Location = new Point(12, 12);
             guna2Panel2.Margin = new Padding(0);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel2.Size = new Size(714, 85);
+            guna2Panel2.Size = new Size(384, 40);
             guna2Panel2.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -206,7 +200,7 @@
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(556, 175);
+            flowLayoutPanel1.Size = new Size(299, 82);
             flowLayoutPanel1.TabIndex = 3;
             flowLayoutPanel1.WrapContents = false;
             // 
@@ -231,7 +225,7 @@
             guna2Button1.Margin = new Padding(0);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(158, 85);
+            guna2Button1.Size = new Size(85, 40);
             guna2Button1.TabIndex = 0;
             guna2Button1.Text = "Set 1";
             // 
@@ -251,11 +245,11 @@
             guna2Button2.Font = new Font("Segoe UI", 9F);
             guna2Button2.ForeColor = Color.White;
             guna2Button2.HoverState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button2.Location = new Point(158, 0);
+            guna2Button2.Location = new Point(85, 0);
             guna2Button2.Margin = new Padding(0);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.Size = new Size(158, 85);
+            guna2Button2.Size = new Size(85, 40);
             guna2Button2.TabIndex = 1;
             guna2Button2.Text = "Set 1";
             // 
@@ -275,11 +269,11 @@
             guna2Button3.Font = new Font("Segoe UI", 9F);
             guna2Button3.ForeColor = Color.White;
             guna2Button3.HoverState.CustomBorderColor = Color.FromArgb(19, 150, 255);
-            guna2Button3.Location = new Point(316, 0);
+            guna2Button3.Location = new Point(170, 0);
             guna2Button3.Margin = new Padding(0);
             guna2Button3.Name = "guna2Button3";
             guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button3.Size = new Size(158, 85);
+            guna2Button3.Size = new Size(85, 40);
             guna2Button3.TabIndex = 2;
             guna2Button3.Text = "Set 1";
             // 
@@ -294,10 +288,10 @@
             iconButton1.IconColor = Color.White;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Regular;
             iconButton1.IconSize = 12;
-            iconButton1.Location = new Point(556, 0);
+            iconButton1.Location = new Point(299, 0);
             iconButton1.Margin = new Padding(0);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(158, 85);
+            iconButton1.Size = new Size(85, 40);
             iconButton1.TabIndex = 4;
             iconButton1.Text = "  Add set";
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -305,14 +299,13 @@
             // 
             // UC_KeySets
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(guna2Panel1);
             ForeColor = Color.White;
-            Margin = new Padding(6, 6, 6, 6);
             Name = "UC_KeySets";
-            Size = new Size(758, 1771);
+            Size = new Size(408, 830);
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             blank.ResumeLayout(false);

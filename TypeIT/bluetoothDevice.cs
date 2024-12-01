@@ -24,7 +24,6 @@ namespace TypeIT
         public string Address { get; set; }
         private SerialCommunicationModel serialComm = new SerialCommunicationModel();
 
-
         //Constructor
         public bluetoothDevice(string BTName, string CPName, string address)
         {
@@ -33,16 +32,16 @@ namespace TypeIT
             this.ComPortName = CPName;
             this.Address = address;
             this.name.Text = BTName; //name of the blueotooth device from the UI
+
         }
 
         internal async Task<bool> bluetoothAutoConnect()
-        {   
+        {
             //This function is for the HomePage trying to create default/auto connection with Type It Wireless Keyboard
             bool isConnected = await Task.Run(() => serialComm.Connect(ComPortName, BluetoothName));
             if (isConnected)
             {
                 //ConnectionStatus.Text = "Connected"; // Uncomment when a label is created on the UI stating the connection status of the bluetooth device
-                serialComm.DataReceived += SerialComm_DataReceived;
                 MessageBox.Show($"Successfully connected to {BluetoothName}.\nCOM Port Address: {ComPortName}.",
                                 "Connection Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -59,7 +58,6 @@ namespace TypeIT
             if (isConnected)
             {
                 //ConnectionStatus.Text = "Connected"; // Uncomment when a label is created on the UI stating the connection status of the bluetooth device
-                serialComm.DataReceived += SerialComm_DataReceived;
                 MessageBox.Show($"Successfully connected to {BluetoothName}.\nCOM Port Address: {ComPortName}.",
                                 "Connection Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -67,7 +65,7 @@ namespace TypeIT
         }
 
         private void SerialComm_DataReceived(object sender, string receivedData)
-        {
+        { //Not Used currently, data received events are now handled on the Serial Communication Model
             // This method will be called when data is received
             // You can process the ASCII codes here
             this.Invoke(() =>
@@ -75,10 +73,10 @@ namespace TypeIT
                 // For demonstration, we'll just show the received data in a message box
                 // In a real application, you might want to update a TextBox or other UI element
                 Debug.WriteLine($"Received ASCII: {receivedData}");
-                if (receivedData.Contains("A")) // For example, if the received data contains the letter 'A'
-                {
-                    SendKeys.SendWait("A"); // Sends the 'A' keystroke to the active window
-                }
+                //if (receivedData.Contains("A")) // For example, if the received data contains the letter 'A'
+                //{
+                //    SendKeys.SendWait("A"); // Sends the 'A' keystroke to the active window
+                //}
             });
         }
     }

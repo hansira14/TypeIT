@@ -36,7 +36,6 @@
             // set
             // 
             set.BorderColor = Color.Transparent;
-            set.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
             set.Checked = true;
             set.CheckedState.CustomBorderColor = Color.FromArgb(19, 150, 255);
             set.CustomBorderColor = Color.Transparent;
@@ -54,13 +53,13 @@
             set.Margin = new Padding(0);
             set.Name = "set";
             set.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            set.Size = new Size(111, 85);
+            set.Size = new Size(60, 40);
             set.TabIndex = 1;
             set.Text = "Set 1";
             // 
             // UC_Sets
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -68,7 +67,7 @@
             Controls.Add(set);
             Margin = new Padding(0);
             Name = "UC_Sets";
-            Size = new Size(111, 85);
+            Size = new Size(60, 40);
             ResumeLayout(false);
         }
 
