@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "sets": [
+    {
+      "activation key": "Set1Key",
+      "mappings": {}
+    },
+    {
+      "activation key": "Set2Key",
+      "mappings": {}
+    }
+  ]
+}

@@ -118,22 +118,11 @@ namespace TypeIT
                             Sets = new Dictionary<string, KeyMappingSet>()
                         };
 
-                        // Add initial set
-                        var initialSet = new KeyMappingSet
-                        {
-                            KeyMappings = new Dictionary<string, List<string>>()
-                        };
-                        tempProfile.Sets.Add("Set 1", initialSet);
-                        tempProfile.CurrentMappingsSelected = initialSet;
-
                         Program.KeyMappingProfiles.Add(tempProfile);
                         Program.CurrentSelectedMappingProfile = tempProfile;
-                        tempProfile.CurrentMappingsSelected = initialSet;
 
-                        // Update UI
                         UpdateCurrentProfile(tempProfile);
                         
-                        // Ensure Customize form is displayed
                         if (homeForm.customizeForm == null || homeForm.customizeForm.IsDisposed)
                         {
                             homeForm.customizeForm = new Customize(homeForm);

@@ -220,31 +220,54 @@ namespace TypeIT
 
         private void discardChanges_Click(object sender, EventArgs e)
         {
-            var tempProfile = Program.CurrentSelectedMappingProfile;
-            Program.KeyMappingProfiles.Remove(tempProfile);
-            
-            var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
-            Program.CurrentSelectedMappingProfile = previousProfile;
+            // If this is a new profile (temp profile)
+            if (!File.Exists(GetProfilePath(Program.CurrentSelectedMappingProfile.Name)))
+            {
+                var tempProfile = Program.CurrentSelectedMappingProfile;
+                Program.KeyMappingProfiles.Remove(tempProfile);
+                
+                var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
+                Program.CurrentSelectedMappingProfile = previousProfile;
+                home.profileList.UpdateCurrentProfile(previousProfile);
+            }
+            else // This is an existing profile that was modified
+            {
+                // Reload the profile from file
+                string jsonContent = File.ReadAllText(GetProfilePath(Program.CurrentSelectedMappingProfile.Name));
+                var originalProfile = KeyMappingProfile.FromJsonManual(jsonContent);
+                
+                // Replace the current profile with the original
+                int index = Program.KeyMappingProfiles.FindIndex(p => p.Name == originalProfile.Name);
+                if (index != -1)
+                {
+                    Program.KeyMappingProfiles[index] = originalProfile;
+                    Program.CurrentSelectedMappingProfile = originalProfile;
+                    home.profileList.UpdateCurrentProfile(originalProfile);
+                }
+            }
             
             PopulateSets();
             saveChanges.Visible = false;
             discardChanges.Visible = false;
-            home.profileList.UpdateCurrentProfile(previousProfile);
         }
 
         private void saveChanges_Click(object sender, EventArgs e)
         {
-            // Save the current profile to JSON
-            string projectFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)
-                .Parent.Parent.Parent.Parent.FullName;
-            string folderPath = Path.Combine(projectFolder, "DefaultKeyMappingProfiles");
-            string fileName = $"{Program.CurrentSelectedMappingProfile.Name}.json";
-            string filePath = Path.Combine(folderPath, fileName);
-
             try
             {
-                string jsonContent = JsonSerializer.Serialize(Program.CurrentSelectedMappingProfile, 
-                    new JsonSerializerOptions { WriteIndented = true });
+                string filePath = GetProfilePath(Program.CurrentSelectedMappingProfile.Name);
+                
+                // Convert to our JSON-friendly format
+                var jsonProfile = KeyMappingProfileJson.FromKeyMappingProfile(Program.CurrentSelectedMappingProfile);
+                
+                // Serialize with proper formatting
+                var options = new JsonSerializerOptions 
+                { 
+                    WriteIndented = true,
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                };
+                
+                string jsonContent = JsonSerializer.Serialize(jsonProfile, options);
                 File.WriteAllText(filePath, jsonContent);
                 
                 saveChanges.Visible = false;
@@ -258,6 +281,37 @@ namespace TypeIT
                 MessageBox.Show($"Error saving profile: {ex.Message}", "Error", 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void addSet_Click(object sender, EventArgs e)
+        {
+            // Get the next set number
+            int nextSetNumber = Program.CurrentSelectedMappingProfile.Sets.Count + 1;
+            
+            // Create a new empty mapping set
+            var newSet = new KeyMappingSet
+            {
+                ActivationKey = $"Set{nextSetNumber}Key", // Default activation key
+                KeyMappings = new Dictionary<string, List<string>>()
+            };
+            
+            // Add the new set to the current profile
+            Program.CurrentSelectedMappingProfile.Sets.Add(newSet.ActivationKey, newSet);
+            
+            // Show save/discard buttons since we've modified the profile
+            saveChanges.Visible = true;
+            discardChanges.Visible = true;
+            
+            // Refresh the sets display
+            PopulateSets();
+        }
+
+        private string GetProfilePath(string profileName)
+        {
+            string projectFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)
+                .Parent.Parent.Parent.Parent.FullName;
+            string folderPath = Path.Combine(projectFolder, "DefaultKeyMappingProfiles");
+            return Path.Combine(folderPath, $"{profileName}.json");
         }
     }
 }
