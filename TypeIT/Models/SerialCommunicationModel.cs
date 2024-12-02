@@ -13,8 +13,13 @@ namespace TypeIT.Models
     {
         private SerialPort _serialPort;
         private StringBuilder _dataBuffer = new StringBuilder(); // Buffer to store incomplete data
+        private KeyInputProcessor _keyInputProcessor;
 
-
+        public SerialCommunicationModel()
+        {
+            _keyInputProcessor = new KeyInputProcessor();
+            _keyInputProcessor.KeyStateProcessed += HandleProcessedKeyState;
+        }
 
         public bool Connect(string portName, string bluetoothName)
         {
@@ -87,7 +92,6 @@ namespace TypeIT.Models
                 }
                 else
                 {
-                    // Handle the case when the serial port is closed
                     MessageBox.Show(
                         "The serial port is closed. Data cannot be received.",
                         "Serial Port Closed",
@@ -95,26 +99,15 @@ namespace TypeIT.Models
                         MessageBoxIcon.Warning);
                 }
             }
-            catch (InvalidOperationException ex)
+            catch (Exception ex)
             {
-                // Handle if the port is unexpectedly closed
                 MessageBox.Show(
                     $"An error occurred while receiving data: {ex.Message}",
                     "Serial Port Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
-            catch (Exception ex)
-            {
-                // General exception handling
-                MessageBox.Show(
-                    $"An unexpected error occurred: {ex.Message}",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
         }
-
 
         private void ProcessBufferedData()
         {
@@ -122,55 +115,44 @@ namespace TypeIT.Models
 
             while (true)
             {
-                // Find the start bit ('S')
                 int startIndex = buffer.IndexOf('S');
-
                 if (startIndex == -1)
                 {
-                    // No start bit found, clear the buffer and exit
                     _dataBuffer.Clear();
                     break;
                 }
 
-                // Find the end bit ('E') after the start bit
                 int endIndex = buffer.IndexOf('E', startIndex + 1);
-
                 if (endIndex != -1)
                 {
-                    // Extract the complete message
                     string completeMessage = buffer.Substring(startIndex, endIndex - startIndex + 1);
-
-                    // Log or process the complete message
-                    //Debug.WriteLine($"Complete Message: {completeMessage}");
-
-                    // Remove the processed message from the buffer
                     buffer = buffer.Substring(endIndex + 1);
-
-                    // The command code needed for handling the keystroke or macros to execute on the PC
-                    HandleKeyStrokeOrMacro(completeMessage);
+                    
+                    // Use KeyInputProcessor to handle the input
+                    _keyInputProcessor.ProcessInput(completeMessage);
                 }
                 else
                 {
-                    // Check if another start bit appears before an end bit
                     int nextStartIndex = buffer.IndexOf('S', startIndex + 1);
-
                     if (nextStartIndex != -1)
                     {
-                        // Discard the corrupted data up to the new start bit
                         Debug.WriteLine($"Corrupted data detected. Discarding: {buffer.Substring(0, nextStartIndex)}");
                         buffer = buffer.Substring(nextStartIndex);
                     }
                     else
                     {
-                        // No end bit or new start bit found, keep the remaining buffer
                         break;
                     }
                 }
             }
 
-            // Update the buffer with remaining unprocessed data
             _dataBuffer.Clear();
             _dataBuffer.Append(buffer);
+        }
+
+        private void HandleProcessedKeyState(object sender, string keyState)
+        {
+            HandleKeyStrokeOrMacro(keyState);
         }
 
         private void HandleKeyStrokeOrMacro(string keyCommand)
