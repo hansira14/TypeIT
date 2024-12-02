@@ -145,7 +145,10 @@ namespace TypeIT
             int newDeviceY = (contentHeight - deviceHeight) / 2 - 50;
             device.Location = new Point(newDeviceX, newDeviceY);
 
-            content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
+            if(profileList != null)
+            {
+                content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
+            }
         }
 
         private void notConnected_Click(object sender, EventArgs e)
