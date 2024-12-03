@@ -44,6 +44,17 @@ namespace TypeIT
                 _serialComm = value;
             }
         }
+        private bool hasUnsavedChanges = false;
+        public bool HasUnsavedChanges
+        {
+            get => hasUnsavedChanges;
+            private set
+            {
+                hasUnsavedChanges = value;
+                saveChanges.Visible = value;
+                discardChanges.Visible = value;
+            }
+        }
         public Customize(Home home)
         {
             InitializeComponent();
@@ -232,35 +243,44 @@ namespace TypeIT
 
         private void discardChanges_Click(object sender, EventArgs e)
         {
-            // If this is a new profile (temp profile)
-            if (!File.Exists(GetProfilePath(Program.CurrentSelectedMappingProfile.Name)))
+            var result = MessageBox.Show("Are you sure you want to discard all changes?",
+                "Confirm Discard", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            
+            if (result == DialogResult.Yes)
             {
-                var tempProfile = Program.CurrentSelectedMappingProfile;
-                Program.KeyMappingProfiles.Remove(tempProfile);
-
-                var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
-                Program.CurrentSelectedMappingProfile = previousProfile;
-                home.profileList.UpdateCurrentProfile(previousProfile);
-            }
-            else // This is an existing profile that was modified
-            {
-                // Reload the profile from file
-                string jsonContent = File.ReadAllText(GetProfilePath(Program.CurrentSelectedMappingProfile.Name));
-                var originalProfile = KeyMappingProfile.FromJsonManual(jsonContent);
-
-                // Replace the current profile with the original
-                int index = Program.KeyMappingProfiles.FindIndex(p => p.Name == originalProfile.Name);
-                if (index != -1)
+                // If this is a new profile (temp profile)
+                if (!File.Exists(GetProfilePath(Program.CurrentSelectedMappingProfile.Name)))
                 {
-                    Program.KeyMappingProfiles[index] = originalProfile;
-                    Program.CurrentSelectedMappingProfile = originalProfile;
-                    home.profileList.UpdateCurrentProfile(originalProfile);
+                    var tempProfile = Program.CurrentSelectedMappingProfile;
+                    Program.KeyMappingProfiles.Remove(tempProfile);
+
+                    var previousProfile = Program.KeyMappingProfiles.FirstOrDefault();
+                    Program.CurrentSelectedMappingProfile = previousProfile;
+                    home.profileList.UpdateCurrentProfile(previousProfile);
+                }
+                else // This is an existing profile that was modified
+                {
+                    // Reload the profile from file
+                    string jsonContent = File.ReadAllText(GetProfilePath(Program.CurrentSelectedMappingProfile.Name));
+                    var originalProfile = KeyMappingProfile.FromJsonManual(jsonContent);
+
+                    // Replace the current profile with the original
+                    int index = Program.KeyMappingProfiles.FindIndex(p => p.Name == originalProfile.Name);
+                    if (index != -1)
+                    {
+                        Program.KeyMappingProfiles[index] = originalProfile;
+                        Program.CurrentSelectedMappingProfile = originalProfile;
+                        home.profileList.UpdateCurrentProfile(originalProfile);
+                    }
+                }
+
+                PopulateSets();
+                HasUnsavedChanges = false;
+                if (home?.profileList != null)
+                {
+                    home.profileList.DisableProfileSwitching = false;
                 }
             }
-
-            PopulateSets();
-            saveChanges.Visible = false;
-            discardChanges.Visible = false;
         }
 
         private void saveChanges_Click(object sender, EventArgs e)
@@ -268,11 +288,8 @@ namespace TypeIT
             try
             {
                 string filePath = GetProfilePath(Program.CurrentSelectedMappingProfile.Name);
-
-                // Convert to our JSON-friendly format
                 var jsonProfile = KeyMappingProfileJson.FromKeyMappingProfile(Program.CurrentSelectedMappingProfile);
-
-                // Serialize with proper formatting
+                
                 var options = new JsonSerializerOptions
                 {
                     WriteIndented = true,
@@ -282,8 +299,11 @@ namespace TypeIT
                 string jsonContent = JsonSerializer.Serialize(jsonProfile, options);
                 File.WriteAllText(filePath, jsonContent);
 
-                saveChanges.Visible = false;
-                discardChanges.Visible = false;
+                HasUnsavedChanges = false;
+                if (home?.profileList != null)
+                {
+                    home.profileList.DisableProfileSwitching = false;
+                }
 
                 MessageBox.Show("Profile saved successfully!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -297,18 +317,14 @@ namespace TypeIT
 
         private void addSet_Click(object sender, EventArgs e)
         {
-            // Create a new empty mapping set
             var newSet = new KeyMappingSet
             {
-                ActivationKey = "", // Default activation key
+                ActivationKey = "",
                 KeyMappings = new Dictionary<string, List<string>>()
             };
 
             Program.CurrentSelectedMappingProfile.Sets.Add(newSet.ActivationKey, newSet);
-
-            saveChanges.Visible = true;
-            discardChanges.Visible = true;
-
+            MarkAsModified();
             PopulateSets();
         }
 
@@ -549,6 +565,17 @@ namespace TypeIT
             keyChoices.Location = new Point(xPos, yPos);
             assignMenu.Controls.Add(keyChoices);
             keyChoices.BringToFront();
+        }
+
+        public void MarkAsModified()
+        {
+            HasUnsavedChanges = true;
+            
+            // Notify the parent Home form that there are unsaved changes
+            if (home?.profileList != null)
+            {
+                home.profileList.DisableProfileSwitching = true;
+            }
         }
     }
 }

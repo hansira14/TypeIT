@@ -18,8 +18,19 @@ namespace TypeIT
         KeyMappingProfile currentProfile;
         List<KeyMappingProfile> allProfiles;
         private Home home;
+        private bool disableProfileSwitching;
 
         public event EventHandler<KeyMappingProfile> ProfileSelected;
+
+        public bool DisableProfileSwitching
+        {
+            get => disableProfileSwitching;
+            set
+            {
+                disableProfileSwitching = value;
+                otherProfiles.Enabled = !value;
+            }
+        }
 
         public UC_ProfileList(KeyMappingProfile currentProfile, List<KeyMappingProfile> allProfiles, Home home)
         {

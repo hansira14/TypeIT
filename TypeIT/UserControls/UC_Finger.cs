@@ -64,12 +64,8 @@ namespace TypeIT.UserControls
                     _parentForm.currentSet.KeyMappings.Add(fingerMapping, new List<string> { commandValue });
                 }
 
-                // Show save/discard buttons
-                if (_parentForm.saveChanges != null && _parentForm.discardChanges != null)
-                {
-                    _parentForm.saveChanges.Visible = true;
-                    _parentForm.discardChanges.Visible = true;
-                }
+                // Mark the profile as modified instead of directly manipulating buttons
+                _parentForm.MarkAsModified();
 
                 // Refresh the key mappings display
                 _parentForm.PopulateKeyMappings(_parentForm.currentSet);
