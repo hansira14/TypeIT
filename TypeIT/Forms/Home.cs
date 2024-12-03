@@ -10,6 +10,7 @@ namespace TypeIT
         private Form currentForm = null!;
         internal bool isConnected = false;
         List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
+        bluetoothDevice connectedDevice = null!;
         public UC_ProfileList profileList;
         private static PictureBox _menuControl;
         public static PictureBox MenuControl => _menuControl;
@@ -75,6 +76,7 @@ namespace TypeIT
                         {
                             MessageBox.Show($"Successfully established default connection with \"Type It Wireless Keyboard\".",
                             "Default Connection Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            connectedDevice = BTDevice;
                         }
                     }
                     catch (Exception ex)
@@ -145,7 +147,10 @@ namespace TypeIT
             int newDeviceY = (contentHeight - deviceHeight) / 2 - 50;
             device.Location = new Point(newDeviceX, newDeviceY);
 
-            content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
+            if(profileList != null)
+            {
+                content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
+            }
         }
 
         private void notConnected_Click(object sender, EventArgs e)
@@ -163,19 +168,18 @@ namespace TypeIT
             if (customizeForm == null || customizeForm.IsDisposed)
             {
                 customizeForm = new Customize(this);
+                if(connectedDevice!=null) customizeForm.SerialComm = connectedDevice.serialComm;
             }
             openForm(customizeForm);
         }
 
         private void ProfileList_ProfileSelected(object sender, KeyMappingProfile selectedProfile)
         {
-            // Update the current selected profile
-            Program.CurrentSelectedMappingProfile = selectedProfile;
-            
-            // If you need to refresh any UI elements that depend on the current profile
+
+            Program.CurrentSelectedMappingProfile = selectedProfile; 
             if (currentForm is Customize customizeForm)
             {
-                // Refresh the customize form if it's open
+
                 customizeForm.PopulateSets();
             }
         }

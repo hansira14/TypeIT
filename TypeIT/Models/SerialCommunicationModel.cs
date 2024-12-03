@@ -14,7 +14,7 @@ namespace TypeIT.Models
         private SerialPort _serialPort;
         private StringBuilder _dataBuffer = new StringBuilder(); // Buffer to store incomplete data
 
-
+        public event Action<string> CombinationReceived;
 
         public bool Connect(string portName, string bluetoothName)
         {
@@ -175,7 +175,10 @@ namespace TypeIT.Models
 
         private void HandleKeyStrokeOrMacro(string keyCommand)
         {
-            // Add your logic to process the complete message
+            // Raise the combination received event
+            CombinationReceived?.Invoke(keyCommand);
+
+            // Rest of your existing code...
             Debug.WriteLine($"Key Command Code: {keyCommand}");
             if (Program.CurrentSelectedMappingProfile != null)
             {

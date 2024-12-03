@@ -25,7 +25,20 @@ namespace TypeIT
         private static readonly Color SpecialKeysColor = Color.FromArgb(64, 128, 64);
         private static readonly Color ModifierKeysColor = Color.FromArgb(64, 64, 128);
         private static readonly Color CommandsColor = Color.FromArgb(128, 128, 64);
+        private string recordedCombination;
+        private bool combinationMode = false;
+        private HashSet<string> selectedFingers = new HashSet<string>();
+        private StringBuilder currentCombination = new StringBuilder("S0000000000E");
+        private SerialCommunicationModel _serialComm;
 
+        public SerialCommunicationModel SerialComm
+        {
+            get { return _serialComm; }
+            set
+            {
+                _serialComm = value;
+            }
+        }
         public Customize(Home home)
         {
             InitializeComponent();
@@ -33,6 +46,14 @@ namespace TypeIT
             PopulateToBeAssignedList();
             this.home = home;
             setParent();
+
+            keyChoices.Parent.Controls.Remove(keyChoices);
+            //keyChoices.Location = new Point(panel6.Width - keyChoices.Width - 10, (panel6.Height - keyChoices.Height) / 2);
+            int xPos = panel6.Location.X + panel6.Width - keyChoices.Width;
+            int yPos = panel6.Location.Y + (panel6.Height - keyChoices.Height) / 2;
+            keyChoices.Location = new Point(xPos, yPos);
+            assignSingleKey.Controls.Add(keyChoices);
+            keyChoices.BringToFront();
         }
         bool expand = false;
         public void PopulateSets()
@@ -207,6 +228,13 @@ namespace TypeIT
             keySet.Visible = false;
             assignSingleKey.Visible = false;
             assignOptions.Visible = false;
+
+            currentCombination.Clear();
+            currentCombination.Append("S0000000000E");
+            selectedFingers.Clear();
+            recordedCombinationTextBox.Text = "";
+
+            //_serialComm.CombinationReceived += HandleGloveInput;
         }
 
         private void cancelRecord_Click(object sender, EventArgs e)
@@ -214,6 +242,13 @@ namespace TypeIT
             keySet.Visible = true;
             recordCombination.Visible = false;
             assignSingleKey.Visible = false;
+
+            //_serialComm.CombinationReceived -= HandleGloveInput;
+
+            currentCombination.Clear();
+            currentCombination.Append("S0000000000E");
+            selectedFingers.Clear();
+            recordedCombinationTextBox.Text = "";
         }
 
         private void keyTypeButton_Click(object sender, EventArgs e)
@@ -390,7 +425,7 @@ namespace TypeIT
         {
             // Initialize a char array with '0's and 'S' prefix and 'E' suffix
             char[] mapping = "S0000000000E".ToCharArray();
-            
+
             // Map finger names to their positions (1-based index)
             Dictionary<string, int> fingerPositions = new Dictionary<string, int>
             {
@@ -475,6 +510,129 @@ namespace TypeIT
                         break;
                     }
                 }
+            }
+        }
+
+        private void proceedToAssign_Click(object sender, EventArgs e)
+        {
+            if (currentCombination.ToString().Count(c => c == '1') > 2)
+            {
+                combinationMode = true;
+                recordedCombination = currentCombination.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Please select at least two finger for the combination.",
+                    "Invalid Combination", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void HandleGloveInput(string fingerCombination)
+        {
+            // Only process input when recording is active and the combination is valid
+            if (recordCombination.Visible &&
+                fingerCombination.Length == 12 &&
+                fingerCombination.StartsWith("S") &&
+                fingerCombination.EndsWith("E"))
+            {
+                // Count the number of active fingers (1s)
+                int activeFingers = fingerCombination.Count(c => c == '1');
+
+                // Only process if there are multiple fingers pressed
+                if (activeFingers >= 2)
+                {
+                    this.Invoke(() =>
+                    {
+                        currentCombination.Clear();
+                        currentCombination.Append(fingerCombination);
+                        recordedCombinationTextBox.Text = fingerCombination;
+
+                        // Update UI buttons to match the input
+                        UpdateFingerButtons(fingerCombination);
+                    });
+                }
+            }
+        }
+
+        private void UpdateFingerButtons(string combination)
+        {
+            Dictionary<int, string> buttonMapping = new Dictionary<int, string>
+            {
+                {1, "Lpinky"},
+                {2, "Lring"},
+                {3, "Lmiddle"},
+                {4, "Lindex"},
+                {5, "Lthumb"},
+                {6, "Rthumb"},
+                {7, "Rindex"},
+                {8, "Rmiddle"},
+                {9, "Rring"},
+                {10, "Rpinky"}
+            };
+
+            for (int i = 1; i <= 10; i++)
+            {
+                if (buttonMapping.TryGetValue(i, out string buttonName))
+                {
+                    var button = this.Controls.Find(buttonName, true).FirstOrDefault() as Guna.UI2.WinForms.Guna2Button;
+                    if (button != null)
+                    {
+                        button.Checked = combination[i] == '1';
+                    }
+                }
+            }
+        }
+
+        private void fingerClick(object sender, EventArgs e)
+        {
+            var button = (Guna.UI2.WinForms.Guna2Button)sender;
+            string buttonName = button.Name;
+            buttonName = buttonName.Substring(0, 1) + char.ToUpper(buttonName[1]) + buttonName.Substring(2);
+
+            string fingerName;
+            if (buttonName.StartsWith("L"))
+            {
+                fingerName = "left" + buttonName.Substring(1);
+            }
+            else if (buttonName.StartsWith("R"))
+            {
+                fingerName = "right" + buttonName.Substring(1);
+            }
+            else
+            {
+                return;
+            }
+
+            Dictionary<string, int> fingerPositions = new Dictionary<string, int>
+            {
+                {"leftPinky", 1},
+                {"leftRing", 2},
+                {"leftMiddle", 3},
+                {"leftIndex", 4},
+                {"leftThumb", 5},
+                {"rightThumb", 6},
+                {"rightIndex", 7},
+                {"rightMiddle", 8},
+                {"rightRing", 9},
+                {"rightPinky", 10}
+            };
+
+            if (fingerPositions.TryGetValue(fingerName, out int position))
+            {
+                // Toggle the finger state
+                if (currentCombination[position] == '0')
+                {
+                    currentCombination[position] = '1';
+                    selectedFingers.Add(fingerName);
+                }
+                else
+                {
+                    currentCombination[position] = '0';
+                    selectedFingers.Remove(fingerName);
+                }
+
+                // Update the textbox with the current combination
+                recordedCombinationTextBox.Text = currentCombination.ToString();
             }
         }
     }

@@ -125,7 +125,7 @@ namespace TypeIT
                         
                         if (homeForm.customizeForm == null || homeForm.customizeForm.IsDisposed)
                         {
-                            homeForm.customizeForm = new Customize(homeForm);
+                            //homeForm.customizeForm = new Customize(homeForm);
                         }
                         homeForm.openForm(homeForm.customizeForm);
                         

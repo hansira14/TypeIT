@@ -22,7 +22,7 @@ namespace TypeIT
         public string BluetoothName { get; set; }
         public string ComPortName { get; set; }
         public string Address { get; set; }
-        private SerialCommunicationModel serialComm = new SerialCommunicationModel();
+        public SerialCommunicationModel serialComm = new SerialCommunicationModel();
 
         //Constructor
         public bluetoothDevice(string BTName, string CPName, string address)

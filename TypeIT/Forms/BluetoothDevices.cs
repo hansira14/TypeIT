@@ -22,8 +22,6 @@ namespace TypeIT
     {
 
         private List<bluetoothDevice> BTDevices = new List<bluetoothDevice>();
-        private SerialCommunicationModel serialComm = new SerialCommunicationModel();
-
         public BluetoothDevices()
         {
             InitializeComponent();
