@@ -48,14 +48,15 @@
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
             tableLayoutPanel1.Dock = DockStyle.Top;
-            tableLayoutPanel1.Location = new Point(19, 0);
+            tableLayoutPanel1.Location = new Point(10, 0);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
-            tableLayoutPanel1.Size = new Size(876, 70);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            tableLayoutPanel1.Size = new Size(472, 33);
             tableLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.Click += mapping_Click;
             // 
             // panel1
             // 
@@ -64,8 +65,9 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(438, 70);
+            panel1.Size = new Size(236, 33);
             panel1.TabIndex = 0;
+            panel1.Click += mapping_Click;
             panel1.MouseDown += command_MouseDown;
             // 
             // mapping
@@ -73,23 +75,24 @@
             mapping.AutoSize = true;
             mapping.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             mapping.ForeColor = Color.FromArgb(19, 150, 255);
-            mapping.Location = new Point(2, 19);
-            mapping.Margin = new Padding(6, 0, 6, 0);
+            mapping.Location = new Point(1, 9);
             mapping.Name = "mapping";
-            mapping.Size = new Size(99, 32);
+            mapping.Size = new Size(47, 15);
             mapping.TabIndex = 1;
             mapping.Text = "Ctrl + V";
+            mapping.Click += mapping_Click;
             mapping.MouseDown += command_MouseDown;
             // 
             // panel2
             // 
             panel2.Controls.Add(output);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(438, 0);
+            panel2.Location = new Point(236, 0);
             panel2.Margin = new Padding(0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(438, 70);
+            panel2.Size = new Size(236, 33);
             panel2.TabIndex = 1;
+            panel2.Click += mapping_Click;
             panel2.MouseDown += command_MouseDown;
             // 
             // output
@@ -97,35 +100,36 @@
             output.AutoSize = true;
             output.Font = new Font("Segoe UI", 9F);
             output.ForeColor = Color.DimGray;
-            output.Location = new Point(13, 19);
-            output.Margin = new Padding(6, 0, 6, 0);
+            output.Location = new Point(7, 9);
             output.Name = "output";
-            output.Size = new Size(69, 32);
+            output.Size = new Size(35, 15);
             output.TabIndex = 1;
             output.Text = "Paste";
+            output.Click += mapping_Click;
             output.MouseDown += command_MouseDown;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(125, 64, 65, 66);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(19, 70);
+            panel3.Location = new Point(10, 33);
             panel3.Margin = new Padding(0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(876, 2);
+            panel3.Size = new Size(472, 1);
             panel3.TabIndex = 2;
+            panel3.Click += mapping_Click;
             // 
             // UC_Commands
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(panel3);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(0);
             Name = "UC_Commands";
-            Padding = new Padding(19, 0, 19, 0);
-            Size = new Size(914, 73);
+            Padding = new Padding(10, 0, 10, 0);
+            Size = new Size(492, 34);
             Load += UC_Key_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -137,10 +141,10 @@
 
         #endregion
         private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel1;
-        private Label mapping;
         private Panel panel2;
         private Label output;
         private Panel panel3;
+        public Panel panel1;
+        public Label mapping;
     }
 }

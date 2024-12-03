@@ -1,17 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TypeIT.UserControls;
 
 namespace TypeIT
 {
     public partial class UC_Commands : UserControl
     {
+        private Customize _parentForm;
+
+        public Customize ParentForm
+        {
+            get { return _parentForm; }
+            set
+            {
+                _parentForm = value;
+            }
+        }
         public string KeyCombination { get; private set; }
         public string Command { get; private set; }
 
@@ -38,12 +50,18 @@ namespace TypeIT
 
         private void command_MouseDown(object sender, MouseEventArgs e)
         {
-            // Create a custom data object that contains both the display text and actual command
+            if (_parentForm.combinationMode) return;
+
             var dragData = new DataObject();
             dragData.SetData("DisplayText", KeyCombination);
             dragData.SetData("Command", Command);
-            
+
             DoDragDrop(dragData, DragDropEffects.All);
+        }
+
+        private void mapping_Click(object sender, EventArgs e)
+        {
+            _parentForm.HandleCombinationMapping(KeyCombination, Command);
         }
     }
 }

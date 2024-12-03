@@ -46,26 +46,27 @@
             guna2Button4.Font = new Font("Segoe UI", 9F);
             guna2Button4.ForeColor = Color.White;
             guna2Button4.Location = new Point(0, 0);
-            guna2Button4.Margin = new Padding(0, 0, 15, 17);
+            guna2Button4.Margin = new Padding(0, 0, 8, 8);
             guna2Button4.Name = "guna2Button4";
             guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button4.Size = new Size(82, 96);
+            guna2Button4.Size = new Size(44, 45);
             guna2Button4.TabIndex = 1;
             guna2Button4.Text = "A";
+            guna2Button4.Click += guna2Button4_Click;
             guna2Button4.MouseDown += guna2Button4_MouseDown;
             // 
             // UC_KeyCharacter
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.White;
+            BackColor = Color.Transparent;
             Controls.Add(guna2Button4);
-            Margin = new Padding(0, 0, 16, 16);
-            MaximumSize = new Size(82, 96);
-            MinimumSize = new Size(82, 96);
+            Margin = new Padding(0, 0, 9, 8);
+            MaximumSize = new Size(44, 45);
+            MinimumSize = new Size(44, 45);
             Name = "UC_KeyCharacter";
-            Size = new Size(82, 96);
+            Size = new Size(44, 45);
             ResumeLayout(false);
         }
 

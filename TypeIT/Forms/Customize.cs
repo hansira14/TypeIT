@@ -25,7 +25,7 @@ namespace TypeIT
         private static readonly Color SpecialKeysColor = Color.FromArgb(64, 128, 64);
         private static readonly Color ModifierKeysColor = Color.FromArgb(64, 64, 128);
         private string recordedCombination;
-        private bool combinationMode = false;
+        public bool combinationMode = false;
         private HashSet<string> selectedFingers = new HashSet<string>();
         private StringBuilder currentCombination = new StringBuilder("S0000000000E");
         private SerialCommunicationModel _serialComm;
@@ -353,7 +353,7 @@ namespace TypeIT
                     foreach (var command in KeyboardConstants.CommonCombinations)
                     {
                         var commandControl = new UC_Commands(command.Key, string.Join(" + ", command.Value));
-                        commandControl.Click += CommandControl_Click;
+                        commandControl.ParentForm = this;
                         commandControl.Dock = DockStyle.Top;
                         toBeAssignedList.Controls.Add(commandControl);
                     }
@@ -369,7 +369,8 @@ namespace TypeIT
         {
             var keyControl = new UC_KeyCharacter();
             keyControl.SetKeyDetails(text, value, color);
-            keyControl.Click += KeyControl_Click;
+            keyControl.ParentForm = this;
+
             keyControl.Margin = new Padding(0, 0, 15, 17);
             keyControl.Size = new Size(82, 96);
             toBeAssignedList.Controls.Add(keyControl);
@@ -448,6 +449,7 @@ namespace TypeIT
                 recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
                 recordedCombination = currentCombination.ToString();
                 recordedCombinationTextBox2.Visible = true;
+                combinationLabel.Visible = true;
                 combinationMode = true;
                 ShowPanel(PanelState.AssignMenu);
             }
@@ -517,6 +519,7 @@ namespace TypeIT
             recordCombination.Visible = false;
             assignOptions.Visible = false;
             recordedCombinationTextBox2.Visible = false;
+            combinationLabel.Visible = false;
 
             if (!(state == PanelState.AssignMenu && combinationMode)) combinationMode = false;
 
@@ -530,7 +533,7 @@ namespace TypeIT
                     if (combinationMode)
                     {
                         recordedCombinationTextBox2.Visible = true;
-                        moveDropdown();
+                        combinationLabel.Visible = true;
                     }
                     break;
                 case PanelState.RecordCombination:
@@ -538,6 +541,7 @@ namespace TypeIT
                     ResetCombinationState();
                     break;
             }
+            moveDropdown();
         }
 
         private void ResetCombinationState()
@@ -573,26 +577,9 @@ namespace TypeIT
                 home.profileList.DisableProfileSwitching = true;
             }
         }
-
-        private void KeyControl_Click(object sender, EventArgs e)
+        public void HandleCombinationMapping(string displayText, string commandValue)
         {
             if (!combinationMode) return;
-
-            var keyControl = (UC_KeyCharacter)sender;
-            string commandValue = keyControl.KeyValue;
-            HandleCombinationMapping(commandValue, commandValue);
-        }
-
-        private void CommandControl_Click(object sender, EventArgs e)
-        {
-            if (!combinationMode) return;
-
-            var commandControl = (UC_Commands)sender;
-            HandleCombinationMapping(commandControl.KeyCombination, commandControl.Command);
-        }
-
-        private void HandleCombinationMapping(string displayText, string commandValue)
-        {
             var result = MessageBox.Show(
                 $"Do you want to map '{displayText}' to the finger combination '{KeyCodeConverter.ConvertToFingerCombination(recordedCombination)}'?",
                 "Confirm Mapping",
