@@ -24,13 +24,18 @@ namespace TypeIT
         private static readonly Color FunctionKeysColor = Color.FromArgb(128, 64, 64);
         private static readonly Color SpecialKeysColor = Color.FromArgb(64, 128, 64);
         private static readonly Color ModifierKeysColor = Color.FromArgb(64, 64, 128);
-        private static readonly Color CommandsColor = Color.FromArgb(128, 128, 64);
         private string recordedCombination;
         private bool combinationMode = false;
         private HashSet<string> selectedFingers = new HashSet<string>();
         private StringBuilder currentCombination = new StringBuilder("S0000000000E");
         private SerialCommunicationModel _serialComm;
-
+        private readonly Dictionary<string, (int Position, UC_Finger Control)> fingerMappings;
+        private enum PanelState
+        {
+            KeySet,
+            AssignMenu,
+            RecordCombination
+        }
         public SerialCommunicationModel SerialComm
         {
             get { return _serialComm; }
@@ -42,20 +47,27 @@ namespace TypeIT
         public Customize(Home home)
         {
             InitializeComponent();
+            
+            fingerMappings = new Dictionary<string, (int Position, UC_Finger Control)>
+            {
+                {"leftPinky", (1, leftPinky)},
+                {"leftRing", (2, leftRing)},
+                {"leftMiddle", (3, leftMiddle)},
+                {"leftIndex", (4, leftIndex)},
+                {"leftThumb", (5, leftThumb)},
+                {"rightThumb", (6, rightThumb)},
+                {"rightIndex", (7, rightIndex)},
+                {"rightMiddle", (8, rightMiddle)},
+                {"rightRing", (9, rightRing)},
+                {"rightPinky", (10, rightPinky)}
+            };
+
             PopulateSets();
             PopulateToBeAssignedList();
             this.home = home;
             setParent();
-
-            keyChoices.Parent.Controls.Remove(keyChoices);
-            //keyChoices.Location = new Point(panel6.Width - keyChoices.Width - 10, (panel6.Height - keyChoices.Height) / 2);
-            int xPos = panel6.Location.X + panel6.Width - keyChoices.Width;
-            int yPos = panel6.Location.Y + (panel6.Height - keyChoices.Height) / 2;
-            keyChoices.Location = new Point(xPos, yPos);
-            assignMenu.Controls.Add(keyChoices);
-            keyChoices.BringToFront();
+            moveDropdown();
         }
-        bool expand = false;
         public void PopulateSets()
         {
             setList.Controls.Clear();
@@ -145,22 +157,13 @@ namespace TypeIT
         }
         private void assignButton_Click(object sender, EventArgs e)
         {
-            keySet.Visible = false;
-            assignMenu.Visible = true;
-            combinationMode = false;
-            recordedCombinationTextBox2.Visible = false;
+            ShowPanel(PanelState.AssignMenu);
         }
 
         private void keyChoice_Click(object sender, EventArgs e)
         {
-            if (keyChoices.Size == keyChoices.MaximumSize)
-            {
-                keyChoices.Size = keyChoices.MinimumSize;
-            }
-            else
-            {
-                keyChoices.Size = keyChoices.MaximumSize;
-            }
+            if (keyChoices.Size == keyChoices.MaximumSize)keyChoices.Size = keyChoices.MinimumSize;
+            else keyChoices.Size = keyChoices.MaximumSize;
         }
 
         private void keyChoices_Leave(object sender, EventArgs e)
@@ -170,10 +173,7 @@ namespace TypeIT
 
         private void closeAssign_Click(object sender, EventArgs e)
         {
-            keySet.Visible = true;
-            assignMenu.Visible = false;
-            combinationMode = false;
-            recordedCombinationTextBox2.Visible = false;
+            ShowPanel(PanelState.KeySet);
         }
 
         private void Customize_Paint(object sender, PaintEventArgs e)
@@ -181,7 +181,6 @@ namespace TypeIT
             var homeForm = Application.OpenForms.OfType<Home>().FirstOrDefault();
             if (homeForm != null)
             {
-                //Main.Padding = new Padding(homeForm.menu.Location.X + (int)(homeForm.menu.Width * 1.2), 0, 0, 0);
                 Main.Padding = new Padding(homeForm.menu.Location.X, 0, 0, 0);
             }
         }
@@ -190,31 +189,6 @@ namespace TypeIT
         {
 
         }
-
-        private void HideAssignOptions()
-        {
-            if (assignOptions.Visible)
-            {
-                combinationMode = false;
-                recordedCombinationTextBox2.Visible = false;
-                assignOptions.Visible = false;
-                keySet.Visible = true;
-                assignMenu.Visible = false;
-            }
-        }
-
-        protected override void OnDeactivate(EventArgs e)
-        {
-            base.OnDeactivate(e);
-            HideAssignOptions();
-        }
-
-        protected override void OnClick(EventArgs e)
-        {
-            base.OnClick(e);
-            HideAssignOptions();
-        }
-
         private void assignMapping_Click(object sender, EventArgs e)
         {
             assignOptions.Visible = !assignOptions.Visible;
@@ -222,47 +196,17 @@ namespace TypeIT
 
         private void singleKeyButton_Click(object sender, EventArgs e)
         {
-            assignMenu.Visible = true;
-            keySet.Visible = false;
-            recordCombination.Visible = false;
-            assignOptions.Visible = false;
-            combinationMode = false;
-            recordedCombinationTextBox2.Visible = false;
+            ShowPanel(PanelState.AssignMenu);
         }
 
         private void combinationButton_Click(object sender, EventArgs e)
         {
-            recordCombination.Visible = true;
-            keySet.Visible = false;
-            assignMenu.Visible = false;
-            assignOptions.Visible = false;
-
-            currentCombination.Clear();
-            currentCombination.Append("S0000000000E");
-            selectedFingers.Clear();
-            recordedCombinationTextBox.Text = "";
-            recordedCombinationTextBox2.Text = "";
-            //_serialComm.CombinationReceived += HandleGloveInput;
+            ShowPanel(PanelState.RecordCombination);
         }
 
         private void cancelRecord_Click(object sender, EventArgs e)
         {
-            keySet.Visible = true;
-            recordCombination.Visible = false;
-            assignMenu.Visible = false;
-            combinationMode = false;
-            recordedCombinationTextBox2.Visible = false;
-
-            //_serialComm.CombinationReceived -= HandleGloveInput;
-            foreach(var button in fingerList.Controls.OfType<Guna.UI2.WinForms.Guna2Button>())
-            {
-                button.Checked = false;
-            }
-            currentCombination.Clear();
-            currentCombination.Append("S0000000000E");
-            selectedFingers.Clear();
-            recordedCombinationTextBox.Text = "";
-            recordedCombinationTextBox2.Text = "";
+            ShowPanel(PanelState.KeySet);
         }
 
         private void keyTypeButton_Click(object sender, EventArgs e)
@@ -270,9 +214,9 @@ namespace TypeIT
             currentKeyMapType = ((Button)sender).Text;
             currentKeyType.Text = currentKeyMapType;
             ((Button)sender).Visible = false;
-            keyTypeButton.Visible = (currentKeyType.Text != "Keys");
-            commandTypeButton.Visible = (currentKeyType.Text != "Commands");
-            macroTypeButton.Visible = (currentKeyType.Text != "Macros");
+            keyTypeButton.Visible = currentKeyType.Text != "Keys";
+            commandTypeButton.Visible = currentKeyType.Text != "Commands";
+            macroTypeButton.Visible = currentKeyType.Text != "Macros";
 
             PopulateToBeAssignedList();
 
@@ -353,9 +297,6 @@ namespace TypeIT
 
         private void addSet_Click(object sender, EventArgs e)
         {
-            // Get the next set number
-            int nextSetNumber = Program.CurrentSelectedMappingProfile.Sets.Count + 1;
-
             // Create a new empty mapping set
             var newSet = new KeyMappingSet
             {
@@ -386,29 +327,10 @@ namespace TypeIT
             switch (currentKeyMapType)
             {
                 case "Keys":
-                    // Basic Keys
-                    foreach (var key in KeyboardConstants.BasicKeys)
-                    {
-                        AddKeyControl(key.Key, key.Value, BasicKeysColor);
-                    }
-
-                    // Function Keys
-                    foreach (var key in KeyboardConstants.FunctionKeys)
-                    {
-                        AddKeyControl(key.Key, key.Value, FunctionKeysColor);
-                    }
-
-                    // Special Keys
-                    foreach (var key in KeyboardConstants.SpecialKeys)
-                    {
-                        AddKeyControl(key.Key, key.Value, SpecialKeysColor);
-                    }
-
-                    // Modifier Keys
-                    foreach (var key in KeyboardConstants.ModifierKeys)
-                    {
-                        AddKeyControl(key.Key, key.Value, ModifierKeysColor);
-                    }
+                    foreach (var key in KeyboardConstants.BasicKeys) AddKeyControl(key.Key, key.Value, BasicKeysColor);
+                    foreach (var key in KeyboardConstants.FunctionKeys) AddKeyControl(key.Key, key.Value, FunctionKeysColor);
+                    foreach (var key in KeyboardConstants.SpecialKeys) AddKeyControl(key.Key, key.Value, SpecialKeysColor);
+                    foreach (var key in KeyboardConstants.ModifierKeys) AddKeyControl(key.Key, key.Value, ModifierKeysColor);
                     break;
 
                 case "Commands":
@@ -421,7 +343,7 @@ namespace TypeIT
                     break;
 
                 case "Macros":
-                    // To be implemented later
+                    // HELP
                     break;
             }
         }
@@ -437,10 +359,8 @@ namespace TypeIT
 
         public string UpdateFingerMapping(string fingerName)
         {
-            // Initialize a char array with '0's and 'S' prefix and 'E' suffix
             char[] mapping = "S0000000000E".ToCharArray();
 
-            // Map finger names to their positions (1-based index)
             Dictionary<string, int> fingerPositions = new Dictionary<string, int>
             {
                 {"leftPinky", 1},
@@ -455,11 +375,7 @@ namespace TypeIT
                 {"rightPinky", 10}
             };
 
-            // Set the corresponding position to '1'
-            if (fingerPositions.TryGetValue(fingerName, out int position))
-            {
-                mapping[position] = '1';
-            }
+            if (fingerPositions.TryGetValue(fingerName, out int position)) mapping[position] = '1';
 
             return new string(mapping);
         }
@@ -479,34 +395,12 @@ namespace TypeIT
 
         public void UpdateFingerMappingsDisplay()
         {
-            // Clear all finger displays first
-            leftPinky.mapping.Text = "";
-            leftRing.mapping.Text = "";
-            leftMiddle.mapping.Text = "";
-            leftIndex.mapping.Text = "";
-            leftThumb.mapping.Text = "";
-            rightThumb.mapping.Text = "";
-            rightIndex.mapping.Text = "";
-            rightMiddle.mapping.Text = "";
-            rightRing.mapping.Text = "";
-            rightPinky.mapping.Text = "";
+            foreach (var mapping in fingerMappings.Values)
+            {
+                mapping.Control.mapping.Text = "";
+            }
 
             if (currentSet?.KeyMappings == null) return;
-
-            // Dictionary to map finger positions to controls
-            var fingerControls = new Dictionary<int, UC_Finger>
-            {
-                {1, leftPinky},
-                {2, leftRing},
-                {3, leftMiddle},
-                {4, leftIndex},
-                {5, leftThumb},
-                {6, rightThumb},
-                {7, rightIndex},
-                {8, rightMiddle},
-                {9, rightRing},
-                {10, rightPinky}
-            };
 
             foreach (var mapping in currentSet.KeyMappings)
             {
@@ -514,14 +408,16 @@ namespace TypeIT
                 if (fingerCode.Length != 12 || !fingerCode.StartsWith("S") || !fingerCode.EndsWith("E"))
                     continue;
 
-                // Find which finger position has '1'
                 for (int i = 1; i <= 10; i++)
                 {
-                    if (fingerCode[i] == '1' && fingerControls.ContainsKey(i))
+                    if (fingerCode[i] == '1')
                     {
-                        // Display the first command/key for this finger
-                        fingerControls[i].mapping.Text = string.Join(" + ", mapping.Value);
-                        break;
+                        var finger = fingerMappings.Values.FirstOrDefault(f => f.Position == i);
+                        if (finger.Control != null)
+                        {
+                            finger.Control.mapping.Text = string.Join(" + ", mapping.Value);
+                            break;
+                        }
                     }
                 }
             }
@@ -547,63 +443,6 @@ namespace TypeIT
             {
                 MessageBox.Show("Please select at least two finger for the combination.",
                     "Invalid Combination", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void HandleGloveInput(string fingerCombination)
-        {
-            // Only process input when recording is active and the combination is valid
-            if (recordCombination.Visible &&
-                fingerCombination.Length == 12 &&
-                fingerCombination.StartsWith("S") &&
-                fingerCombination.EndsWith("E"))
-            {
-                // Count the number of active fingers (1s)
-                int activeFingers = fingerCombination.Count(c => c == '1');
-
-                // Only process if there are multiple fingers pressed
-                if (activeFingers >= 2)
-                {
-                    this.Invoke(() =>
-                    {
-                        currentCombination.Clear();
-                        currentCombination.Append(fingerCombination);
-                        recordedCombinationTextBox.Text = KeyCodeConverter.ConvertToFingerCombination(fingerCombination);
-                        recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(fingerCombination);
-
-                        // Update UI buttons to match the input
-                        UpdateFingerButtons(fingerCombination);
-                    });
-                }
-            }
-        }
-
-        private void UpdateFingerButtons(string combination)
-        {
-            Dictionary<int, string> buttonMapping = new Dictionary<int, string>
-            {
-                {1, "Lpinky"},
-                {2, "Lring"},
-                {3, "Lmiddle"},
-                {4, "Lindex"},
-                {5, "Lthumb"},
-                {6, "Rthumb"},
-                {7, "Rindex"},
-                {8, "Rmiddle"},
-                {9, "Rring"},
-                {10, "Rpinky"}
-            };
-
-            for (int i = 1; i <= 10; i++)
-            {
-                if (buttonMapping.TryGetValue(i, out string buttonName))
-                {
-                    var button = this.Controls.Find(buttonName, true).FirstOrDefault() as Guna.UI2.WinForms.Guna2Button;
-                    if (button != null)
-                    {
-                        button.Checked = combination[i] == '1';
-                    }
-                }
             }
         }
 
@@ -655,10 +494,61 @@ namespace TypeIT
                     selectedFingers.Remove(fingerName);
                 }
 
-                // Update the textbox with the current combination
                 recordedCombinationTextBox.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
-                recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
             }
+
+        }
+        private void ShowPanel(PanelState state)
+        {
+            keySet.Visible = false;
+            assignMenu.Visible = false;
+            recordCombination.Visible = false;
+            assignOptions.Visible = false;
+
+            combinationMode = false;
+            recordedCombinationTextBox2.Visible = false;
+
+            switch (state)
+            {
+                case PanelState.KeySet:
+                    keySet.Visible = true;
+                    if (combinationMode)
+                    {
+                        recordedCombinationTextBox2.Visible = true;
+                        moveDropdown();
+                    }
+                        break;
+                case PanelState.AssignMenu:
+                    assignMenu.Visible = true;
+                    break;
+                case PanelState.RecordCombination:
+                    recordCombination.Visible = true;
+                    ResetCombinationState();
+                    break;
+            }
+        }
+
+        private void ResetCombinationState()
+        {
+            currentCombination.Clear();
+            currentCombination.Append("S0000000000E");
+            selectedFingers.Clear();
+            recordedCombinationTextBox.Text = "";
+            recordedCombinationTextBox2.Text = "";
+
+            foreach (var button in fingerList.Controls.OfType<Guna.UI2.WinForms.Guna2Button>())
+            {
+                button.Checked = false;
+            }
+        }
+        private void moveDropdown()
+        {
+            keyChoices.Parent.Controls.Remove(keyChoices);
+            int xPos = panel6.Location.X + panel6.Width - keyChoices.Width;
+            int yPos = panel6.Location.Y + (panel6.Height - keyChoices.Height) / 2;
+            keyChoices.Location = new Point(xPos, yPos);
+            assignMenu.Controls.Add(keyChoices);
+            keyChoices.BringToFront();
         }
     }
 }
