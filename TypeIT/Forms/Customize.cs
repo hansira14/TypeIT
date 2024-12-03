@@ -353,6 +353,7 @@ namespace TypeIT
                     foreach (var command in KeyboardConstants.CommonCombinations)
                     {
                         var commandControl = new UC_Commands(command.Key, string.Join(" + ", command.Value));
+                        commandControl.Click += CommandControl_Click;
                         commandControl.Dock = DockStyle.Top;
                         toBeAssignedList.Controls.Add(commandControl);
                     }
@@ -368,6 +369,7 @@ namespace TypeIT
         {
             var keyControl = new UC_KeyCharacter();
             keyControl.SetKeyDetails(text, value, color);
+            keyControl.Click += KeyControl_Click;
             keyControl.Margin = new Padding(0, 0, 15, 17);
             keyControl.Size = new Size(82, 96);
             toBeAssignedList.Controls.Add(keyControl);
@@ -443,17 +445,11 @@ namespace TypeIT
         {
             if (currentCombination.ToString().Count(c => c == '1') > 1)
             {
-                combinationMode = true;
-                recordedCombinationTextBox2.Visible = true;
                 recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
                 recordedCombination = currentCombination.ToString();
-
-                assignMenu.Visible = true;
-                keySet.Visible = false;
-                recordCombination.Visible = false;
-                assignOptions.Visible = false;
-                combinationMode = true;
                 recordedCombinationTextBox2.Visible = true;
+                combinationMode = true;
+                ShowPanel(PanelState.AssignMenu);
             }
             else
             {
@@ -520,22 +516,22 @@ namespace TypeIT
             assignMenu.Visible = false;
             recordCombination.Visible = false;
             assignOptions.Visible = false;
-
-            combinationMode = false;
             recordedCombinationTextBox2.Visible = false;
+
+            if (!(state == PanelState.AssignMenu && combinationMode)) combinationMode = false;
 
             switch (state)
             {
                 case PanelState.KeySet:
                     keySet.Visible = true;
+                    break;
+                case PanelState.AssignMenu:
+                    assignMenu.Visible = true;
                     if (combinationMode)
                     {
                         recordedCombinationTextBox2.Visible = true;
                         moveDropdown();
                     }
-                        break;
-                case PanelState.AssignMenu:
-                    assignMenu.Visible = true;
                     break;
                 case PanelState.RecordCombination:
                     recordCombination.Visible = true;
@@ -575,6 +571,54 @@ namespace TypeIT
             if (home?.profileList != null)
             {
                 home.profileList.DisableProfileSwitching = true;
+            }
+        }
+
+        private void KeyControl_Click(object sender, EventArgs e)
+        {
+            if (!combinationMode) return;
+
+            var keyControl = (UC_KeyCharacter)sender;
+            string commandValue = keyControl.KeyValue;
+            HandleCombinationMapping(commandValue, commandValue);
+        }
+
+        private void CommandControl_Click(object sender, EventArgs e)
+        {
+            if (!combinationMode) return;
+
+            var commandControl = (UC_Commands)sender;
+            HandleCombinationMapping(commandControl.KeyCombination, commandControl.Command);
+        }
+
+        private void HandleCombinationMapping(string displayText, string commandValue)
+        {
+            var result = MessageBox.Show(
+                $"Do you want to map '{displayText}' to the finger combination '{KeyCodeConverter.ConvertToFingerCombination(recordedCombination)}'?",
+                "Confirm Mapping",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                if (currentSet?.KeyMappings == null) return;
+
+                // Update or add the mapping
+                if (currentSet.KeyMappings.ContainsKey(recordedCombination))
+                {
+                    currentSet.KeyMappings[recordedCombination] = new List<string> { commandValue };
+                }
+                else
+                {
+                    currentSet.KeyMappings.Add(recordedCombination, new List<string> { commandValue });
+                }
+
+                // Mark as modified and update display
+                MarkAsModified();
+                PopulateKeyMappings(currentSet);
+
+                // Return to key set view
+                ShowPanel(PanelState.KeySet);
             }
         }
     }
