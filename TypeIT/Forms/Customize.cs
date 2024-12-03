@@ -52,7 +52,7 @@ namespace TypeIT
             int xPos = panel6.Location.X + panel6.Width - keyChoices.Width;
             int yPos = panel6.Location.Y + (panel6.Height - keyChoices.Height) / 2;
             keyChoices.Location = new Point(xPos, yPos);
-            assignSingleKey.Controls.Add(keyChoices);
+            assignMenu.Controls.Add(keyChoices);
             keyChoices.BringToFront();
         }
         bool expand = false;
@@ -146,7 +146,9 @@ namespace TypeIT
         private void assignButton_Click(object sender, EventArgs e)
         {
             keySet.Visible = false;
-            assignSingleKey.Visible = true;
+            assignMenu.Visible = true;
+            combinationMode = false;
+            recordedCombinationTextBox2.Visible = false;
         }
 
         private void keyChoice_Click(object sender, EventArgs e)
@@ -169,7 +171,9 @@ namespace TypeIT
         private void closeAssign_Click(object sender, EventArgs e)
         {
             keySet.Visible = true;
-            assignSingleKey.Visible = false;
+            assignMenu.Visible = false;
+            combinationMode = false;
+            recordedCombinationTextBox2.Visible = false;
         }
 
         private void Customize_Paint(object sender, PaintEventArgs e)
@@ -191,9 +195,11 @@ namespace TypeIT
         {
             if (assignOptions.Visible)
             {
+                combinationMode = false;
+                recordedCombinationTextBox2.Visible = false;
                 assignOptions.Visible = false;
                 keySet.Visible = true;
-                assignSingleKey.Visible = false;
+                assignMenu.Visible = false;
             }
         }
 
@@ -216,24 +222,26 @@ namespace TypeIT
 
         private void singleKeyButton_Click(object sender, EventArgs e)
         {
-            assignSingleKey.Visible = true;
+            assignMenu.Visible = true;
             keySet.Visible = false;
             recordCombination.Visible = false;
             assignOptions.Visible = false;
+            combinationMode = false;
+            recordedCombinationTextBox2.Visible = false;
         }
 
         private void combinationButton_Click(object sender, EventArgs e)
         {
             recordCombination.Visible = true;
             keySet.Visible = false;
-            assignSingleKey.Visible = false;
+            assignMenu.Visible = false;
             assignOptions.Visible = false;
 
             currentCombination.Clear();
             currentCombination.Append("S0000000000E");
             selectedFingers.Clear();
             recordedCombinationTextBox.Text = "";
-
+            recordedCombinationTextBox2.Text = "";
             //_serialComm.CombinationReceived += HandleGloveInput;
         }
 
@@ -241,14 +249,20 @@ namespace TypeIT
         {
             keySet.Visible = true;
             recordCombination.Visible = false;
-            assignSingleKey.Visible = false;
+            assignMenu.Visible = false;
+            combinationMode = false;
+            recordedCombinationTextBox2.Visible = false;
 
             //_serialComm.CombinationReceived -= HandleGloveInput;
-
+            foreach(var button in fingerList.Controls.OfType<Guna.UI2.WinForms.Guna2Button>())
+            {
+                button.Checked = false;
+            }
             currentCombination.Clear();
             currentCombination.Append("S0000000000E");
             selectedFingers.Clear();
             recordedCombinationTextBox.Text = "";
+            recordedCombinationTextBox2.Text = "";
         }
 
         private void keyTypeButton_Click(object sender, EventArgs e)
@@ -515,10 +529,19 @@ namespace TypeIT
 
         private void proceedToAssign_Click(object sender, EventArgs e)
         {
-            if (currentCombination.ToString().Count(c => c == '1') > 2)
+            if (currentCombination.ToString().Count(c => c == '1') > 1)
             {
                 combinationMode = true;
+                recordedCombinationTextBox2.Visible = true;
+                recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
                 recordedCombination = currentCombination.ToString();
+
+                assignMenu.Visible = true;
+                keySet.Visible = false;
+                recordCombination.Visible = false;
+                assignOptions.Visible = false;
+                combinationMode = true;
+                recordedCombinationTextBox2.Visible = true;
             }
             else
             {
@@ -545,7 +568,8 @@ namespace TypeIT
                     {
                         currentCombination.Clear();
                         currentCombination.Append(fingerCombination);
-                        recordedCombinationTextBox.Text = fingerCombination;
+                        recordedCombinationTextBox.Text = KeyCodeConverter.ConvertToFingerCombination(fingerCombination);
+                        recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(fingerCombination);
 
                         // Update UI buttons to match the input
                         UpdateFingerButtons(fingerCombination);
@@ -632,7 +656,8 @@ namespace TypeIT
                 }
 
                 // Update the textbox with the current combination
-                recordedCombinationTextBox.Text = currentCombination.ToString();
+                recordedCombinationTextBox.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
+                recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
             }
         }
     }
