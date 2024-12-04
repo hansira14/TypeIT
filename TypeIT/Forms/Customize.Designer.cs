@@ -34,13 +34,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customize));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -49,8 +48,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -69,12 +68,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customize));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -91,33 +91,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Main = new TableLayoutPanel();
             panelMenu = new Panel();
-            assignMenu = new Guna.UI2.WinForms.Guna2Panel();
-            toBeAssignedList2 = new Guna.UI2.WinForms.Guna2Panel();
-            toBeAssignedList = new FlowLayoutPanel();
-            macroPanel = new Panel();
-            addNewMacro = new Guna.UI2.WinForms.Guna2TileButton();
-            panel8 = new Panel();
-            pictureBox2 = new PictureBox();
-            Search = new TextBox();
-            panel9 = new Panel();
-            panel6 = new Panel();
-            combinationLabel = new Label();
-            keyChoices = new Guna.UI2.WinForms.Guna2Panel();
-            keyTypeList = new FlowLayoutPanel();
-            currentKeyType = new FontAwesome.Sharp.IconButton();
-            keyTypeButton = new FontAwesome.Sharp.IconButton();
-            commandTypeButton = new FontAwesome.Sharp.IconButton();
-            macroTypeButton = new FontAwesome.Sharp.IconButton();
-            label6 = new Label();
-            recordedCombinationTextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            panel1 = new Panel();
-            closeAssign = new FontAwesome.Sharp.IconButton();
             keySet = new Guna.UI2.WinForms.Guna2Panel();
             keyMaps = new Guna.UI2.WinForms.Guna2Panel();
             blank = new Panel();
             label1 = new Label();
             panel7 = new Panel();
-            guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            activationKeyPanel = new Guna.UI2.WinForms.Guna2Panel();
             setActivationKey = new Label();
             label2 = new Label();
             panel5 = new Panel();
@@ -141,6 +120,27 @@
             proceedToAssign = new Guna.UI2.WinForms.Guna2Button();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             recordedCombinationTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            assignMenu = new Guna.UI2.WinForms.Guna2Panel();
+            toBeAssignedList2 = new Guna.UI2.WinForms.Guna2Panel();
+            toBeAssignedList = new FlowLayoutPanel();
+            macroPanel = new Panel();
+            addNewMacro = new Guna.UI2.WinForms.Guna2TileButton();
+            panel8 = new Panel();
+            pictureBox2 = new PictureBox();
+            Search = new TextBox();
+            panel9 = new Panel();
+            panel6 = new Panel();
+            combinationLabel = new Label();
+            keyChoices = new Guna.UI2.WinForms.Guna2Panel();
+            keyTypeList = new FlowLayoutPanel();
+            currentKeyType = new FontAwesome.Sharp.IconButton();
+            keyTypeButton = new FontAwesome.Sharp.IconButton();
+            commandTypeButton = new FontAwesome.Sharp.IconButton();
+            macroTypeButton = new FontAwesome.Sharp.IconButton();
+            label6 = new Label();
+            recordedCombinationTextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            panel1 = new Panel();
+            closeAssign = new FontAwesome.Sharp.IconButton();
             label4 = new Label();
             panelPreview = new Panel();
             assignOptions = new Guna.UI2.WinForms.Guna2Panel();
@@ -161,6 +161,13 @@
             pictureBox1 = new PictureBox();
             Main.SuspendLayout();
             panelMenu.SuspendLayout();
+            keySet.SuspendLayout();
+            blank.SuspendLayout();
+            panel7.SuspendLayout();
+            activationKeyPanel.SuspendLayout();
+            guna2Panel3.SuspendLayout();
+            recordCombination.SuspendLayout();
+            fingerList.SuspendLayout();
             assignMenu.SuspendLayout();
             macroPanel.SuspendLayout();
             panel8.SuspendLayout();
@@ -169,13 +176,6 @@
             keyChoices.SuspendLayout();
             keyTypeList.SuspendLayout();
             panel1.SuspendLayout();
-            keySet.SuspendLayout();
-            blank.SuspendLayout();
-            panel7.SuspendLayout();
-            guna2Panel4.SuspendLayout();
-            guna2Panel3.SuspendLayout();
-            recordCombination.SuspendLayout();
-            fingerList.SuspendLayout();
             panelPreview.SuspendLayout();
             assignOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -200,9 +200,9 @@
             // 
             // panelMenu
             // 
-            panelMenu.Controls.Add(assignMenu);
             panelMenu.Controls.Add(keySet);
             panelMenu.Controls.Add(recordCombination);
+            panelMenu.Controls.Add(assignMenu);
             panelMenu.Controls.Add(label4);
             panelMenu.Dock = DockStyle.Fill;
             panelMenu.Location = new Point(3, 3);
@@ -210,6 +210,561 @@
             panelMenu.Padding = new Padding(0, 16, 0, 16);
             panelMenu.Size = new Size(404, 630);
             panelMenu.TabIndex = 12;
+            // 
+            // keySet
+            // 
+            keySet.BackColor = Color.Transparent;
+            keySet.BorderRadius = 14;
+            keySet.Controls.Add(keyMaps);
+            keySet.Controls.Add(blank);
+            keySet.Controls.Add(panel7);
+            keySet.Controls.Add(guna2Panel3);
+            keySet.CustomizableEdges = customizableEdges9;
+            keySet.Dock = DockStyle.Fill;
+            keySet.FillColor = Color.FromArgb(33, 34, 37);
+            keySet.Location = new Point(0, 64);
+            keySet.Name = "keySet";
+            keySet.Padding = new Padding(12);
+            keySet.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            keySet.Size = new Size(404, 550);
+            keySet.TabIndex = 9;
+            // 
+            // keyMaps
+            // 
+            keyMaps.AutoScroll = true;
+            keyMaps.CustomizableEdges = customizableEdges1;
+            keyMaps.Dock = DockStyle.Fill;
+            keyMaps.Location = new Point(12, 277);
+            keyMaps.Name = "keyMaps";
+            keyMaps.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            keyMaps.Size = new Size(380, 261);
+            keyMaps.TabIndex = 18;
+            keyMaps.Paint += keyMaps_Paint;
+            // 
+            // blank
+            // 
+            blank.Controls.Add(label1);
+            blank.Dock = DockStyle.Top;
+            blank.Location = new Point(12, 124);
+            blank.Name = "blank";
+            blank.Size = new Size(380, 153);
+            blank.TabIndex = 17;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(125, 62);
+            label1.Name = "label1";
+            label1.Size = new Size(115, 15);
+            label1.TabIndex = 3;
+            label1.Text = "No key assigned yet!";
+            // 
+            // panel7
+            // 
+            panel7.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panel7.BackColor = Color.Transparent;
+            panel7.Controls.Add(activationKeyPanel);
+            panel7.Controls.Add(panel5);
+            panel7.Controls.Add(assignMapping);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(12, 52);
+            panel7.Name = "panel7";
+            panel7.Padding = new Padding(0, 14, 0, 14);
+            panel7.Size = new Size(380, 72);
+            panel7.TabIndex = 16;
+            // 
+            // activationKeyPanel
+            // 
+            activationKeyPanel.BackColor = Color.Transparent;
+            activationKeyPanel.BorderColor = Color.Transparent;
+            activationKeyPanel.BorderRadius = 6;
+            activationKeyPanel.Controls.Add(setActivationKey);
+            activationKeyPanel.Controls.Add(label2);
+            activationKeyPanel.CustomizableEdges = customizableEdges3;
+            activationKeyPanel.Dock = DockStyle.Fill;
+            activationKeyPanel.FillColor = Color.FromArgb(16, 17, 19);
+            activationKeyPanel.Location = new Point(0, 14);
+            activationKeyPanel.Margin = new Padding(0);
+            activationKeyPanel.Name = "activationKeyPanel";
+            activationKeyPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            activationKeyPanel.Size = new Size(285, 44);
+            activationKeyPanel.TabIndex = 14;
+            // 
+            // setActivationKey
+            // 
+            setActivationKey.AutoSize = true;
+            setActivationKey.Dock = DockStyle.Right;
+            setActivationKey.FlatStyle = FlatStyle.Flat;
+            setActivationKey.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            setActivationKey.ForeColor = Color.FromArgb(19, 150, 255);
+            setActivationKey.Location = new Point(185, 0);
+            setActivationKey.Margin = new Padding(2, 0, 2, 0);
+            setActivationKey.Name = "setActivationKey";
+            setActivationKey.Padding = new Padding(12);
+            setActivationKey.Size = new Size(100, 41);
+            setActivationKey.TabIndex = 5;
+            setActivationKey.Text = "Select a set";
+            setActivationKey.Click += setActivationKey_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Left;
+            label2.FlatStyle = FlatStyle.Flat;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(0, 0);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Padding = new Padding(12);
+            label2.Size = new Size(85, 43);
+            label2.TabIndex = 4;
+            label2.Text = "Activate:";
+            // 
+            // panel5
+            // 
+            panel5.Dock = DockStyle.Right;
+            panel5.Location = new Point(285, 14);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(8, 44);
+            panel5.TabIndex = 16;
+            // 
+            // assignMapping
+            // 
+            assignMapping.BorderRadius = 4;
+            assignMapping.CustomizableEdges = customizableEdges5;
+            assignMapping.DisabledState.BorderColor = Color.DarkGray;
+            assignMapping.DisabledState.CustomBorderColor = Color.DarkGray;
+            assignMapping.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            assignMapping.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            assignMapping.Dock = DockStyle.Right;
+            assignMapping.Font = new Font("Segoe UI", 9F);
+            assignMapping.ForeColor = Color.White;
+            assignMapping.Location = new Point(293, 14);
+            assignMapping.Name = "assignMapping";
+            assignMapping.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            assignMapping.Size = new Size(87, 44);
+            assignMapping.TabIndex = 15;
+            assignMapping.Text = "Assign";
+            assignMapping.Click += assignMapping_Click;
+            // 
+            // guna2Panel3
+            // 
+            guna2Panel3.Controls.Add(setList);
+            guna2Panel3.Controls.Add(addSet);
+            guna2Panel3.CustomBorderColor = Color.FromArgb(64, 65, 66);
+            guna2Panel3.CustomBorderThickness = new Padding(0, 0, 0, 1);
+            guna2Panel3.CustomizableEdges = customizableEdges7;
+            guna2Panel3.Dock = DockStyle.Top;
+            guna2Panel3.Location = new Point(12, 12);
+            guna2Panel3.Margin = new Padding(0);
+            guna2Panel3.Name = "guna2Panel3";
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel3.Size = new Size(380, 40);
+            guna2Panel3.TabIndex = 0;
+            // 
+            // setList
+            // 
+            setList.AutoScroll = true;
+            setList.Dock = DockStyle.Top;
+            setList.Location = new Point(0, 0);
+            setList.Margin = new Padding(0);
+            setList.Name = "setList";
+            setList.Size = new Size(295, 82);
+            setList.TabIndex = 3;
+            setList.WrapContents = false;
+            // 
+            // addSet
+            // 
+            addSet.BackColor = Color.Transparent;
+            addSet.Dock = DockStyle.Right;
+            addSet.FlatAppearance.BorderSize = 0;
+            addSet.FlatStyle = FlatStyle.Flat;
+            addSet.ForeColor = Color.Transparent;
+            addSet.IconChar = FontAwesome.Sharp.IconChar.Add;
+            addSet.IconColor = Color.White;
+            addSet.IconFont = FontAwesome.Sharp.IconFont.Regular;
+            addSet.IconSize = 12;
+            addSet.Location = new Point(295, 0);
+            addSet.Margin = new Padding(0);
+            addSet.Name = "addSet";
+            addSet.Size = new Size(85, 40);
+            addSet.TabIndex = 4;
+            addSet.Text = "  Add set";
+            addSet.TextImageRelation = TextImageRelation.ImageBeforeText;
+            addSet.UseVisualStyleBackColor = false;
+            addSet.Click += addSet_Click;
+            // 
+            // recordCombination
+            // 
+            recordCombination.BackColor = Color.Transparent;
+            recordCombination.BorderRadius = 14;
+            recordCombination.Controls.Add(fingerList);
+            recordCombination.Controls.Add(cancelRecord);
+            recordCombination.Controls.Add(proceedToAssign);
+            recordCombination.Controls.Add(guna2TextBox2);
+            recordCombination.Controls.Add(recordedCombinationTextBox);
+            recordCombination.CustomizableEdges = customizableEdges39;
+            recordCombination.Dock = DockStyle.Fill;
+            recordCombination.FillColor = Color.FromArgb(10, 10, 12);
+            recordCombination.Location = new Point(0, 64);
+            recordCombination.Name = "recordCombination";
+            recordCombination.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            recordCombination.Size = new Size(404, 550);
+            recordCombination.TabIndex = 0;
+            recordCombination.Visible = false;
+            // 
+            // fingerList
+            // 
+            fingerList.Controls.Add(Lpinky);
+            fingerList.Controls.Add(Lmiddle);
+            fingerList.Controls.Add(Lring);
+            fingerList.Controls.Add(Lindex);
+            fingerList.Controls.Add(Lthumb);
+            fingerList.Controls.Add(Rpinky);
+            fingerList.Controls.Add(Rmiddle);
+            fingerList.Controls.Add(Rring);
+            fingerList.Controls.Add(Rindex);
+            fingerList.Controls.Add(Rthumb);
+            fingerList.Location = new Point(44, 260);
+            fingerList.Name = "fingerList";
+            fingerList.Size = new Size(324, 149);
+            fingerList.TabIndex = 16;
+            // 
+            // Lpinky
+            // 
+            Lpinky.BorderColor = Color.FromArgb(16, 17, 19);
+            Lpinky.BorderRadius = 4;
+            Lpinky.BorderThickness = 1;
+            Lpinky.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Lpinky.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Lpinky.CheckedState.FillColor = Color.Black;
+            Lpinky.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Lpinky.CustomizableEdges = customizableEdges11;
+            Lpinky.DisabledState.BorderColor = Color.DarkGray;
+            Lpinky.DisabledState.CustomBorderColor = Color.DarkGray;
+            Lpinky.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Lpinky.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Lpinky.FillColor = Color.Black;
+            Lpinky.Font = new Font("Segoe UI", 9F);
+            Lpinky.ForeColor = Color.White;
+            Lpinky.Location = new Point(3, 3);
+            Lpinky.Name = "Lpinky";
+            Lpinky.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            Lpinky.Size = new Size(69, 35);
+            Lpinky.TabIndex = 16;
+            Lpinky.Text = "Lpinky";
+            Lpinky.Click += fingerClick;
+            // 
+            // Lmiddle
+            // 
+            Lmiddle.BorderColor = Color.FromArgb(16, 17, 19);
+            Lmiddle.BorderRadius = 4;
+            Lmiddle.BorderThickness = 1;
+            Lmiddle.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Lmiddle.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Lmiddle.CheckedState.FillColor = Color.Black;
+            Lmiddle.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Lmiddle.CustomizableEdges = customizableEdges13;
+            Lmiddle.DisabledState.BorderColor = Color.DarkGray;
+            Lmiddle.DisabledState.CustomBorderColor = Color.DarkGray;
+            Lmiddle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Lmiddle.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Lmiddle.FillColor = Color.Black;
+            Lmiddle.Font = new Font("Segoe UI", 9F);
+            Lmiddle.ForeColor = Color.White;
+            Lmiddle.Location = new Point(78, 3);
+            Lmiddle.Name = "Lmiddle";
+            Lmiddle.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            Lmiddle.Size = new Size(75, 35);
+            Lmiddle.TabIndex = 17;
+            Lmiddle.Text = "Lmiddle";
+            Lmiddle.Click += fingerClick;
+            // 
+            // Lring
+            // 
+            Lring.BorderColor = Color.FromArgb(16, 17, 19);
+            Lring.BorderRadius = 4;
+            Lring.BorderThickness = 1;
+            Lring.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Lring.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Lring.CheckedState.FillColor = Color.Black;
+            Lring.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Lring.CustomizableEdges = customizableEdges15;
+            Lring.DisabledState.BorderColor = Color.DarkGray;
+            Lring.DisabledState.CustomBorderColor = Color.DarkGray;
+            Lring.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Lring.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Lring.FillColor = Color.Black;
+            Lring.Font = new Font("Segoe UI", 9F);
+            Lring.ForeColor = Color.White;
+            Lring.Location = new Point(159, 3);
+            Lring.Name = "Lring";
+            Lring.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            Lring.Size = new Size(69, 35);
+            Lring.TabIndex = 18;
+            Lring.Text = "Lring";
+            Lring.Click += fingerClick;
+            // 
+            // Lindex
+            // 
+            Lindex.BorderColor = Color.FromArgb(16, 17, 19);
+            Lindex.BorderRadius = 4;
+            Lindex.BorderThickness = 1;
+            Lindex.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Lindex.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Lindex.CheckedState.FillColor = Color.Black;
+            Lindex.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Lindex.CustomizableEdges = customizableEdges17;
+            Lindex.DisabledState.BorderColor = Color.DarkGray;
+            Lindex.DisabledState.CustomBorderColor = Color.DarkGray;
+            Lindex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Lindex.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Lindex.FillColor = Color.Black;
+            Lindex.Font = new Font("Segoe UI", 9F);
+            Lindex.ForeColor = Color.White;
+            Lindex.Location = new Point(234, 3);
+            Lindex.Name = "Lindex";
+            Lindex.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            Lindex.Size = new Size(69, 35);
+            Lindex.TabIndex = 19;
+            Lindex.Text = "Lindex";
+            Lindex.Click += fingerClick;
+            // 
+            // Lthumb
+            // 
+            Lthumb.BorderColor = Color.FromArgb(16, 17, 19);
+            Lthumb.BorderRadius = 4;
+            Lthumb.BorderThickness = 1;
+            Lthumb.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Lthumb.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Lthumb.CheckedState.FillColor = Color.Black;
+            Lthumb.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Lthumb.CustomizableEdges = customizableEdges19;
+            Lthumb.DisabledState.BorderColor = Color.DarkGray;
+            Lthumb.DisabledState.CustomBorderColor = Color.DarkGray;
+            Lthumb.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Lthumb.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Lthumb.FillColor = Color.Black;
+            Lthumb.Font = new Font("Segoe UI", 9F);
+            Lthumb.ForeColor = Color.White;
+            Lthumb.Location = new Point(3, 44);
+            Lthumb.Name = "Lthumb";
+            Lthumb.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            Lthumb.Size = new Size(80, 35);
+            Lthumb.TabIndex = 20;
+            Lthumb.Text = "Lthumb";
+            Lthumb.Click += fingerClick;
+            // 
+            // Rpinky
+            // 
+            Rpinky.BorderRadius = 4;
+            Rpinky.BorderThickness = 1;
+            Rpinky.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Rpinky.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Rpinky.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
+            Rpinky.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Rpinky.CustomizableEdges = customizableEdges21;
+            Rpinky.DisabledState.BorderColor = Color.DarkGray;
+            Rpinky.DisabledState.CustomBorderColor = Color.DarkGray;
+            Rpinky.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Rpinky.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Rpinky.FillColor = Color.FromArgb(16, 17, 19);
+            Rpinky.Font = new Font("Segoe UI", 9F);
+            Rpinky.ForeColor = Color.White;
+            Rpinky.Location = new Point(89, 44);
+            Rpinky.Name = "Rpinky";
+            Rpinky.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            Rpinky.Size = new Size(69, 35);
+            Rpinky.TabIndex = 21;
+            Rpinky.Text = "Rpinky";
+            Rpinky.Click += fingerClick;
+            // 
+            // Rmiddle
+            // 
+            Rmiddle.BorderRadius = 4;
+            Rmiddle.BorderThickness = 1;
+            Rmiddle.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Rmiddle.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Rmiddle.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
+            Rmiddle.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Rmiddle.CustomizableEdges = customizableEdges23;
+            Rmiddle.DisabledState.BorderColor = Color.DarkGray;
+            Rmiddle.DisabledState.CustomBorderColor = Color.DarkGray;
+            Rmiddle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Rmiddle.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Rmiddle.FillColor = Color.FromArgb(16, 17, 19);
+            Rmiddle.Font = new Font("Segoe UI", 9F);
+            Rmiddle.ForeColor = Color.White;
+            Rmiddle.Location = new Point(164, 44);
+            Rmiddle.Name = "Rmiddle";
+            Rmiddle.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            Rmiddle.Size = new Size(75, 35);
+            Rmiddle.TabIndex = 22;
+            Rmiddle.Text = "Rmiddle";
+            Rmiddle.Click += fingerClick;
+            // 
+            // Rring
+            // 
+            Rring.BorderRadius = 4;
+            Rring.BorderThickness = 1;
+            Rring.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Rring.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Rring.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
+            Rring.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Rring.CustomizableEdges = customizableEdges25;
+            Rring.DisabledState.BorderColor = Color.DarkGray;
+            Rring.DisabledState.CustomBorderColor = Color.DarkGray;
+            Rring.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Rring.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Rring.FillColor = Color.FromArgb(16, 17, 19);
+            Rring.Font = new Font("Segoe UI", 9F);
+            Rring.ForeColor = Color.White;
+            Rring.Location = new Point(245, 44);
+            Rring.Name = "Rring";
+            Rring.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            Rring.Size = new Size(69, 35);
+            Rring.TabIndex = 23;
+            Rring.Text = "Rring";
+            Rring.Click += fingerClick;
+            // 
+            // Rindex
+            // 
+            Rindex.BorderRadius = 4;
+            Rindex.BorderThickness = 1;
+            Rindex.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Rindex.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Rindex.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
+            Rindex.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Rindex.CustomizableEdges = customizableEdges27;
+            Rindex.DisabledState.BorderColor = Color.DarkGray;
+            Rindex.DisabledState.CustomBorderColor = Color.DarkGray;
+            Rindex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Rindex.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Rindex.FillColor = Color.FromArgb(16, 17, 19);
+            Rindex.Font = new Font("Segoe UI", 9F);
+            Rindex.ForeColor = Color.White;
+            Rindex.Location = new Point(3, 85);
+            Rindex.Name = "Rindex";
+            Rindex.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            Rindex.Size = new Size(69, 35);
+            Rindex.TabIndex = 24;
+            Rindex.Text = "Rindex";
+            Rindex.Click += fingerClick;
+            // 
+            // Rthumb
+            // 
+            Rthumb.BorderRadius = 4;
+            Rthumb.BorderThickness = 1;
+            Rthumb.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            Rthumb.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Rthumb.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
+            Rthumb.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
+            Rthumb.CustomizableEdges = customizableEdges29;
+            Rthumb.DisabledState.BorderColor = Color.DarkGray;
+            Rthumb.DisabledState.CustomBorderColor = Color.DarkGray;
+            Rthumb.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            Rthumb.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            Rthumb.FillColor = Color.FromArgb(16, 17, 19);
+            Rthumb.Font = new Font("Segoe UI", 9F);
+            Rthumb.ForeColor = Color.White;
+            Rthumb.Location = new Point(78, 85);
+            Rthumb.Name = "Rthumb";
+            Rthumb.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            Rthumb.Size = new Size(85, 35);
+            Rthumb.TabIndex = 25;
+            Rthumb.Text = "Rthumb";
+            Rthumb.Click += fingerClick;
+            // 
+            // cancelRecord
+            // 
+            cancelRecord.BackColor = Color.Transparent;
+            cancelRecord.BorderRadius = 4;
+            cancelRecord.CustomizableEdges = customizableEdges31;
+            cancelRecord.DisabledState.BorderColor = Color.DarkGray;
+            cancelRecord.DisabledState.CustomBorderColor = Color.DarkGray;
+            cancelRecord.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            cancelRecord.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            cancelRecord.FillColor = Color.Transparent;
+            cancelRecord.Font = new Font("Segoe UI", 9F);
+            cancelRecord.ForeColor = Color.White;
+            cancelRecord.Location = new Point(204, 466);
+            cancelRecord.Name = "cancelRecord";
+            cancelRecord.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            cancelRecord.Size = new Size(79, 37);
+            cancelRecord.TabIndex = 14;
+            cancelRecord.Text = "Cancel";
+            cancelRecord.Click += cancelRecord_Click;
+            // 
+            // proceedToAssign
+            // 
+            proceedToAssign.BorderRadius = 4;
+            proceedToAssign.CustomizableEdges = customizableEdges33;
+            proceedToAssign.DisabledState.BorderColor = Color.DarkGray;
+            proceedToAssign.DisabledState.CustomBorderColor = Color.DarkGray;
+            proceedToAssign.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            proceedToAssign.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            proceedToAssign.Font = new Font("Segoe UI", 9F);
+            proceedToAssign.ForeColor = Color.White;
+            proceedToAssign.Location = new Point(289, 466);
+            proceedToAssign.Name = "proceedToAssign";
+            proceedToAssign.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            proceedToAssign.Size = new Size(79, 37);
+            proceedToAssign.TabIndex = 13;
+            proceedToAssign.Text = "Next";
+            proceedToAssign.Click += proceedToAssign_Click;
+            // 
+            // guna2TextBox2
+            // 
+            guna2TextBox2.BackColor = Color.Transparent;
+            guna2TextBox2.BorderColor = Color.Transparent;
+            guna2TextBox2.BorderThickness = 0;
+            guna2TextBox2.CustomizableEdges = customizableEdges35;
+            guna2TextBox2.DefaultText = "Select the finger combination you want to use for this mapping.";
+            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox2.FillColor = Color.FromArgb(10, 10, 12);
+            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Font = new Font("Segoe UI", 9F);
+            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox2.Location = new Point(44, 97);
+            guna2TextBox2.Margin = new Padding(6);
+            guna2TextBox2.Multiline = true;
+            guna2TextBox2.Name = "guna2TextBox2";
+            guna2TextBox2.PasswordChar = '\0';
+            guna2TextBox2.PlaceholderText = "";
+            guna2TextBox2.ReadOnly = true;
+            guna2TextBox2.SelectedText = "";
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            guna2TextBox2.Size = new Size(324, 70);
+            guna2TextBox2.TabIndex = 12;
+            // 
+            // recordedCombinationTextBox
+            // 
+            recordedCombinationTextBox.BackColor = Color.Transparent;
+            recordedCombinationTextBox.BorderColor = Color.Transparent;
+            recordedCombinationTextBox.BorderRadius = 6;
+            recordedCombinationTextBox.CustomizableEdges = customizableEdges37;
+            recordedCombinationTextBox.DefaultText = "";
+            recordedCombinationTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            recordedCombinationTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            recordedCombinationTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            recordedCombinationTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            recordedCombinationTextBox.FillColor = Color.FromArgb(16, 17, 19);
+            recordedCombinationTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            recordedCombinationTextBox.Font = new Font("Segoe UI", 9F);
+            recordedCombinationTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            recordedCombinationTextBox.Location = new Point(44, 184);
+            recordedCombinationTextBox.Margin = new Padding(6);
+            recordedCombinationTextBox.Name = "recordedCombinationTextBox";
+            recordedCombinationTextBox.PasswordChar = '\0';
+            recordedCombinationTextBox.PlaceholderText = "";
+            recordedCombinationTextBox.ReadOnly = true;
+            recordedCombinationTextBox.SelectedText = "";
+            recordedCombinationTextBox.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            recordedCombinationTextBox.Size = new Size(324, 60);
+            recordedCombinationTextBox.TabIndex = 11;
             // 
             // assignMenu
             // 
@@ -222,13 +777,13 @@
             assignMenu.Controls.Add(panel6);
             assignMenu.Controls.Add(recordedCombinationTextBox2);
             assignMenu.Controls.Add(panel1);
-            assignMenu.CustomizableEdges = customizableEdges9;
+            assignMenu.CustomizableEdges = customizableEdges49;
             assignMenu.Dock = DockStyle.Fill;
             assignMenu.FillColor = Color.FromArgb(33, 34, 37);
             assignMenu.Location = new Point(0, 64);
             assignMenu.Name = "assignMenu";
             assignMenu.Padding = new Padding(12);
-            assignMenu.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            assignMenu.ShadowDecoration.CustomizableEdges = customizableEdges50;
             assignMenu.Size = new Size(404, 550);
             assignMenu.TabIndex = 10;
             assignMenu.Visible = false;
@@ -237,12 +792,12 @@
             // 
             toBeAssignedList2.AutoScroll = true;
             toBeAssignedList2.BackColor = Color.Transparent;
-            toBeAssignedList2.CustomizableEdges = customizableEdges1;
+            toBeAssignedList2.CustomizableEdges = customizableEdges41;
             toBeAssignedList2.Dock = DockStyle.Fill;
             toBeAssignedList2.Location = new Point(12, 258);
             toBeAssignedList2.Margin = new Padding(3, 0, 3, 3);
             toBeAssignedList2.Name = "toBeAssignedList2";
-            toBeAssignedList2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            toBeAssignedList2.ShadowDecoration.CustomizableEdges = customizableEdges42;
             toBeAssignedList2.Size = new Size(380, 280);
             toBeAssignedList2.TabIndex = 63;
             // 
@@ -276,7 +831,7 @@
             addNewMacro.BorderColor = Color.FromArgb(29, 30, 33);
             addNewMacro.BorderRadius = 6;
             addNewMacro.BorderThickness = 1;
-            addNewMacro.CustomizableEdges = customizableEdges3;
+            addNewMacro.CustomizableEdges = customizableEdges43;
             addNewMacro.DisabledState.BorderColor = Color.DarkGray;
             addNewMacro.DisabledState.CustomBorderColor = Color.DarkGray;
             addNewMacro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -288,7 +843,7 @@
             addNewMacro.Location = new Point(0, 8);
             addNewMacro.Margin = new Padding(0);
             addNewMacro.Name = "addNewMacro";
-            addNewMacro.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            addNewMacro.ShadowDecoration.CustomizableEdges = customizableEdges44;
             addNewMacro.Size = new Size(380, 29);
             addNewMacro.TabIndex = 65;
             addNewMacro.Text = "Add new macro";
@@ -376,13 +931,13 @@
             keyChoices.BackColor = Color.Transparent;
             keyChoices.BorderRadius = 4;
             keyChoices.Controls.Add(keyTypeList);
-            keyChoices.CustomizableEdges = customizableEdges5;
+            keyChoices.CustomizableEdges = customizableEdges45;
             keyChoices.FillColor = Color.DarkGray;
             keyChoices.Location = new Point(239, 13);
             keyChoices.MaximumSize = new Size(133, 116);
             keyChoices.MinimumSize = new Size(133, 38);
             keyChoices.Name = "keyChoices";
-            keyChoices.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            keyChoices.ShadowDecoration.CustomizableEdges = customizableEdges46;
             keyChoices.Size = new Size(133, 38);
             keyChoices.TabIndex = 18;
             keyChoices.Leave += keyChoices_Leave;
@@ -513,7 +1068,7 @@
             recordedCombinationTextBox2.BackColor = Color.Transparent;
             recordedCombinationTextBox2.BorderColor = Color.Transparent;
             recordedCombinationTextBox2.BorderRadius = 6;
-            recordedCombinationTextBox2.CustomizableEdges = customizableEdges7;
+            recordedCombinationTextBox2.CustomizableEdges = customizableEdges47;
             recordedCombinationTextBox2.DefaultText = "";
             recordedCombinationTextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             recordedCombinationTextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -531,7 +1086,7 @@
             recordedCombinationTextBox2.PlaceholderText = "";
             recordedCombinationTextBox2.ReadOnly = true;
             recordedCombinationTextBox2.SelectedText = "";
-            recordedCombinationTextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            recordedCombinationTextBox2.ShadowDecoration.CustomizableEdges = customizableEdges48;
             recordedCombinationTextBox2.Size = new Size(380, 60);
             recordedCombinationTextBox2.TabIndex = 62;
             recordedCombinationTextBox2.Visible = false;
@@ -562,560 +1117,6 @@
             closeAssign.TabIndex = 0;
             closeAssign.UseVisualStyleBackColor = true;
             closeAssign.Click += closeAssign_Click;
-            // 
-            // keySet
-            // 
-            keySet.BackColor = Color.Transparent;
-            keySet.BorderRadius = 14;
-            keySet.Controls.Add(keyMaps);
-            keySet.Controls.Add(blank);
-            keySet.Controls.Add(panel7);
-            keySet.Controls.Add(guna2Panel3);
-            keySet.CustomizableEdges = customizableEdges19;
-            keySet.Dock = DockStyle.Fill;
-            keySet.FillColor = Color.FromArgb(33, 34, 37);
-            keySet.Location = new Point(0, 64);
-            keySet.Name = "keySet";
-            keySet.Padding = new Padding(12);
-            keySet.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            keySet.Size = new Size(404, 550);
-            keySet.TabIndex = 9;
-            // 
-            // keyMaps
-            // 
-            keyMaps.AutoScroll = true;
-            keyMaps.CustomizableEdges = customizableEdges11;
-            keyMaps.Dock = DockStyle.Fill;
-            keyMaps.Location = new Point(12, 277);
-            keyMaps.Name = "keyMaps";
-            keyMaps.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            keyMaps.Size = new Size(380, 261);
-            keyMaps.TabIndex = 18;
-            keyMaps.Paint += keyMaps_Paint;
-            // 
-            // blank
-            // 
-            blank.Controls.Add(label1);
-            blank.Dock = DockStyle.Top;
-            blank.Location = new Point(12, 124);
-            blank.Name = "blank";
-            blank.Size = new Size(380, 153);
-            blank.TabIndex = 17;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(125, 62);
-            label1.Name = "label1";
-            label1.Size = new Size(115, 15);
-            label1.TabIndex = 3;
-            label1.Text = "No key assigned yet!";
-            // 
-            // panel7
-            // 
-            panel7.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel7.BackColor = Color.Transparent;
-            panel7.Controls.Add(guna2Panel4);
-            panel7.Controls.Add(panel5);
-            panel7.Controls.Add(assignMapping);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(12, 52);
-            panel7.Name = "panel7";
-            panel7.Padding = new Padding(0, 14, 0, 14);
-            panel7.Size = new Size(380, 72);
-            panel7.TabIndex = 16;
-            // 
-            // guna2Panel4
-            // 
-            guna2Panel4.BackColor = Color.Transparent;
-            guna2Panel4.BorderColor = Color.Transparent;
-            guna2Panel4.BorderRadius = 6;
-            guna2Panel4.Controls.Add(setActivationKey);
-            guna2Panel4.Controls.Add(label2);
-            guna2Panel4.CustomizableEdges = customizableEdges13;
-            guna2Panel4.Dock = DockStyle.Fill;
-            guna2Panel4.FillColor = Color.FromArgb(16, 17, 19);
-            guna2Panel4.Location = new Point(0, 14);
-            guna2Panel4.Margin = new Padding(0);
-            guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel4.Size = new Size(285, 44);
-            guna2Panel4.TabIndex = 14;
-            // 
-            // setActivationKey
-            // 
-            setActivationKey.AutoSize = true;
-            setActivationKey.Dock = DockStyle.Right;
-            setActivationKey.FlatStyle = FlatStyle.Flat;
-            setActivationKey.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            setActivationKey.ForeColor = Color.FromArgb(19, 150, 255);
-            setActivationKey.Location = new Point(185, 0);
-            setActivationKey.Margin = new Padding(2, 0, 2, 0);
-            setActivationKey.Name = "setActivationKey";
-            setActivationKey.Padding = new Padding(12);
-            setActivationKey.Size = new Size(100, 41);
-            setActivationKey.TabIndex = 5;
-            setActivationKey.Text = "Select a set";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Left;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(0, 0);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Padding = new Padding(12);
-            label2.Size = new Size(85, 43);
-            label2.TabIndex = 4;
-            label2.Text = "Activate:";
-            // 
-            // panel5
-            // 
-            panel5.Dock = DockStyle.Right;
-            panel5.Location = new Point(285, 14);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(8, 44);
-            panel5.TabIndex = 16;
-            // 
-            // assignMapping
-            // 
-            assignMapping.BorderRadius = 4;
-            assignMapping.CustomizableEdges = customizableEdges15;
-            assignMapping.DisabledState.BorderColor = Color.DarkGray;
-            assignMapping.DisabledState.CustomBorderColor = Color.DarkGray;
-            assignMapping.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            assignMapping.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            assignMapping.Dock = DockStyle.Right;
-            assignMapping.Font = new Font("Segoe UI", 9F);
-            assignMapping.ForeColor = Color.White;
-            assignMapping.Location = new Point(293, 14);
-            assignMapping.Name = "assignMapping";
-            assignMapping.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            assignMapping.Size = new Size(87, 44);
-            assignMapping.TabIndex = 15;
-            assignMapping.Text = "Assign";
-            assignMapping.Click += assignMapping_Click;
-            // 
-            // guna2Panel3
-            // 
-            guna2Panel3.Controls.Add(setList);
-            guna2Panel3.Controls.Add(addSet);
-            guna2Panel3.CustomBorderColor = Color.FromArgb(64, 65, 66);
-            guna2Panel3.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            guna2Panel3.CustomizableEdges = customizableEdges17;
-            guna2Panel3.Dock = DockStyle.Top;
-            guna2Panel3.Location = new Point(12, 12);
-            guna2Panel3.Margin = new Padding(0);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel3.Size = new Size(380, 40);
-            guna2Panel3.TabIndex = 0;
-            // 
-            // setList
-            // 
-            setList.AutoScroll = true;
-            setList.Dock = DockStyle.Top;
-            setList.Location = new Point(0, 0);
-            setList.Margin = new Padding(0);
-            setList.Name = "setList";
-            setList.Size = new Size(295, 82);
-            setList.TabIndex = 3;
-            setList.WrapContents = false;
-            // 
-            // addSet
-            // 
-            addSet.BackColor = Color.Transparent;
-            addSet.Dock = DockStyle.Right;
-            addSet.FlatAppearance.BorderSize = 0;
-            addSet.FlatStyle = FlatStyle.Flat;
-            addSet.ForeColor = Color.Transparent;
-            addSet.IconChar = FontAwesome.Sharp.IconChar.Add;
-            addSet.IconColor = Color.White;
-            addSet.IconFont = FontAwesome.Sharp.IconFont.Regular;
-            addSet.IconSize = 12;
-            addSet.Location = new Point(295, 0);
-            addSet.Margin = new Padding(0);
-            addSet.Name = "addSet";
-            addSet.Size = new Size(85, 40);
-            addSet.TabIndex = 4;
-            addSet.Text = "  Add set";
-            addSet.TextImageRelation = TextImageRelation.ImageBeforeText;
-            addSet.UseVisualStyleBackColor = false;
-            addSet.Click += addSet_Click;
-            // 
-            // recordCombination
-            // 
-            recordCombination.BackColor = Color.Transparent;
-            recordCombination.BorderRadius = 14;
-            recordCombination.Controls.Add(fingerList);
-            recordCombination.Controls.Add(cancelRecord);
-            recordCombination.Controls.Add(proceedToAssign);
-            recordCombination.Controls.Add(guna2TextBox2);
-            recordCombination.Controls.Add(recordedCombinationTextBox);
-            recordCombination.CustomizableEdges = customizableEdges49;
-            recordCombination.Dock = DockStyle.Fill;
-            recordCombination.FillColor = Color.FromArgb(10, 10, 12);
-            recordCombination.Location = new Point(0, 64);
-            recordCombination.Name = "recordCombination";
-            recordCombination.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            recordCombination.Size = new Size(404, 550);
-            recordCombination.TabIndex = 0;
-            recordCombination.Visible = false;
-            // 
-            // fingerList
-            // 
-            fingerList.Controls.Add(Lpinky);
-            fingerList.Controls.Add(Lmiddle);
-            fingerList.Controls.Add(Lring);
-            fingerList.Controls.Add(Lindex);
-            fingerList.Controls.Add(Lthumb);
-            fingerList.Controls.Add(Rpinky);
-            fingerList.Controls.Add(Rmiddle);
-            fingerList.Controls.Add(Rring);
-            fingerList.Controls.Add(Rindex);
-            fingerList.Controls.Add(Rthumb);
-            fingerList.Location = new Point(44, 260);
-            fingerList.Name = "fingerList";
-            fingerList.Size = new Size(324, 149);
-            fingerList.TabIndex = 16;
-            // 
-            // Lpinky
-            // 
-            Lpinky.BorderColor = Color.FromArgb(16, 17, 19);
-            Lpinky.BorderRadius = 4;
-            Lpinky.BorderThickness = 1;
-            Lpinky.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Lpinky.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Lpinky.CheckedState.FillColor = Color.Black;
-            Lpinky.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lpinky.CustomizableEdges = customizableEdges21;
-            Lpinky.DisabledState.BorderColor = Color.DarkGray;
-            Lpinky.DisabledState.CustomBorderColor = Color.DarkGray;
-            Lpinky.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Lpinky.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Lpinky.FillColor = Color.Black;
-            Lpinky.Font = new Font("Segoe UI", 9F);
-            Lpinky.ForeColor = Color.White;
-            Lpinky.Location = new Point(3, 3);
-            Lpinky.Name = "Lpinky";
-            Lpinky.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            Lpinky.Size = new Size(69, 35);
-            Lpinky.TabIndex = 16;
-            Lpinky.Text = "Lpinky";
-            Lpinky.Click += fingerClick;
-            // 
-            // Lmiddle
-            // 
-            Lmiddle.BorderColor = Color.FromArgb(16, 17, 19);
-            Lmiddle.BorderRadius = 4;
-            Lmiddle.BorderThickness = 1;
-            Lmiddle.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Lmiddle.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Lmiddle.CheckedState.FillColor = Color.Black;
-            Lmiddle.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lmiddle.CustomizableEdges = customizableEdges23;
-            Lmiddle.DisabledState.BorderColor = Color.DarkGray;
-            Lmiddle.DisabledState.CustomBorderColor = Color.DarkGray;
-            Lmiddle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Lmiddle.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Lmiddle.FillColor = Color.Black;
-            Lmiddle.Font = new Font("Segoe UI", 9F);
-            Lmiddle.ForeColor = Color.White;
-            Lmiddle.Location = new Point(78, 3);
-            Lmiddle.Name = "Lmiddle";
-            Lmiddle.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            Lmiddle.Size = new Size(75, 35);
-            Lmiddle.TabIndex = 17;
-            Lmiddle.Text = "Lmiddle";
-            Lmiddle.Click += fingerClick;
-            // 
-            // Lring
-            // 
-            Lring.BorderColor = Color.FromArgb(16, 17, 19);
-            Lring.BorderRadius = 4;
-            Lring.BorderThickness = 1;
-            Lring.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Lring.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Lring.CheckedState.FillColor = Color.Black;
-            Lring.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lring.CustomizableEdges = customizableEdges25;
-            Lring.DisabledState.BorderColor = Color.DarkGray;
-            Lring.DisabledState.CustomBorderColor = Color.DarkGray;
-            Lring.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Lring.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Lring.FillColor = Color.Black;
-            Lring.Font = new Font("Segoe UI", 9F);
-            Lring.ForeColor = Color.White;
-            Lring.Location = new Point(159, 3);
-            Lring.Name = "Lring";
-            Lring.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            Lring.Size = new Size(69, 35);
-            Lring.TabIndex = 18;
-            Lring.Text = "Lring";
-            Lring.Click += fingerClick;
-            // 
-            // Lindex
-            // 
-            Lindex.BorderColor = Color.FromArgb(16, 17, 19);
-            Lindex.BorderRadius = 4;
-            Lindex.BorderThickness = 1;
-            Lindex.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Lindex.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Lindex.CheckedState.FillColor = Color.Black;
-            Lindex.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lindex.CustomizableEdges = customizableEdges27;
-            Lindex.DisabledState.BorderColor = Color.DarkGray;
-            Lindex.DisabledState.CustomBorderColor = Color.DarkGray;
-            Lindex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Lindex.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Lindex.FillColor = Color.Black;
-            Lindex.Font = new Font("Segoe UI", 9F);
-            Lindex.ForeColor = Color.White;
-            Lindex.Location = new Point(234, 3);
-            Lindex.Name = "Lindex";
-            Lindex.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            Lindex.Size = new Size(69, 35);
-            Lindex.TabIndex = 19;
-            Lindex.Text = "Lindex";
-            Lindex.Click += fingerClick;
-            // 
-            // Lthumb
-            // 
-            Lthumb.BorderColor = Color.FromArgb(16, 17, 19);
-            Lthumb.BorderRadius = 4;
-            Lthumb.BorderThickness = 1;
-            Lthumb.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Lthumb.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Lthumb.CheckedState.FillColor = Color.Black;
-            Lthumb.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lthumb.CustomizableEdges = customizableEdges29;
-            Lthumb.DisabledState.BorderColor = Color.DarkGray;
-            Lthumb.DisabledState.CustomBorderColor = Color.DarkGray;
-            Lthumb.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Lthumb.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Lthumb.FillColor = Color.Black;
-            Lthumb.Font = new Font("Segoe UI", 9F);
-            Lthumb.ForeColor = Color.White;
-            Lthumb.Location = new Point(3, 44);
-            Lthumb.Name = "Lthumb";
-            Lthumb.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            Lthumb.Size = new Size(80, 35);
-            Lthumb.TabIndex = 20;
-            Lthumb.Text = "Lthumb";
-            Lthumb.Click += fingerClick;
-            // 
-            // Rpinky
-            // 
-            Rpinky.BorderRadius = 4;
-            Rpinky.BorderThickness = 1;
-            Rpinky.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Rpinky.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Rpinky.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
-            Rpinky.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rpinky.CustomizableEdges = customizableEdges31;
-            Rpinky.DisabledState.BorderColor = Color.DarkGray;
-            Rpinky.DisabledState.CustomBorderColor = Color.DarkGray;
-            Rpinky.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Rpinky.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Rpinky.FillColor = Color.FromArgb(16, 17, 19);
-            Rpinky.Font = new Font("Segoe UI", 9F);
-            Rpinky.ForeColor = Color.White;
-            Rpinky.Location = new Point(89, 44);
-            Rpinky.Name = "Rpinky";
-            Rpinky.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            Rpinky.Size = new Size(69, 35);
-            Rpinky.TabIndex = 21;
-            Rpinky.Text = "Rpinky";
-            Rpinky.Click += fingerClick;
-            // 
-            // Rmiddle
-            // 
-            Rmiddle.BorderRadius = 4;
-            Rmiddle.BorderThickness = 1;
-            Rmiddle.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Rmiddle.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Rmiddle.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
-            Rmiddle.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rmiddle.CustomizableEdges = customizableEdges33;
-            Rmiddle.DisabledState.BorderColor = Color.DarkGray;
-            Rmiddle.DisabledState.CustomBorderColor = Color.DarkGray;
-            Rmiddle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Rmiddle.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Rmiddle.FillColor = Color.FromArgb(16, 17, 19);
-            Rmiddle.Font = new Font("Segoe UI", 9F);
-            Rmiddle.ForeColor = Color.White;
-            Rmiddle.Location = new Point(164, 44);
-            Rmiddle.Name = "Rmiddle";
-            Rmiddle.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            Rmiddle.Size = new Size(75, 35);
-            Rmiddle.TabIndex = 22;
-            Rmiddle.Text = "Rmiddle";
-            Rmiddle.Click += fingerClick;
-            // 
-            // Rring
-            // 
-            Rring.BorderRadius = 4;
-            Rring.BorderThickness = 1;
-            Rring.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Rring.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Rring.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
-            Rring.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rring.CustomizableEdges = customizableEdges35;
-            Rring.DisabledState.BorderColor = Color.DarkGray;
-            Rring.DisabledState.CustomBorderColor = Color.DarkGray;
-            Rring.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Rring.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Rring.FillColor = Color.FromArgb(16, 17, 19);
-            Rring.Font = new Font("Segoe UI", 9F);
-            Rring.ForeColor = Color.White;
-            Rring.Location = new Point(245, 44);
-            Rring.Name = "Rring";
-            Rring.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            Rring.Size = new Size(69, 35);
-            Rring.TabIndex = 23;
-            Rring.Text = "Rring";
-            Rring.Click += fingerClick;
-            // 
-            // Rindex
-            // 
-            Rindex.BorderRadius = 4;
-            Rindex.BorderThickness = 1;
-            Rindex.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Rindex.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Rindex.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
-            Rindex.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rindex.CustomizableEdges = customizableEdges37;
-            Rindex.DisabledState.BorderColor = Color.DarkGray;
-            Rindex.DisabledState.CustomBorderColor = Color.DarkGray;
-            Rindex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Rindex.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Rindex.FillColor = Color.FromArgb(16, 17, 19);
-            Rindex.Font = new Font("Segoe UI", 9F);
-            Rindex.ForeColor = Color.White;
-            Rindex.Location = new Point(3, 85);
-            Rindex.Name = "Rindex";
-            Rindex.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            Rindex.Size = new Size(69, 35);
-            Rindex.TabIndex = 24;
-            Rindex.Text = "Rindex";
-            Rindex.Click += fingerClick;
-            // 
-            // Rthumb
-            // 
-            Rthumb.BorderRadius = 4;
-            Rthumb.BorderThickness = 1;
-            Rthumb.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            Rthumb.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Rthumb.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
-            Rthumb.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rthumb.CustomizableEdges = customizableEdges39;
-            Rthumb.DisabledState.BorderColor = Color.DarkGray;
-            Rthumb.DisabledState.CustomBorderColor = Color.DarkGray;
-            Rthumb.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Rthumb.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Rthumb.FillColor = Color.FromArgb(16, 17, 19);
-            Rthumb.Font = new Font("Segoe UI", 9F);
-            Rthumb.ForeColor = Color.White;
-            Rthumb.Location = new Point(78, 85);
-            Rthumb.Name = "Rthumb";
-            Rthumb.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            Rthumb.Size = new Size(85, 35);
-            Rthumb.TabIndex = 25;
-            Rthumb.Text = "Rthumb";
-            Rthumb.Click += fingerClick;
-            // 
-            // cancelRecord
-            // 
-            cancelRecord.BackColor = Color.Transparent;
-            cancelRecord.BorderRadius = 4;
-            cancelRecord.CustomizableEdges = customizableEdges41;
-            cancelRecord.DisabledState.BorderColor = Color.DarkGray;
-            cancelRecord.DisabledState.CustomBorderColor = Color.DarkGray;
-            cancelRecord.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            cancelRecord.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            cancelRecord.FillColor = Color.Transparent;
-            cancelRecord.Font = new Font("Segoe UI", 9F);
-            cancelRecord.ForeColor = Color.White;
-            cancelRecord.Location = new Point(204, 466);
-            cancelRecord.Name = "cancelRecord";
-            cancelRecord.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            cancelRecord.Size = new Size(79, 37);
-            cancelRecord.TabIndex = 14;
-            cancelRecord.Text = "Cancel";
-            cancelRecord.Click += cancelRecord_Click;
-            // 
-            // proceedToAssign
-            // 
-            proceedToAssign.BorderRadius = 4;
-            proceedToAssign.CustomizableEdges = customizableEdges43;
-            proceedToAssign.DisabledState.BorderColor = Color.DarkGray;
-            proceedToAssign.DisabledState.CustomBorderColor = Color.DarkGray;
-            proceedToAssign.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            proceedToAssign.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            proceedToAssign.Font = new Font("Segoe UI", 9F);
-            proceedToAssign.ForeColor = Color.White;
-            proceedToAssign.Location = new Point(289, 466);
-            proceedToAssign.Name = "proceedToAssign";
-            proceedToAssign.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            proceedToAssign.Size = new Size(79, 37);
-            proceedToAssign.TabIndex = 13;
-            proceedToAssign.Text = "Next";
-            proceedToAssign.Click += proceedToAssign_Click;
-            // 
-            // guna2TextBox2
-            // 
-            guna2TextBox2.BackColor = Color.Transparent;
-            guna2TextBox2.BorderColor = Color.Transparent;
-            guna2TextBox2.BorderThickness = 0;
-            guna2TextBox2.CustomizableEdges = customizableEdges45;
-            guna2TextBox2.DefaultText = "Select the finger combination you want to use for this mapping.";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(10, 10, 12);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(44, 97);
-            guna2TextBox2.Margin = new Padding(6);
-            guna2TextBox2.Multiline = true;
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.ReadOnly = true;
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            guna2TextBox2.Size = new Size(324, 70);
-            guna2TextBox2.TabIndex = 12;
-            // 
-            // recordedCombinationTextBox
-            // 
-            recordedCombinationTextBox.BackColor = Color.Transparent;
-            recordedCombinationTextBox.BorderColor = Color.Transparent;
-            recordedCombinationTextBox.BorderRadius = 6;
-            recordedCombinationTextBox.CustomizableEdges = customizableEdges47;
-            recordedCombinationTextBox.DefaultText = "";
-            recordedCombinationTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            recordedCombinationTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            recordedCombinationTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            recordedCombinationTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            recordedCombinationTextBox.FillColor = Color.FromArgb(16, 17, 19);
-            recordedCombinationTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            recordedCombinationTextBox.Font = new Font("Segoe UI", 9F);
-            recordedCombinationTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            recordedCombinationTextBox.Location = new Point(44, 184);
-            recordedCombinationTextBox.Margin = new Padding(6);
-            recordedCombinationTextBox.Name = "recordedCombinationTextBox";
-            recordedCombinationTextBox.PasswordChar = '\0';
-            recordedCombinationTextBox.PlaceholderText = "";
-            recordedCombinationTextBox.ReadOnly = true;
-            recordedCombinationTextBox.SelectedText = "";
-            recordedCombinationTextBox.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            recordedCombinationTextBox.Size = new Size(324, 60);
-            recordedCombinationTextBox.TabIndex = 11;
             // 
             // label4
             // 
@@ -1420,6 +1421,15 @@
             Main.ResumeLayout(false);
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
+            keySet.ResumeLayout(false);
+            blank.ResumeLayout(false);
+            blank.PerformLayout();
+            panel7.ResumeLayout(false);
+            activationKeyPanel.ResumeLayout(false);
+            activationKeyPanel.PerformLayout();
+            guna2Panel3.ResumeLayout(false);
+            recordCombination.ResumeLayout(false);
+            fingerList.ResumeLayout(false);
             assignMenu.ResumeLayout(false);
             macroPanel.ResumeLayout(false);
             panel8.ResumeLayout(false);
@@ -1430,15 +1440,6 @@
             keyChoices.ResumeLayout(false);
             keyTypeList.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            keySet.ResumeLayout(false);
-            blank.ResumeLayout(false);
-            blank.PerformLayout();
-            panel7.ResumeLayout(false);
-            guna2Panel4.ResumeLayout(false);
-            guna2Panel4.PerformLayout();
-            guna2Panel3.ResumeLayout(false);
-            recordCombination.ResumeLayout(false);
-            fingerList.ResumeLayout(false);
             panelPreview.ResumeLayout(false);
             assignOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1458,7 +1459,7 @@
         private Panel blank;
         private Label label1;
         private Panel panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel activationKeyPanel;
         private Label setActivationKey;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;

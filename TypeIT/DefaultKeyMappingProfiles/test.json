@@ -2,7 +2,7 @@
   "name": "test",
   "sets": [
     {
-      "activation key": "Set1Key",
+      "activation key": "S1110000000E",
       "mappings": {
         "S1000000000E": [
           "G"
@@ -46,7 +46,7 @@
       }
     },
     {
-      "activation key": "Set2Key",
+      "activation key": "S1010000000E",
       "mappings": {
         "S0000100000E": [
           "^ \u002B Z"
@@ -57,7 +57,7 @@
       }
     },
     {
-      "activation key": "",
+      "activation key": "S1010100000E",
       "mappings": {
         "S1000000000E": [
           "E"

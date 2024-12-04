@@ -11,6 +11,7 @@ using TypeIT.Models;
 using System.Text.Json;
 using System.IO;
 using TypeIT.UserControls;
+using TypeIT.Forms;
 
 namespace TypeIT
 {
@@ -58,7 +59,7 @@ namespace TypeIT
         public Customize(Home home)
         {
             InitializeComponent();
-            
+
             fingerMappings = new Dictionary<string, (int Position, UC_Finger Control)>
             {
                 {"leftPinky", (1, leftPinky)},
@@ -173,7 +174,7 @@ namespace TypeIT
 
         private void keyChoice_Click(object sender, EventArgs e)
         {
-            if (keyChoices.Size == keyChoices.MaximumSize)keyChoices.Size = keyChoices.MinimumSize;
+            if (keyChoices.Size == keyChoices.MaximumSize) keyChoices.Size = keyChoices.MinimumSize;
             else keyChoices.Size = keyChoices.MaximumSize;
         }
 
@@ -227,7 +228,7 @@ namespace TypeIT
             currentKeyType.Text = currentKeyMapType;
 
             ((Button)sender).Visible = false;
-            if(currentKeyType.Text == "Macros") macroPanel.Visible = true;
+            if (currentKeyType.Text == "Macros") macroPanel.Visible = true;
 
             keyTypeButton.Visible = currentKeyType.Text != "Keys";
             commandTypeButton.Visible = currentKeyType.Text != "Commands";
@@ -249,7 +250,7 @@ namespace TypeIT
         {
             var result = MessageBox.Show("Are you sure you want to discard all changes?",
                 "Confirm Discard", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            
+
             if (result == DialogResult.Yes)
             {
                 // If this is a new profile (temp profile)
@@ -293,7 +294,7 @@ namespace TypeIT
             {
                 string filePath = GetProfilePath(Program.CurrentSelectedMappingProfile.Name);
                 var jsonProfile = KeyMappingProfileJson.FromKeyMappingProfile(Program.CurrentSelectedMappingProfile);
-                
+
                 var options = new JsonSerializerOptions
                 {
                     WriteIndented = true,
@@ -321,6 +322,17 @@ namespace TypeIT
 
         private void addSet_Click(object sender, EventArgs e)
         {
+            // Check if any existing set has an empty activation key
+            if (Program.CurrentSelectedMappingProfile.Sets.Any(s => string.IsNullOrEmpty(s.Key)))
+            {
+                MessageBox.Show(
+                    "Cannot add a new set. One or more existing sets have no activation key assigned.",
+                    "Invalid Operation",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
             var newSet = new KeyMappingSet
             {
                 ActivationKey = "",
@@ -593,7 +605,7 @@ namespace TypeIT
         public void MarkAsModified()
         {
             HasUnsavedChanges = true;
-            
+
             // Notify the parent Home form that there are unsaved changes
             if (home?.profileList != null)
             {
@@ -630,6 +642,34 @@ namespace TypeIT
                 // Return to key set view
                 ShowPanel(PanelState.KeySet);
             }
+        }
+
+        private void setActivationKey_Click(object sender, EventArgs e)
+        {
+            if (currentSet == null) return;
+
+            var editActivationForm = new EditActivation(currentSet, (newActivationKey) =>
+            {
+                // Remove the old mapping from the Sets dictionary
+                Program.CurrentSelectedMappingProfile.Sets.Remove(currentSet.ActivationKey);
+                
+                // Update the activation key
+                currentSet.ActivationKey = newActivationKey;
+                
+                // Add back to the Sets dictionary with new key
+                Program.CurrentSelectedMappingProfile.Sets.Add(newActivationKey, currentSet);
+                
+                // Update the activation key display
+                setActivationKey.Text = KeyCodeConverter.ConvertToFingerCombination(newActivationKey);
+                
+                // Mark as modified
+                MarkAsModified();
+                
+                // Refresh the sets display
+                PopulateSets();
+            });
+
+            editActivationForm.ShowDialog();
         }
     }
 }
