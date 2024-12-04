@@ -56,6 +56,7 @@ namespace TypeIT
                 discardChanges.Visible = value;
             }
         }
+        private string fingerMapping;
         public Customize(Home home)
         {
             InitializeComponent();
@@ -134,6 +135,17 @@ namespace TypeIT
 
                 var commandControl = new UC_Commands(fingerCombination, command);
                 commandControl.Dock = DockStyle.Top;
+                
+                // Add context menu handling
+                commandControl.MouseClick += (sender, e) =>
+                {
+                    if (e.Button == MouseButtons.Right)
+                    {
+                        fingerMapping = mapping.Key;
+                        contextMenuStrip1.Show(commandControl, e.Location);
+                    }
+                };
+                
                 keyMaps.Controls.Add(commandControl);
             }
             //keyMaps.PerformLayout();
@@ -443,6 +455,7 @@ namespace TypeIT
                 mapping.Control.mapping.Text = "Assign";
                 mapping.Control.mapping.ForeColor = Color.Gray;
                 mapping.Control.mapping.Font = new Font(mapping.Control.mapping.Font, FontStyle.Regular);
+                mapping.Control.LoadCombinations();
             }
 
             if (currentSet?.KeyMappings == null) return;
@@ -650,26 +663,37 @@ namespace TypeIT
 
             var editActivationForm = new EditActivation(currentSet, (newActivationKey) =>
             {
-                // Remove the old mapping from the Sets dictionary
                 Program.CurrentSelectedMappingProfile.Sets.Remove(currentSet.ActivationKey);
-                
-                // Update the activation key
+
                 currentSet.ActivationKey = newActivationKey;
-                
-                // Add back to the Sets dictionary with new key
+
                 Program.CurrentSelectedMappingProfile.Sets.Add(newActivationKey, currentSet);
-                
-                // Update the activation key display
+
                 setActivationKey.Text = KeyCodeConverter.ConvertToFingerCombination(newActivationKey);
-                
-                // Mark as modified
+
                 MarkAsModified();
-                
-                // Refresh the sets display
                 PopulateSets();
             });
 
             editActivationForm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentSet?.KeyMappings == null) return;
+
+            var result = MessageBox.Show(
+                $"Are you sure you want to delete this mapping?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                currentSet.KeyMappings.Remove(fingerMapping);
+                MarkAsModified();
+                PopulateKeyMappings(currentSet);
+            }
         }
     }
 }

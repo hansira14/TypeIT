@@ -69,6 +69,7 @@
             panel1.TabIndex = 0;
             panel1.Click += mapping_Click;
             panel1.MouseDown += command_MouseDown;
+            panel1.MouseClick += new MouseEventHandler(Control_MouseClick);
             // 
             // mapping
             // 
@@ -82,6 +83,7 @@
             mapping.Text = "Ctrl + V";
             mapping.Click += mapping_Click;
             mapping.MouseDown += command_MouseDown;
+            mapping.MouseClick += new MouseEventHandler(Control_MouseClick);
             // 
             // panel2
             // 
@@ -94,6 +96,7 @@
             panel2.TabIndex = 1;
             panel2.Click += mapping_Click;
             panel2.MouseDown += command_MouseDown;
+            panel2.MouseClick += new MouseEventHandler(Control_MouseClick);
             // 
             // output
             // 
@@ -107,6 +110,7 @@
             output.Text = "Paste";
             output.Click += mapping_Click;
             output.MouseDown += command_MouseDown;
+            output.MouseClick += new MouseEventHandler(Control_MouseClick);
             // 
             // panel3
             // 

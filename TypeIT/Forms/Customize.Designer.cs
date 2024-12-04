@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -159,6 +160,8 @@
             discardChanges = new Guna.UI2.WinForms.Guna2Button();
             saveChanges = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            deleteToolStripMenuItem = new ToolStripMenuItem();
             Main.SuspendLayout();
             panelMenu.SuspendLayout();
             keySet.SuspendLayout();
@@ -179,6 +182,7 @@
             panelPreview.SuspendLayout();
             assignOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // Main
@@ -1407,6 +1411,21 @@
             pictureBox1.TabIndex = 34;
             pictureBox1.TabStop = false;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.BackColor = Color.Black;
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(108, 26);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            deleteToolStripMenuItem.ForeColor = Color.White;
+            deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            deleteToolStripMenuItem.Size = new Size(107, 22);
+            deleteToolStripMenuItem.Text = "Delete";
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
+            // 
             // Customize
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1443,6 +1462,7 @@
             panelPreview.ResumeLayout(false);
             assignOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -1522,5 +1542,7 @@
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TileButton addNewMacro;
         private Panel macroPanel;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

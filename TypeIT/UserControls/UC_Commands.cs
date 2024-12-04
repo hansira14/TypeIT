@@ -65,5 +65,13 @@ namespace TypeIT
             if (_parentForm == null) return;
             _parentForm.HandleCombinationMapping(KeyCombination, Command);
         }
+
+        private void Control_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                OnMouseClick(e);
+            }
+        }
     }
 }
