@@ -135,7 +135,7 @@ namespace TypeIT
                 commandControl.Dock = DockStyle.Top;
                 keyMaps.Controls.Add(commandControl);
             }
-            keyMaps.PerformLayout();
+            //keyMaps.PerformLayout();
             keyMaps.Visible = true;
 
             UpdateFingerMappingsDisplay();
@@ -449,6 +449,7 @@ namespace TypeIT
                             if (activeFingers == 1)
                             {
                                 finger.Control.mapping.Text = string.Join(" + ", mapping.Value);
+                                finger.Control.LoadCombinations();
                             }
                         }
                     }
@@ -462,8 +463,6 @@ namespace TypeIT
             {
                 recordedCombinationTextBox2.Text = KeyCodeConverter.ConvertToFingerCombination(currentCombination.ToString());
                 recordedCombination = currentCombination.ToString();
-                recordedCombinationTextBox2.Visible = true;
-                combinationLabel.Visible = true;
                 combinationMode = true;
                 ShowPanel(PanelState.AssignMenu);
             }
@@ -528,6 +527,7 @@ namespace TypeIT
         }
         private void ShowPanel(PanelState state)
         {
+            assignMenu.BorderThickness = 0;
             keySet.Visible = false;
             assignMenu.Visible = false;
             recordCombination.Visible = false;
@@ -548,6 +548,7 @@ namespace TypeIT
                     {
                         recordedCombinationTextBox2.Visible = true;
                         combinationLabel.Visible = true;
+                        assignMenu.BorderThickness = 2;
                     }
                     break;
                 case PanelState.RecordCombination:
