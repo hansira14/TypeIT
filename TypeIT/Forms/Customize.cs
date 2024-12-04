@@ -427,6 +427,9 @@ namespace TypeIT
                 if (fingerCode.Length != 12 || !fingerCode.StartsWith("S") || !fingerCode.EndsWith("E"))
                     continue;
 
+                // Count how many fingers are used in this combination
+                int activeFingers = fingerCode.Count(c => c == '1');
+
                 for (int i = 1; i <= 10; i++)
                 {
                     if (fingerCode[i] == '1')
@@ -434,8 +437,11 @@ namespace TypeIT
                         var finger = fingerMappings.Values.FirstOrDefault(f => f.Position == i);
                         if (finger.Control != null)
                         {
-                            finger.Control.mapping.Text = string.Join(" + ", mapping.Value);
-                            break;
+                            // Only show the mapping on each finger if it's a single finger mapping
+                            if (activeFingers == 1)
+                            {
+                                finger.Control.mapping.Text = string.Join(" + ", mapping.Value);
+                            }
                         }
                     }
                 }

@@ -50,7 +50,8 @@ namespace TypeIT
 
         private void command_MouseDown(object sender, MouseEventArgs e)
         {
-            if (_parentForm.combinationMode) return;
+            if (_parentForm == null) return;
+            if(_parentForm.combinationMode) return;
 
             var dragData = new DataObject();
             dragData.SetData("DisplayText", KeyCombination);
@@ -61,6 +62,7 @@ namespace TypeIT
 
         private void mapping_Click(object sender, EventArgs e)
         {
+            if (_parentForm == null) return;
             _parentForm.HandleCombinationMapping(KeyCombination, Command);
         }
     }
