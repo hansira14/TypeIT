@@ -45,7 +45,7 @@ namespace TypeIT.UserControls
         private void Mapping_MouseEnter(object sender, EventArgs e)
         {
             mapping.ForeColor = Color.FromArgb(94, 148, 255);
-            // Ensure combinations are up-to-date before showing hover
+
             LoadCombinations();
             
             if (combinationMappings.Count > 0)
@@ -150,6 +150,7 @@ namespace TypeIT.UserControls
 
             if (fingerPosition == -1) return;
 
+            int combinationCount = 0;
             foreach (var mapping in _parentForm.currentSet.KeyMappings)
             {
                 string fingerCode = mapping.Key;
@@ -162,17 +163,37 @@ namespace TypeIT.UserControls
                     int activeFingers = fingerCode.Count(c => c == '1');
                     if (activeFingers > 1)
                     {
+                        combinationCount++;
                         string displayText = $"{KeyCodeConverter.ConvertToFingerCombination2(fingerCode)} -> {string.Join(" + ", mapping.Value)}";
                         combinationMappings.Add(displayText);
                     }
                 }
             }
 
-            // Update hover control with new combinations
             if (hoverControl != null)
             {
                 hoverControl.combinations = combinationMappings;
                 hoverControl.PopulateTable();
+            }
+
+            string currentText = mapping.Text;
+            if (currentText.Contains(" +"))
+            {
+                currentText = currentText.Substring(0, currentText.IndexOf(" +"));
+            }
+            mapping.Text = currentText;
+
+            if (combinationCount > 0)
+            {
+                this.combinationCount.Text = $"+{combinationCount}";
+                // Calculate position right after mapping text
+                Size textSize = TextRenderer.MeasureText(mapping.Text, mapping.Font);
+                this.combinationCount.Location = new Point(mapping.Left + textSize.Width + 2, mapping.Top);
+                this.combinationCount.Visible = true;
+            }
+            else
+            {
+                this.combinationCount.Visible = false;
             }
         }
 

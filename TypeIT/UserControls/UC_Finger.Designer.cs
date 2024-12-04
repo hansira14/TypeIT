@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             mapping = new Label();
+            combinationCount = new Label();
             SuspendLayout();
             // 
             // mapping
@@ -39,10 +40,21 @@
             mapping.Location = new Point(7, 8);
             mapping.Margin = new Padding(2, 0, 2, 0);
             mapping.Name = "mapping";
-            mapping.Size = new Size(40, 15);
+            mapping.Size = new Size(12, 15);
             mapping.TabIndex = 0;
-            mapping.Text = "label1";
+            mapping.Text = "?";
             mapping.Click += mapping_Click;
+            // 
+            // combinationCount
+            // 
+            combinationCount.AutoSize = true;
+            combinationCount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            combinationCount.ForeColor = Color.Gray;
+            combinationCount.Location = new Point(51, 8);
+            combinationCount.Margin = new Padding(2, 0, 2, 0);
+            combinationCount.Name = "combinationCount";
+            combinationCount.Size = new Size(0, 15);
+            combinationCount.TabIndex = 1;
             // 
             // UC_Finger
             // 
@@ -50,6 +62,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(combinationCount);
             Controls.Add(mapping);
             Margin = new Padding(2, 1, 2, 1);
             MaximumSize = new Size(110, 30);
@@ -65,5 +78,6 @@
         #endregion
 
         public Label mapping;
+        public Label combinationCount;
     }
 }
