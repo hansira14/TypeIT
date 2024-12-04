@@ -14,7 +14,7 @@ namespace TypeIT.Models
         //public string? CurrentActivationKeySelected;
         public KeyMappingSet CurrentMappingsSelected;
         public Dictionary<string, KeyMappingSet> Sets = new Dictionary<string, KeyMappingSet>(); // Initialize the Sets dictionary for key mappings
-
+        public Dictionary<string, Macro> Macros { get; set; } = new Dictionary<string, Macro>();
 
         // Custom manual deserialization method
         public static KeyMappingProfile FromJsonManual(string jsonContent)
@@ -84,5 +84,14 @@ namespace TypeIT.Models
             return profile;
         }
 
+        public void AddMacro(string name, Macro macro)
+        {
+            Macros[name] = macro;
+        }
+
+        public bool TryGetMacro(string name, out Macro macro)
+        {
+            return Macros.TryGetValue(name, out macro);
+        }
     }
 }

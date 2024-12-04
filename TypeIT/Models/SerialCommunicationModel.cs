@@ -173,60 +173,38 @@ namespace TypeIT.Models
             _dataBuffer.Append(buffer);
         }
 
-        private void HandleKeyStrokeOrMacro(string keyCommand)
+        private async void HandleKeyStrokeOrMacro(string keyCommand)
         {
-            // Raise the combination received event
             CombinationReceived?.Invoke(keyCommand);
 
-            // Rest of your existing code...
             Debug.WriteLine($"Key Command Code: {keyCommand}");
             if (Program.CurrentSelectedMappingProfile != null)
             {
                 var currentProfile = Program.CurrentSelectedMappingProfile;
                 if (currentProfile.CurrentMappingsSelected != null)
                 {
-                    // Ensure the keyCommand is not the unpressed command (e.g., "S0000000000E")
                     if (keyCommand != "S0000000000E")
                     {
-                        // Check if the keyCommand matches any activation key in the profile's sets
-                        if (currentProfile.Sets.TryGetValue(keyCommand, out var newMappingSet))
+                        // First check if it's a macro
+                        if (currentProfile.CurrentMappingsSelected.Macros.TryGetValue(keyCommand, out var macro))
                         {
-                            // Switch to the new mapping set
+                            await macro.PlayAsync();
+                        }
+                        // Then check if it's a mapping set change
+                        else if (currentProfile.Sets.TryGetValue(keyCommand, out var newMappingSet))
+                        {
                             currentProfile.CurrentMappingsSelected = newMappingSet;
                             Debug.WriteLine($"Switched to new mapping set: {newMappingSet.ActivationKey}");
                         }
-                        else
+                        // Finally check if it's a regular keystroke
+                        else if (currentProfile.CurrentMappingsSelected.KeyMappings.TryGetValue(keyCommand, out var mappedValues))
                         {
-                            // Handle as a regular keystroke if it exists in the current mapping set
-                            if (currentProfile.CurrentMappingsSelected.KeyMappings.TryGetValue(keyCommand, out var mappedValues))
-                            {
-                                var keysToSend = string.Join("", mappedValues); //Much faster for simple keystrokes let's say [
-                                Debug.WriteLine($"Processing keystroke(s): {keysToSend}");
-                                SendKeys.SendWait(keysToSend);
-
-                                //If you need more customization, granularity, or special key checking/handling on some keys.
-                                //foreach (var key in mappedValues)
-                                //{
-                                //    Debug.WriteLine($"Processing keystroke: {key}");
-                                //    SendKeys.SendWait(key);
-                                //}
-                            }
-                            else
-                            {
-                                Debug.WriteLine($"Key Command '{keyCommand}' not found in current mapping set.");
-                            }
+                            var keysToSend = string.Join("", mappedValues);
+                            Debug.WriteLine($"Processing keystroke(s): {keysToSend}");
+                            SendKeys.SendWait(keysToSend);
                         }
                     }
                 }
-            }
-            else
-            {
-                Debug.WriteLine("No Mapping Profile is currently selected.");
-                MessageBox.Show(
-                    $"A key command was captured from your Type It Keyboard, but no keystroke will be processed since no KeyMappingProfile was selected yet.",
-                    "No Key Mapping Profile Selected",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
             }
         }
 

@@ -4,14 +4,11 @@
     {
       "activation key": "S1110000000E",
       "mappings": {
-        "S1000000000E": [
-          "G"
-        ],
         "S0010000000E": [
           "Cut"
         ],
         "S0100000000E": [
-          "^ \u002B C"
+        "^ \u002B C"
         ],
         "S0001000000E": [
           "L"
@@ -43,6 +40,34 @@
         "S1000000001E": [
           "D"
         ]
+      },
+      "macros": {
+        "S1000000000E": {
+          "name": "OpenNotepad",
+          "delayBetweenActions": 50,
+          "actions": [
+            {
+              "key": "^{ESC}",
+              "type": "KeyPress",
+              "customDelay": null
+            },
+            {
+              "key": null,
+              "type": "Delay",
+              "customDelay": 500
+            },
+            {
+              "key": "notepad",
+              "type": "KeyPress",
+              "customDelay": null
+            },
+            {
+              "key": "{ENTER}",
+              "type": "KeyPress",
+              "customDelay": null
+            }
+          ]
+        }
       }
     },
     {
@@ -61,6 +86,12 @@
       "mappings": {
         "S1000000000E": [
           "E"
+        ],
+        "S0000100000E": [
+          "W"
+        ],
+        "S0010000000E": [
+          "/"
         ]
       }
     }
