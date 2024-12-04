@@ -32,8 +32,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             mainTable = new TableLayoutPanel();
             combination = new Label();
@@ -45,16 +45,16 @@
             // guna2Panel1
             // 
             guna2Panel1.AutoSize = true;
-            guna2Panel1.BorderColor = Color.Black;
+            guna2Panel1.BorderColor = Color.FromArgb(40, 40, 40);
             guna2Panel1.BorderRadius = 6;
             guna2Panel1.BorderThickness = 1;
             guna2Panel1.Controls.Add(mainTable);
-            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.FillColor = Color.FromArgb(16, 17, 19);
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(150, 44);
             guna2Panel1.TabIndex = 0;
             // 
@@ -81,7 +81,7 @@
             // 
             combination.AutoSize = true;
             combination.Dock = DockStyle.Fill;
-            combination.ForeColor = Color.White;
+            combination.ForeColor = SystemColors.ActiveCaption;
             combination.Location = new Point(13, 10);
             combination.Name = "combination";
             combination.Size = new Size(59, 24);
@@ -91,7 +91,7 @@
             // 
             command.AutoSize = true;
             command.Dock = DockStyle.Fill;
-            command.ForeColor = Color.White;
+            command.ForeColor = SystemColors.ActiveBorder;
             command.Location = new Point(78, 10);
             command.Name = "command";
             command.Size = new Size(59, 24);
@@ -101,6 +101,7 @@
             // 
             AutoSize = true;
             Controls.Add(guna2Panel1);
+            ForeColor = SystemColors.ActiveCaption;
             Name = "UC_CombinationHover";
             Size = new Size(150, 44);
             guna2Panel1.ResumeLayout(false);

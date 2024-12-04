@@ -254,7 +254,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(10, 10, 12);
+            BackColor = Color.Black;
             ClientSize = new Size(367, 450);
             Controls.Add(fingerList);
             Controls.Add(cancelRecord);

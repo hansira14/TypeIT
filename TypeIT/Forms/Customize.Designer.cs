@@ -1111,7 +1111,7 @@
             // 
             rightPinky.AllowDrop = true;
             rightPinky.BackColor = Color.IndianRed;
-            rightPinky.combinationMappings = (List<string>)resources.GetObject("rightPinky.combinationMappings");
+            rightPinky.combinationMappings = null;
             rightPinky.Location = new Point(592, 414);
             rightPinky.Margin = new Padding(1, 0, 1, 0);
             rightPinky.MaximumSize = new Size(110, 47);
@@ -1125,7 +1125,7 @@
             // 
             rightRing.AllowDrop = true;
             rightRing.BackColor = Color.IndianRed;
-            rightRing.combinationMappings = (List<string>)resources.GetObject("rightRing.combinationMappings");
+            rightRing.combinationMappings = null;
             rightRing.Location = new Point(508, 355);
             rightRing.Margin = new Padding(1, 0, 1, 0);
             rightRing.MaximumSize = new Size(110, 47);
@@ -1139,7 +1139,7 @@
             // 
             rightMiddle.AllowDrop = true;
             rightMiddle.BackColor = Color.IndianRed;
-            rightMiddle.combinationMappings = (List<string>)resources.GetObject("rightMiddle.combinationMappings");
+            rightMiddle.combinationMappings = null;
             rightMiddle.Location = new Point(412, 292);
             rightMiddle.Margin = new Padding(1, 0, 1, 0);
             rightMiddle.MaximumSize = new Size(110, 47);
@@ -1153,7 +1153,7 @@
             // 
             rightIndex.AllowDrop = true;
             rightIndex.BackColor = Color.IndianRed;
-            rightIndex.combinationMappings = (List<string>)resources.GetObject("rightIndex.combinationMappings");
+            rightIndex.combinationMappings = null;
             rightIndex.Location = new Point(345, 355);
             rightIndex.Margin = new Padding(1, 0, 1, 0);
             rightIndex.MaximumSize = new Size(110, 47);
@@ -1167,7 +1167,7 @@
             // 
             rightThumb.AllowDrop = true;
             rightThumb.BackColor = Color.IndianRed;
-            rightThumb.combinationMappings = (List<string>)resources.GetObject("rightThumb.combinationMappings");
+            rightThumb.combinationMappings = null;
             rightThumb.Location = new Point(221, 396);
             rightThumb.Margin = new Padding(1, 0, 1, 0);
             rightThumb.MaximumSize = new Size(110, 47);
@@ -1181,7 +1181,7 @@
             // 
             leftThumb.AllowDrop = true;
             leftThumb.BackColor = Color.IndianRed;
-            leftThumb.combinationMappings = (List<string>)resources.GetObject("leftThumb.combinationMappings");
+            leftThumb.combinationMappings = null;
             leftThumb.Location = new Point(584, 189);
             leftThumb.Margin = new Padding(1, 0, 1, 0);
             leftThumb.MaximumSize = new Size(110, 47);
@@ -1195,7 +1195,7 @@
             // 
             leftIndex.AllowDrop = true;
             leftIndex.BackColor = Color.IndianRed;
-            leftIndex.combinationMappings = (List<string>)resources.GetObject("leftIndex.combinationMappings");
+            leftIndex.combinationMappings = null;
             leftIndex.Location = new Point(499, 130);
             leftIndex.Margin = new Padding(1, 0, 1, 0);
             leftIndex.MaximumSize = new Size(110, 47);
@@ -1209,7 +1209,7 @@
             // 
             leftRing.AllowDrop = true;
             leftRing.BackColor = Color.IndianRed;
-            leftRing.combinationMappings = (List<string>)resources.GetObject("leftRing.combinationMappings");
+            leftRing.combinationMappings = null;
             leftRing.Location = new Point(403, 68);
             leftRing.Margin = new Padding(1, 0, 1, 0);
             leftRing.MaximumSize = new Size(110, 47);
@@ -1223,7 +1223,7 @@
             // 
             leftMiddle.AllowDrop = true;
             leftMiddle.BackColor = Color.IndianRed;
-            leftMiddle.combinationMappings = (List<string>)resources.GetObject("leftMiddle.combinationMappings");
+            leftMiddle.combinationMappings = null;
             leftMiddle.Location = new Point(336, 130);
             leftMiddle.Margin = new Padding(1, 0, 1, 0);
             leftMiddle.MaximumSize = new Size(110, 47);
@@ -1237,7 +1237,7 @@
             // 
             leftPinky.AllowDrop = true;
             leftPinky.BackColor = Color.IndianRed;
-            leftPinky.combinationMappings = (List<string>)resources.GetObject("leftPinky.combinationMappings");
+            leftPinky.combinationMappings = null;
             leftPinky.Location = new Point(213, 171);
             leftPinky.Margin = new Padding(1, 0, 1, 0);
             leftPinky.MaximumSize = new Size(110, 47);

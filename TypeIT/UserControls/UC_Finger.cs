@@ -14,6 +14,7 @@ namespace TypeIT.UserControls
     public partial class UC_Finger : UserControl
     {
         private Customize _parentForm;
+        private UC_CombinationHover hoverControl;
 
         public List<string> combinationMappings { get; set; }
         public Customize ParentForm
@@ -30,6 +31,38 @@ namespace TypeIT.UserControls
         {
             InitializeComponent();
             combinationMappings = new List<string>();
+            
+            // Create hover control
+            hoverControl = new UC_CombinationHover(new List<string>());
+            hoverControl.Visible = false;
+
+            this.MouseEnter += Mapping_MouseEnter;
+            this.MouseLeave += Mapping_MouseLeave;
+            mapping.MouseEnter += Mapping_MouseEnter;
+            mapping.MouseLeave += Mapping_MouseLeave;
+        }
+
+        private void Mapping_MouseEnter(object sender, EventArgs e)
+        {
+            // Ensure combinations are up-to-date before showing hover
+            LoadCombinations();
+            
+            if (combinationMappings.Count > 0)
+            {
+                hoverControl.combinations = combinationMappings;
+                hoverControl.Location = new Point(
+                    mapping.Right + 5,
+                    mapping.Top - (hoverControl.Height - mapping.Height) / 2
+                );
+                hoverControl.PopulateTable();
+                hoverControl.BringToFront();
+                hoverControl.Visible = true;
+            }
+        }
+
+        private void Mapping_MouseLeave(object sender, EventArgs e)
+        {
+            hoverControl.Visible = false;
         }
 
         private void UC_Finger_DragDrop(object sender, DragEventArgs e)
@@ -101,7 +134,7 @@ namespace TypeIT.UserControls
         public void LoadCombinations()
         {
             if (_parentForm?.currentSet == null) return;
-
+            this.Parent.Controls.Add(hoverControl);
             combinationMappings = new List<string>();
             int fingerPosition = GetFingerPosition();
 
@@ -123,6 +156,13 @@ namespace TypeIT.UserControls
                         combinationMappings.Add(displayText);
                     }
                 }
+            }
+
+            // Update hover control with new combinations
+            if (hoverControl != null)
+            {
+                hoverControl.combinations = combinationMappings;
+                hoverControl.PopulateTable();
             }
         }
 
