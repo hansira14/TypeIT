@@ -12,13 +12,20 @@ namespace TypeIT.UserControls
 {
     public partial class UC_CombinationHover : UserControl
     {
-        public UC_CombinationHover()
+        public List<KeyValuePair<string, string>> combinations { get; set; }
+        public UC_CombinationHover(List<KeyValuePair<string, string>> combinations)
         {
             InitializeComponent();
+            this.combinations = combinations;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public void SetContent(string leftText, string rightText)
         {
-                    }
+            combination.Text = leftText;
+            command.Text = rightText;
+            
+            // Force the control to recalculate its size
+            this.PerformLayout();
+        }
     }
 }

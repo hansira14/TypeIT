@@ -34,23 +34,26 @@
             // mapping
             // 
             mapping.AutoSize = true;
-            mapping.Location = new Point(37, 36);
+            mapping.Location = new Point(20, 17);
+            mapping.Margin = new Padding(2, 0, 2, 0);
             mapping.Name = "mapping";
-            mapping.Size = new Size(78, 32);
+            mapping.Size = new Size(38, 15);
             mapping.TabIndex = 0;
             mapping.Text = "label1";
+            mapping.Click += mapping_Click;
             // 
             // UC_Finger
             // 
             AllowDrop = true;
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.IndianRed;
             Controls.Add(mapping);
-            MaximumSize = new Size(205, 100);
-            MinimumSize = new Size(205, 100);
+            Margin = new Padding(2, 1, 2, 1);
+            MaximumSize = new Size(110, 47);
+            MinimumSize = new Size(110, 47);
             Name = "UC_Finger";
-            Size = new Size(205, 100);
+            Size = new Size(110, 47);
             DragDrop += UC_Finger_DragDrop;
             DragOver += UC_Finger_DragOver;
             ResumeLayout(false);
