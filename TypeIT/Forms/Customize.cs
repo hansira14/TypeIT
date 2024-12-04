@@ -222,9 +222,13 @@ namespace TypeIT
 
         private void keyTypeButton_Click(object sender, EventArgs e)
         {
+            macroPanel.Visible = false;
             currentKeyMapType = ((Button)sender).Text;
             currentKeyType.Text = currentKeyMapType;
+
             ((Button)sender).Visible = false;
+            if(currentKeyType.Text == "Macros") macroPanel.Visible = true;
+
             keyTypeButton.Visible = currentKeyType.Text != "Keys";
             commandTypeButton.Visible = currentKeyType.Text != "Commands";
             macroTypeButton.Visible = currentKeyType.Text != "Macros";

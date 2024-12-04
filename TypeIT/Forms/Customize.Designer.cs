@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customize));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customize));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -77,21 +77,25 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Main = new TableLayoutPanel();
             panelMenu = new Panel();
             assignMenu = new Guna.UI2.WinForms.Guna2Panel();
             toBeAssignedList2 = new Guna.UI2.WinForms.Guna2Panel();
             toBeAssignedList = new FlowLayoutPanel();
+            macroPanel = new Panel();
+            addNewMacro = new Guna.UI2.WinForms.Guna2TileButton();
             panel8 = new Panel();
             pictureBox2 = new PictureBox();
             Search = new TextBox();
@@ -139,6 +143,9 @@
             recordedCombinationTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
             panelPreview = new Panel();
+            assignOptions = new Guna.UI2.WinForms.Guna2Panel();
+            combinationButton = new Guna.UI2.WinForms.Guna2Button();
+            singleKeyButton = new Guna.UI2.WinForms.Guna2Button();
             rightPinky = new UserControls.UC_Finger();
             rightRing = new UserControls.UC_Finger();
             rightMiddle = new UserControls.UC_Finger();
@@ -152,12 +159,10 @@
             discardChanges = new Guna.UI2.WinForms.Guna2Button();
             saveChanges = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
-            assignOptions = new Guna.UI2.WinForms.Guna2Panel();
-            combinationButton = new Guna.UI2.WinForms.Guna2Button();
-            singleKeyButton = new Guna.UI2.WinForms.Guna2Button();
             Main.SuspendLayout();
             panelMenu.SuspendLayout();
             assignMenu.SuspendLayout();
+            macroPanel.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel6.SuspendLayout();
@@ -172,8 +177,8 @@
             recordCombination.SuspendLayout();
             fingerList.SuspendLayout();
             panelPreview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             assignOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Main
@@ -212,17 +217,18 @@
             assignMenu.BorderRadius = 14;
             assignMenu.Controls.Add(toBeAssignedList2);
             assignMenu.Controls.Add(toBeAssignedList);
+            assignMenu.Controls.Add(macroPanel);
             assignMenu.Controls.Add(panel8);
             assignMenu.Controls.Add(panel6);
             assignMenu.Controls.Add(recordedCombinationTextBox2);
             assignMenu.Controls.Add(panel1);
-            assignMenu.CustomizableEdges = customizableEdges7;
+            assignMenu.CustomizableEdges = customizableEdges9;
             assignMenu.Dock = DockStyle.Fill;
             assignMenu.FillColor = Color.FromArgb(33, 34, 37);
             assignMenu.Location = new Point(0, 64);
             assignMenu.Name = "assignMenu";
             assignMenu.Padding = new Padding(12);
-            assignMenu.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            assignMenu.ShadowDecoration.CustomizableEdges = customizableEdges10;
             assignMenu.Size = new Size(404, 550);
             assignMenu.TabIndex = 10;
             assignMenu.Visible = false;
@@ -233,10 +239,11 @@
             toBeAssignedList2.BackColor = Color.Transparent;
             toBeAssignedList2.CustomizableEdges = customizableEdges1;
             toBeAssignedList2.Dock = DockStyle.Fill;
-            toBeAssignedList2.Location = new Point(12, 215);
+            toBeAssignedList2.Location = new Point(12, 258);
+            toBeAssignedList2.Margin = new Padding(3, 0, 3, 3);
             toBeAssignedList2.Name = "toBeAssignedList2";
             toBeAssignedList2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            toBeAssignedList2.Size = new Size(380, 323);
+            toBeAssignedList2.Size = new Size(380, 280);
             toBeAssignedList2.TabIndex = 63;
             // 
             // toBeAssignedList
@@ -244,11 +251,47 @@
             toBeAssignedList.AutoScroll = true;
             toBeAssignedList.BackColor = Color.Transparent;
             toBeAssignedList.Dock = DockStyle.Fill;
-            toBeAssignedList.Location = new Point(12, 215);
+            toBeAssignedList.Location = new Point(12, 258);
             toBeAssignedList.Name = "toBeAssignedList";
             toBeAssignedList.Padding = new Padding(0, 14, 0, 0);
-            toBeAssignedList.Size = new Size(380, 323);
+            toBeAssignedList.Size = new Size(380, 280);
             toBeAssignedList.TabIndex = 17;
+            // 
+            // macroPanel
+            // 
+            macroPanel.BackColor = Color.Transparent;
+            macroPanel.Controls.Add(addNewMacro);
+            macroPanel.Dock = DockStyle.Top;
+            macroPanel.Location = new Point(12, 215);
+            macroPanel.Margin = new Padding(0);
+            macroPanel.Name = "macroPanel";
+            macroPanel.Padding = new Padding(0, 8, 0, 0);
+            macroPanel.Size = new Size(380, 43);
+            macroPanel.TabIndex = 66;
+            macroPanel.Visible = false;
+            // 
+            // addNewMacro
+            // 
+            addNewMacro.BackColor = Color.Transparent;
+            addNewMacro.BorderColor = Color.FromArgb(29, 30, 33);
+            addNewMacro.BorderRadius = 6;
+            addNewMacro.BorderThickness = 1;
+            addNewMacro.CustomizableEdges = customizableEdges3;
+            addNewMacro.DisabledState.BorderColor = Color.DarkGray;
+            addNewMacro.DisabledState.CustomBorderColor = Color.DarkGray;
+            addNewMacro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            addNewMacro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            addNewMacro.Dock = DockStyle.Top;
+            addNewMacro.FillColor = Color.FromArgb(55, 58, 65);
+            addNewMacro.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addNewMacro.ForeColor = Color.White;
+            addNewMacro.Location = new Point(0, 8);
+            addNewMacro.Margin = new Padding(0);
+            addNewMacro.Name = "addNewMacro";
+            addNewMacro.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            addNewMacro.Size = new Size(380, 29);
+            addNewMacro.TabIndex = 65;
+            addNewMacro.Text = "Add new macro";
             // 
             // panel8
             // 
@@ -284,7 +327,7 @@
             Search.BorderStyle = BorderStyle.None;
             Search.Font = new Font("Segoe UI Semibold", 9.900001F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Search.ForeColor = Color.FromArgb(179, 179, 179);
-            Search.Location = new Point(32, 12);
+            Search.Location = new Point(37, 8);
             Search.Margin = new Padding(1);
             Search.Name = "Search";
             Search.PlaceholderText = "Search for a key";
@@ -333,13 +376,13 @@
             keyChoices.BackColor = Color.Transparent;
             keyChoices.BorderRadius = 4;
             keyChoices.Controls.Add(keyTypeList);
-            keyChoices.CustomizableEdges = customizableEdges3;
+            keyChoices.CustomizableEdges = customizableEdges5;
             keyChoices.FillColor = Color.DarkGray;
             keyChoices.Location = new Point(239, 13);
             keyChoices.MaximumSize = new Size(133, 116);
             keyChoices.MinimumSize = new Size(133, 38);
             keyChoices.Name = "keyChoices";
-            keyChoices.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            keyChoices.ShadowDecoration.CustomizableEdges = customizableEdges6;
             keyChoices.Size = new Size(133, 38);
             keyChoices.TabIndex = 18;
             keyChoices.Leave += keyChoices_Leave;
@@ -470,7 +513,7 @@
             recordedCombinationTextBox2.BackColor = Color.Transparent;
             recordedCombinationTextBox2.BorderColor = Color.Transparent;
             recordedCombinationTextBox2.BorderRadius = 6;
-            recordedCombinationTextBox2.CustomizableEdges = customizableEdges5;
+            recordedCombinationTextBox2.CustomizableEdges = customizableEdges7;
             recordedCombinationTextBox2.DefaultText = "";
             recordedCombinationTextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             recordedCombinationTextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -488,7 +531,7 @@
             recordedCombinationTextBox2.PlaceholderText = "";
             recordedCombinationTextBox2.ReadOnly = true;
             recordedCombinationTextBox2.SelectedText = "";
-            recordedCombinationTextBox2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            recordedCombinationTextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
             recordedCombinationTextBox2.Size = new Size(380, 60);
             recordedCombinationTextBox2.TabIndex = 62;
             recordedCombinationTextBox2.Visible = false;
@@ -528,24 +571,24 @@
             keySet.Controls.Add(blank);
             keySet.Controls.Add(panel7);
             keySet.Controls.Add(guna2Panel3);
-            keySet.CustomizableEdges = customizableEdges17;
+            keySet.CustomizableEdges = customizableEdges19;
             keySet.Dock = DockStyle.Fill;
             keySet.FillColor = Color.FromArgb(33, 34, 37);
             keySet.Location = new Point(0, 64);
             keySet.Name = "keySet";
             keySet.Padding = new Padding(12);
-            keySet.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            keySet.ShadowDecoration.CustomizableEdges = customizableEdges20;
             keySet.Size = new Size(404, 550);
             keySet.TabIndex = 9;
             // 
             // keyMaps
             // 
             keyMaps.AutoScroll = true;
-            keyMaps.CustomizableEdges = customizableEdges9;
+            keyMaps.CustomizableEdges = customizableEdges11;
             keyMaps.Dock = DockStyle.Fill;
             keyMaps.Location = new Point(12, 277);
             keyMaps.Name = "keyMaps";
-            keyMaps.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            keyMaps.ShadowDecoration.CustomizableEdges = customizableEdges12;
             keyMaps.Size = new Size(380, 261);
             keyMaps.TabIndex = 18;
             keyMaps.Paint += keyMaps_Paint;
@@ -589,13 +632,13 @@
             guna2Panel4.BorderRadius = 6;
             guna2Panel4.Controls.Add(setActivationKey);
             guna2Panel4.Controls.Add(label2);
-            guna2Panel4.CustomizableEdges = customizableEdges11;
+            guna2Panel4.CustomizableEdges = customizableEdges13;
             guna2Panel4.Dock = DockStyle.Fill;
             guna2Panel4.FillColor = Color.FromArgb(16, 17, 19);
             guna2Panel4.Location = new Point(0, 14);
             guna2Panel4.Margin = new Padding(0);
             guna2Panel4.Name = "guna2Panel4";
-            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Panel4.Size = new Size(285, 44);
             guna2Panel4.TabIndex = 14;
             // 
@@ -639,7 +682,7 @@
             // assignMapping
             // 
             assignMapping.BorderRadius = 4;
-            assignMapping.CustomizableEdges = customizableEdges13;
+            assignMapping.CustomizableEdges = customizableEdges15;
             assignMapping.DisabledState.BorderColor = Color.DarkGray;
             assignMapping.DisabledState.CustomBorderColor = Color.DarkGray;
             assignMapping.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -649,7 +692,7 @@
             assignMapping.ForeColor = Color.White;
             assignMapping.Location = new Point(293, 14);
             assignMapping.Name = "assignMapping";
-            assignMapping.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            assignMapping.ShadowDecoration.CustomizableEdges = customizableEdges16;
             assignMapping.Size = new Size(87, 44);
             assignMapping.TabIndex = 15;
             assignMapping.Text = "Assign";
@@ -661,12 +704,12 @@
             guna2Panel3.Controls.Add(addSet);
             guna2Panel3.CustomBorderColor = Color.FromArgb(64, 65, 66);
             guna2Panel3.CustomBorderThickness = new Padding(0, 0, 0, 1);
-            guna2Panel3.CustomizableEdges = customizableEdges15;
+            guna2Panel3.CustomizableEdges = customizableEdges17;
             guna2Panel3.Dock = DockStyle.Top;
             guna2Panel3.Location = new Point(12, 12);
             guna2Panel3.Margin = new Padding(0);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Panel3.Size = new Size(380, 40);
             guna2Panel3.TabIndex = 0;
             // 
@@ -711,12 +754,12 @@
             recordCombination.Controls.Add(proceedToAssign);
             recordCombination.Controls.Add(guna2TextBox2);
             recordCombination.Controls.Add(recordedCombinationTextBox);
-            recordCombination.CustomizableEdges = customizableEdges47;
+            recordCombination.CustomizableEdges = customizableEdges49;
             recordCombination.Dock = DockStyle.Fill;
             recordCombination.FillColor = Color.FromArgb(10, 10, 12);
             recordCombination.Location = new Point(0, 64);
             recordCombination.Name = "recordCombination";
-            recordCombination.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            recordCombination.ShadowDecoration.CustomizableEdges = customizableEdges50;
             recordCombination.Size = new Size(404, 550);
             recordCombination.TabIndex = 0;
             recordCombination.Visible = false;
@@ -747,7 +790,7 @@
             Lpinky.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Lpinky.CheckedState.FillColor = Color.Black;
             Lpinky.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lpinky.CustomizableEdges = customizableEdges19;
+            Lpinky.CustomizableEdges = customizableEdges21;
             Lpinky.DisabledState.BorderColor = Color.DarkGray;
             Lpinky.DisabledState.CustomBorderColor = Color.DarkGray;
             Lpinky.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -757,7 +800,7 @@
             Lpinky.ForeColor = Color.White;
             Lpinky.Location = new Point(3, 3);
             Lpinky.Name = "Lpinky";
-            Lpinky.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            Lpinky.ShadowDecoration.CustomizableEdges = customizableEdges22;
             Lpinky.Size = new Size(69, 35);
             Lpinky.TabIndex = 16;
             Lpinky.Text = "Lpinky";
@@ -772,7 +815,7 @@
             Lmiddle.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Lmiddle.CheckedState.FillColor = Color.Black;
             Lmiddle.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lmiddle.CustomizableEdges = customizableEdges21;
+            Lmiddle.CustomizableEdges = customizableEdges23;
             Lmiddle.DisabledState.BorderColor = Color.DarkGray;
             Lmiddle.DisabledState.CustomBorderColor = Color.DarkGray;
             Lmiddle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -782,7 +825,7 @@
             Lmiddle.ForeColor = Color.White;
             Lmiddle.Location = new Point(78, 3);
             Lmiddle.Name = "Lmiddle";
-            Lmiddle.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            Lmiddle.ShadowDecoration.CustomizableEdges = customizableEdges24;
             Lmiddle.Size = new Size(75, 35);
             Lmiddle.TabIndex = 17;
             Lmiddle.Text = "Lmiddle";
@@ -797,7 +840,7 @@
             Lring.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Lring.CheckedState.FillColor = Color.Black;
             Lring.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lring.CustomizableEdges = customizableEdges23;
+            Lring.CustomizableEdges = customizableEdges25;
             Lring.DisabledState.BorderColor = Color.DarkGray;
             Lring.DisabledState.CustomBorderColor = Color.DarkGray;
             Lring.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -807,7 +850,7 @@
             Lring.ForeColor = Color.White;
             Lring.Location = new Point(159, 3);
             Lring.Name = "Lring";
-            Lring.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            Lring.ShadowDecoration.CustomizableEdges = customizableEdges26;
             Lring.Size = new Size(69, 35);
             Lring.TabIndex = 18;
             Lring.Text = "Lring";
@@ -822,7 +865,7 @@
             Lindex.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Lindex.CheckedState.FillColor = Color.Black;
             Lindex.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lindex.CustomizableEdges = customizableEdges25;
+            Lindex.CustomizableEdges = customizableEdges27;
             Lindex.DisabledState.BorderColor = Color.DarkGray;
             Lindex.DisabledState.CustomBorderColor = Color.DarkGray;
             Lindex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -832,7 +875,7 @@
             Lindex.ForeColor = Color.White;
             Lindex.Location = new Point(234, 3);
             Lindex.Name = "Lindex";
-            Lindex.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            Lindex.ShadowDecoration.CustomizableEdges = customizableEdges28;
             Lindex.Size = new Size(69, 35);
             Lindex.TabIndex = 19;
             Lindex.Text = "Lindex";
@@ -847,7 +890,7 @@
             Lthumb.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Lthumb.CheckedState.FillColor = Color.Black;
             Lthumb.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Lthumb.CustomizableEdges = customizableEdges27;
+            Lthumb.CustomizableEdges = customizableEdges29;
             Lthumb.DisabledState.BorderColor = Color.DarkGray;
             Lthumb.DisabledState.CustomBorderColor = Color.DarkGray;
             Lthumb.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -857,7 +900,7 @@
             Lthumb.ForeColor = Color.White;
             Lthumb.Location = new Point(3, 44);
             Lthumb.Name = "Lthumb";
-            Lthumb.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            Lthumb.ShadowDecoration.CustomizableEdges = customizableEdges30;
             Lthumb.Size = new Size(80, 35);
             Lthumb.TabIndex = 20;
             Lthumb.Text = "Lthumb";
@@ -871,7 +914,7 @@
             Rpinky.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Rpinky.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
             Rpinky.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rpinky.CustomizableEdges = customizableEdges29;
+            Rpinky.CustomizableEdges = customizableEdges31;
             Rpinky.DisabledState.BorderColor = Color.DarkGray;
             Rpinky.DisabledState.CustomBorderColor = Color.DarkGray;
             Rpinky.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -881,7 +924,7 @@
             Rpinky.ForeColor = Color.White;
             Rpinky.Location = new Point(89, 44);
             Rpinky.Name = "Rpinky";
-            Rpinky.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            Rpinky.ShadowDecoration.CustomizableEdges = customizableEdges32;
             Rpinky.Size = new Size(69, 35);
             Rpinky.TabIndex = 21;
             Rpinky.Text = "Rpinky";
@@ -895,7 +938,7 @@
             Rmiddle.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Rmiddle.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
             Rmiddle.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rmiddle.CustomizableEdges = customizableEdges31;
+            Rmiddle.CustomizableEdges = customizableEdges33;
             Rmiddle.DisabledState.BorderColor = Color.DarkGray;
             Rmiddle.DisabledState.CustomBorderColor = Color.DarkGray;
             Rmiddle.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -905,7 +948,7 @@
             Rmiddle.ForeColor = Color.White;
             Rmiddle.Location = new Point(164, 44);
             Rmiddle.Name = "Rmiddle";
-            Rmiddle.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            Rmiddle.ShadowDecoration.CustomizableEdges = customizableEdges34;
             Rmiddle.Size = new Size(75, 35);
             Rmiddle.TabIndex = 22;
             Rmiddle.Text = "Rmiddle";
@@ -919,7 +962,7 @@
             Rring.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Rring.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
             Rring.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rring.CustomizableEdges = customizableEdges33;
+            Rring.CustomizableEdges = customizableEdges35;
             Rring.DisabledState.BorderColor = Color.DarkGray;
             Rring.DisabledState.CustomBorderColor = Color.DarkGray;
             Rring.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -929,7 +972,7 @@
             Rring.ForeColor = Color.White;
             Rring.Location = new Point(245, 44);
             Rring.Name = "Rring";
-            Rring.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            Rring.ShadowDecoration.CustomizableEdges = customizableEdges36;
             Rring.Size = new Size(69, 35);
             Rring.TabIndex = 23;
             Rring.Text = "Rring";
@@ -943,7 +986,7 @@
             Rindex.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Rindex.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
             Rindex.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rindex.CustomizableEdges = customizableEdges35;
+            Rindex.CustomizableEdges = customizableEdges37;
             Rindex.DisabledState.BorderColor = Color.DarkGray;
             Rindex.DisabledState.CustomBorderColor = Color.DarkGray;
             Rindex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -953,7 +996,7 @@
             Rindex.ForeColor = Color.White;
             Rindex.Location = new Point(3, 85);
             Rindex.Name = "Rindex";
-            Rindex.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            Rindex.ShadowDecoration.CustomizableEdges = customizableEdges38;
             Rindex.Size = new Size(69, 35);
             Rindex.TabIndex = 24;
             Rindex.Text = "Rindex";
@@ -967,7 +1010,7 @@
             Rthumb.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Rthumb.CheckedState.FillColor = Color.FromArgb(16, 17, 19);
             Rthumb.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            Rthumb.CustomizableEdges = customizableEdges37;
+            Rthumb.CustomizableEdges = customizableEdges39;
             Rthumb.DisabledState.BorderColor = Color.DarkGray;
             Rthumb.DisabledState.CustomBorderColor = Color.DarkGray;
             Rthumb.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -977,7 +1020,7 @@
             Rthumb.ForeColor = Color.White;
             Rthumb.Location = new Point(78, 85);
             Rthumb.Name = "Rthumb";
-            Rthumb.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            Rthumb.ShadowDecoration.CustomizableEdges = customizableEdges40;
             Rthumb.Size = new Size(85, 35);
             Rthumb.TabIndex = 25;
             Rthumb.Text = "Rthumb";
@@ -987,7 +1030,7 @@
             // 
             cancelRecord.BackColor = Color.Transparent;
             cancelRecord.BorderRadius = 4;
-            cancelRecord.CustomizableEdges = customizableEdges39;
+            cancelRecord.CustomizableEdges = customizableEdges41;
             cancelRecord.DisabledState.BorderColor = Color.DarkGray;
             cancelRecord.DisabledState.CustomBorderColor = Color.DarkGray;
             cancelRecord.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -997,7 +1040,7 @@
             cancelRecord.ForeColor = Color.White;
             cancelRecord.Location = new Point(204, 466);
             cancelRecord.Name = "cancelRecord";
-            cancelRecord.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            cancelRecord.ShadowDecoration.CustomizableEdges = customizableEdges42;
             cancelRecord.Size = new Size(79, 37);
             cancelRecord.TabIndex = 14;
             cancelRecord.Text = "Cancel";
@@ -1006,7 +1049,7 @@
             // proceedToAssign
             // 
             proceedToAssign.BorderRadius = 4;
-            proceedToAssign.CustomizableEdges = customizableEdges41;
+            proceedToAssign.CustomizableEdges = customizableEdges43;
             proceedToAssign.DisabledState.BorderColor = Color.DarkGray;
             proceedToAssign.DisabledState.CustomBorderColor = Color.DarkGray;
             proceedToAssign.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1015,7 +1058,7 @@
             proceedToAssign.ForeColor = Color.White;
             proceedToAssign.Location = new Point(289, 466);
             proceedToAssign.Name = "proceedToAssign";
-            proceedToAssign.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            proceedToAssign.ShadowDecoration.CustomizableEdges = customizableEdges44;
             proceedToAssign.Size = new Size(79, 37);
             proceedToAssign.TabIndex = 13;
             proceedToAssign.Text = "Next";
@@ -1026,7 +1069,7 @@
             guna2TextBox2.BackColor = Color.Transparent;
             guna2TextBox2.BorderColor = Color.Transparent;
             guna2TextBox2.BorderThickness = 0;
-            guna2TextBox2.CustomizableEdges = customizableEdges43;
+            guna2TextBox2.CustomizableEdges = customizableEdges45;
             guna2TextBox2.DefaultText = "Select the finger combination you want to use for this mapping.";
             guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1044,7 +1087,7 @@
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.ReadOnly = true;
             guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges46;
             guna2TextBox2.Size = new Size(324, 70);
             guna2TextBox2.TabIndex = 12;
             // 
@@ -1053,7 +1096,7 @@
             recordedCombinationTextBox.BackColor = Color.Transparent;
             recordedCombinationTextBox.BorderColor = Color.Transparent;
             recordedCombinationTextBox.BorderRadius = 6;
-            recordedCombinationTextBox.CustomizableEdges = customizableEdges45;
+            recordedCombinationTextBox.CustomizableEdges = customizableEdges47;
             recordedCombinationTextBox.DefaultText = "";
             recordedCombinationTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             recordedCombinationTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1070,7 +1113,7 @@
             recordedCombinationTextBox.PlaceholderText = "";
             recordedCombinationTextBox.ReadOnly = true;
             recordedCombinationTextBox.SelectedText = "";
-            recordedCombinationTextBox.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            recordedCombinationTextBox.ShadowDecoration.CustomizableEdges = customizableEdges48;
             recordedCombinationTextBox.Size = new Size(324, 60);
             recordedCombinationTextBox.TabIndex = 11;
             // 
@@ -1090,6 +1133,7 @@
             // 
             // panelPreview
             // 
+            panelPreview.Controls.Add(assignOptions);
             panelPreview.Controls.Add(rightPinky);
             panelPreview.Controls.Add(rightRing);
             panelPreview.Controls.Add(rightMiddle);
@@ -1103,12 +1147,73 @@
             panelPreview.Controls.Add(discardChanges);
             panelPreview.Controls.Add(saveChanges);
             panelPreview.Controls.Add(pictureBox1);
-            panelPreview.Controls.Add(assignOptions);
             panelPreview.Dock = DockStyle.Fill;
             panelPreview.Location = new Point(413, 3);
             panelPreview.Name = "panelPreview";
             panelPreview.Size = new Size(757, 630);
             panelPreview.TabIndex = 13;
+            // 
+            // assignOptions
+            // 
+            assignOptions.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            assignOptions.BackColor = Color.Transparent;
+            assignOptions.BorderColor = Color.Transparent;
+            assignOptions.BorderRadius = 6;
+            assignOptions.Controls.Add(combinationButton);
+            assignOptions.Controls.Add(singleKeyButton);
+            assignOptions.CustomizableEdges = customizableEdges55;
+            assignOptions.FillColor = Color.Transparent;
+            assignOptions.Location = new Point(0, 130);
+            assignOptions.Margin = new Padding(0);
+            assignOptions.Name = "assignOptions";
+            assignOptions.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            assignOptions.Size = new Size(175, 84);
+            assignOptions.TabIndex = 21;
+            assignOptions.Visible = false;
+            // 
+            // combinationButton
+            // 
+            combinationButton.BorderRadius = 4;
+            customizableEdges51.TopLeft = false;
+            customizableEdges51.TopRight = false;
+            combinationButton.CustomizableEdges = customizableEdges51;
+            combinationButton.DisabledState.BorderColor = Color.DarkGray;
+            combinationButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            combinationButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            combinationButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            combinationButton.Dock = DockStyle.Top;
+            combinationButton.FillColor = Color.FromArgb(16, 17, 19);
+            combinationButton.Font = new Font("Segoe UI", 9F);
+            combinationButton.ForeColor = Color.White;
+            combinationButton.Location = new Point(0, 41);
+            combinationButton.Name = "combinationButton";
+            combinationButton.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            combinationButton.Size = new Size(175, 41);
+            combinationButton.TabIndex = 10;
+            combinationButton.Text = "Combination";
+            combinationButton.Click += combinationButton_Click;
+            // 
+            // singleKeyButton
+            // 
+            singleKeyButton.BorderRadius = 4;
+            customizableEdges53.BottomLeft = false;
+            customizableEdges53.BottomRight = false;
+            singleKeyButton.CustomizableEdges = customizableEdges53;
+            singleKeyButton.DisabledState.BorderColor = Color.DarkGray;
+            singleKeyButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            singleKeyButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            singleKeyButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            singleKeyButton.Dock = DockStyle.Top;
+            singleKeyButton.FillColor = Color.FromArgb(16, 17, 19);
+            singleKeyButton.Font = new Font("Segoe UI", 9F);
+            singleKeyButton.ForeColor = Color.White;
+            singleKeyButton.Location = new Point(0, 0);
+            singleKeyButton.Name = "singleKeyButton";
+            singleKeyButton.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            singleKeyButton.Size = new Size(175, 41);
+            singleKeyButton.TabIndex = 9;
+            singleKeyButton.Text = "Single Key";
+            singleKeyButton.Click += singleKeyButton_Click;
             // 
             // rightPinky
             // 
@@ -1254,7 +1359,7 @@
             // 
             discardChanges.BackColor = Color.FromArgb(0, 0, 0, 0);
             discardChanges.BorderRadius = 4;
-            discardChanges.CustomizableEdges = customizableEdges49;
+            discardChanges.CustomizableEdges = customizableEdges57;
             discardChanges.DisabledState.BorderColor = Color.DarkGray;
             discardChanges.DisabledState.CustomBorderColor = Color.DarkGray;
             discardChanges.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1264,7 +1369,7 @@
             discardChanges.ForeColor = Color.White;
             discardChanges.Location = new Point(530, 557);
             discardChanges.Name = "discardChanges";
-            discardChanges.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            discardChanges.ShadowDecoration.CustomizableEdges = customizableEdges58;
             discardChanges.Size = new Size(79, 37);
             discardChanges.TabIndex = 23;
             discardChanges.Text = "Cancel";
@@ -1274,7 +1379,7 @@
             // saveChanges
             // 
             saveChanges.BorderRadius = 4;
-            saveChanges.CustomizableEdges = customizableEdges51;
+            saveChanges.CustomizableEdges = customizableEdges59;
             saveChanges.DisabledState.BorderColor = Color.DarkGray;
             saveChanges.DisabledState.CustomBorderColor = Color.DarkGray;
             saveChanges.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1283,7 +1388,7 @@
             saveChanges.ForeColor = Color.White;
             saveChanges.Location = new Point(616, 557);
             saveChanges.Name = "saveChanges";
-            saveChanges.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            saveChanges.ShadowDecoration.CustomizableEdges = customizableEdges60;
             saveChanges.Size = new Size(116, 37);
             saveChanges.TabIndex = 22;
             saveChanges.Text = "Save changes";
@@ -1301,68 +1406,6 @@
             pictureBox1.TabIndex = 34;
             pictureBox1.TabStop = false;
             // 
-            // assignOptions
-            // 
-            assignOptions.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            assignOptions.BackColor = Color.Transparent;
-            assignOptions.BorderColor = Color.Transparent;
-            assignOptions.BorderRadius = 6;
-            assignOptions.Controls.Add(combinationButton);
-            assignOptions.Controls.Add(singleKeyButton);
-            assignOptions.CustomizableEdges = customizableEdges57;
-            assignOptions.FillColor = Color.Transparent;
-            assignOptions.Location = new Point(0, 130);
-            assignOptions.Margin = new Padding(0);
-            assignOptions.Name = "assignOptions";
-            assignOptions.ShadowDecoration.CustomizableEdges = customizableEdges58;
-            assignOptions.Size = new Size(175, 169);
-            assignOptions.TabIndex = 21;
-            assignOptions.Visible = false;
-            // 
-            // combinationButton
-            // 
-            combinationButton.BorderRadius = 4;
-            customizableEdges53.TopLeft = false;
-            customizableEdges53.TopRight = false;
-            combinationButton.CustomizableEdges = customizableEdges53;
-            combinationButton.DisabledState.BorderColor = Color.DarkGray;
-            combinationButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            combinationButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            combinationButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            combinationButton.Dock = DockStyle.Top;
-            combinationButton.FillColor = Color.FromArgb(16, 17, 19);
-            combinationButton.Font = new Font("Segoe UI", 9F);
-            combinationButton.ForeColor = Color.White;
-            combinationButton.Location = new Point(0, 41);
-            combinationButton.Name = "combinationButton";
-            combinationButton.ShadowDecoration.CustomizableEdges = customizableEdges54;
-            combinationButton.Size = new Size(175, 41);
-            combinationButton.TabIndex = 10;
-            combinationButton.Text = "Combination";
-            combinationButton.Click += combinationButton_Click;
-            // 
-            // singleKeyButton
-            // 
-            singleKeyButton.BorderRadius = 4;
-            customizableEdges55.BottomLeft = false;
-            customizableEdges55.BottomRight = false;
-            singleKeyButton.CustomizableEdges = customizableEdges55;
-            singleKeyButton.DisabledState.BorderColor = Color.DarkGray;
-            singleKeyButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            singleKeyButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            singleKeyButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            singleKeyButton.Dock = DockStyle.Top;
-            singleKeyButton.FillColor = Color.FromArgb(16, 17, 19);
-            singleKeyButton.Font = new Font("Segoe UI", 9F);
-            singleKeyButton.ForeColor = Color.White;
-            singleKeyButton.Location = new Point(0, 0);
-            singleKeyButton.Name = "singleKeyButton";
-            singleKeyButton.ShadowDecoration.CustomizableEdges = customizableEdges56;
-            singleKeyButton.Size = new Size(175, 41);
-            singleKeyButton.TabIndex = 9;
-            singleKeyButton.Text = "Single Key";
-            singleKeyButton.Click += singleKeyButton_Click;
-            // 
             // Customize
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1378,6 +1421,7 @@
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
             assignMenu.ResumeLayout(false);
+            macroPanel.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -1396,8 +1440,8 @@
             recordCombination.ResumeLayout(false);
             fingerList.ResumeLayout(false);
             panelPreview.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             assignOptions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -1475,5 +1519,7 @@
         private Label combinationLabel;
         private Guna.UI2.WinForms.Guna2Panel toBeAssignedList2;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2TileButton addNewMacro;
+        private Panel macroPanel;
     }
 }

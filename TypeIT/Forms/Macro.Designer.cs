@@ -28,71 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            recordedCombinationTextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            fingerList = new FlowLayoutPanel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            recordedMacro = new Guna.UI2.WinForms.Guna2TextBox();
+            modifierKeyList = new FlowLayoutPanel();
             ShiftButton = new Guna.UI2.WinForms.Guna2Button();
             ControlButton = new Guna.UI2.WinForms.Guna2Button();
             AltButton = new Guna.UI2.WinForms.Guna2Button();
             WindowsButton = new Guna.UI2.WinForms.Guna2Button();
-            cancelRecord = new Guna.UI2.WinForms.Guna2Button();
-            proceedToAssign = new Guna.UI2.WinForms.Guna2Button();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            fingerList.SuspendLayout();
+            cancelMacro = new Guna.UI2.WinForms.Guna2Button();
+            saveMacro = new Guna.UI2.WinForms.Guna2Button();
+            captio = new Guna.UI2.WinForms.Guna2TextBox();
+            modifierKeyList.SuspendLayout();
             SuspendLayout();
             // 
-            // recordedCombinationTextBox2
+            // recordedMacro
             // 
-            recordedCombinationTextBox2.BackColor = Color.Transparent;
-            recordedCombinationTextBox2.BorderColor = Color.Transparent;
-            recordedCombinationTextBox2.BorderRadius = 6;
-            recordedCombinationTextBox2.CustomizableEdges = customizableEdges1;
-            recordedCombinationTextBox2.DefaultText = "";
-            recordedCombinationTextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            recordedCombinationTextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            recordedCombinationTextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            recordedCombinationTextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            recordedCombinationTextBox2.FillColor = Color.FromArgb(16, 17, 19);
-            recordedCombinationTextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            recordedCombinationTextBox2.Font = new Font("Segoe UI", 9F);
-            recordedCombinationTextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            recordedCombinationTextBox2.Location = new Point(15, 108);
-            recordedCombinationTextBox2.Margin = new Padding(6);
-            recordedCombinationTextBox2.Name = "recordedCombinationTextBox2";
-            recordedCombinationTextBox2.PasswordChar = '\0';
-            recordedCombinationTextBox2.PlaceholderText = "";
-            recordedCombinationTextBox2.ReadOnly = true;
-            recordedCombinationTextBox2.SelectedText = "";
-            recordedCombinationTextBox2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            recordedCombinationTextBox2.Size = new Size(324, 60);
-            recordedCombinationTextBox2.TabIndex = 63;
-            recordedCombinationTextBox2.Visible = false;
+            recordedMacro.BackColor = Color.Transparent;
+            recordedMacro.BorderColor = Color.Transparent;
+            recordedMacro.BorderRadius = 6;
+            recordedMacro.CustomizableEdges = customizableEdges17;
+            recordedMacro.DefaultText = "";
+            recordedMacro.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            recordedMacro.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            recordedMacro.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            recordedMacro.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            recordedMacro.FillColor = Color.FromArgb(16, 17, 19);
+            recordedMacro.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            recordedMacro.Font = new Font("Segoe UI", 9F);
+            recordedMacro.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            recordedMacro.Location = new Point(15, 108);
+            recordedMacro.Margin = new Padding(6);
+            recordedMacro.Name = "recordedMacro";
+            recordedMacro.PasswordChar = '\0';
+            recordedMacro.PlaceholderText = "";
+            recordedMacro.ReadOnly = true;
+            recordedMacro.SelectedText = "";
+            recordedMacro.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            recordedMacro.Size = new Size(324, 60);
+            recordedMacro.TabIndex = 63;
+            recordedMacro.Visible = false;
             // 
-            // fingerList
+            // modifierKeyList
             // 
-            fingerList.Controls.Add(ShiftButton);
-            fingerList.Controls.Add(ControlButton);
-            fingerList.Controls.Add(AltButton);
-            fingerList.Controls.Add(WindowsButton);
-            fingerList.Location = new Point(15, 189);
-            fingerList.Name = "fingerList";
-            fingerList.Size = new Size(324, 53);
-            fingerList.TabIndex = 67;
+            modifierKeyList.Controls.Add(ShiftButton);
+            modifierKeyList.Controls.Add(ControlButton);
+            modifierKeyList.Controls.Add(AltButton);
+            modifierKeyList.Controls.Add(WindowsButton);
+            modifierKeyList.Location = new Point(15, 189);
+            modifierKeyList.Name = "modifierKeyList";
+            modifierKeyList.Size = new Size(324, 53);
+            modifierKeyList.TabIndex = 67;
             // 
             // ShiftButton
             // 
@@ -102,7 +102,7 @@
             ShiftButton.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             ShiftButton.CheckedState.FillColor = Color.Black;
             ShiftButton.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            ShiftButton.CustomizableEdges = customizableEdges3;
+            ShiftButton.CustomizableEdges = customizableEdges19;
             ShiftButton.DisabledState.BorderColor = Color.DarkGray;
             ShiftButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ShiftButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -112,7 +112,7 @@
             ShiftButton.ForeColor = Color.White;
             ShiftButton.Location = new Point(3, 3);
             ShiftButton.Name = "ShiftButton";
-            ShiftButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ShiftButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
             ShiftButton.Size = new Size(69, 35);
             ShiftButton.TabIndex = 16;
             ShiftButton.Text = "Shift";
@@ -126,7 +126,7 @@
             ControlButton.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             ControlButton.CheckedState.FillColor = Color.Black;
             ControlButton.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            ControlButton.CustomizableEdges = customizableEdges5;
+            ControlButton.CustomizableEdges = customizableEdges21;
             ControlButton.DisabledState.BorderColor = Color.DarkGray;
             ControlButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ControlButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -136,7 +136,7 @@
             ControlButton.ForeColor = Color.White;
             ControlButton.Location = new Point(78, 3);
             ControlButton.Name = "ControlButton";
-            ControlButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ControlButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
             ControlButton.Size = new Size(75, 35);
             ControlButton.TabIndex = 17;
             ControlButton.Text = "Ctrl";
@@ -149,7 +149,7 @@
             AltButton.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             AltButton.CheckedState.FillColor = Color.Black;
             AltButton.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            AltButton.CustomizableEdges = customizableEdges7;
+            AltButton.CustomizableEdges = customizableEdges23;
             AltButton.DisabledState.BorderColor = Color.DarkGray;
             AltButton.DisabledState.CustomBorderColor = Color.DarkGray;
             AltButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -159,7 +159,7 @@
             AltButton.ForeColor = Color.White;
             AltButton.Location = new Point(159, 3);
             AltButton.Name = "AltButton";
-            AltButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            AltButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
             AltButton.Size = new Size(69, 35);
             AltButton.TabIndex = 18;
             AltButton.Text = "Alt";
@@ -172,7 +172,7 @@
             WindowsButton.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             WindowsButton.CheckedState.FillColor = Color.Black;
             WindowsButton.CheckedState.ForeColor = Color.FromArgb(94, 148, 255);
-            WindowsButton.CustomizableEdges = customizableEdges9;
+            WindowsButton.CustomizableEdges = customizableEdges25;
             WindowsButton.DisabledState.BorderColor = Color.DarkGray;
             WindowsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             WindowsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -182,102 +182,102 @@
             WindowsButton.ForeColor = Color.White;
             WindowsButton.Location = new Point(234, 3);
             WindowsButton.Name = "WindowsButton";
-            WindowsButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            WindowsButton.ShadowDecoration.CustomizableEdges = customizableEdges26;
             WindowsButton.Size = new Size(80, 35);
             WindowsButton.TabIndex = 19;
             WindowsButton.Text = "Windows";
             // 
-            // cancelRecord
+            // cancelMacro
             // 
-            cancelRecord.BackColor = Color.Transparent;
-            cancelRecord.BorderRadius = 4;
-            cancelRecord.CustomizableEdges = customizableEdges11;
-            cancelRecord.DisabledState.BorderColor = Color.DarkGray;
-            cancelRecord.DisabledState.CustomBorderColor = Color.DarkGray;
-            cancelRecord.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            cancelRecord.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            cancelRecord.FillColor = Color.Transparent;
-            cancelRecord.Font = new Font("Segoe UI", 9F);
-            cancelRecord.ForeColor = Color.White;
-            cancelRecord.Location = new Point(175, 376);
-            cancelRecord.Name = "cancelRecord";
-            cancelRecord.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cancelRecord.Size = new Size(79, 37);
-            cancelRecord.TabIndex = 66;
-            cancelRecord.Text = "Cancel";
+            cancelMacro.BackColor = Color.Transparent;
+            cancelMacro.BorderRadius = 4;
+            cancelMacro.CustomizableEdges = customizableEdges27;
+            cancelMacro.DisabledState.BorderColor = Color.DarkGray;
+            cancelMacro.DisabledState.CustomBorderColor = Color.DarkGray;
+            cancelMacro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            cancelMacro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            cancelMacro.FillColor = Color.Transparent;
+            cancelMacro.Font = new Font("Segoe UI", 9F);
+            cancelMacro.ForeColor = Color.White;
+            cancelMacro.Location = new Point(175, 376);
+            cancelMacro.Name = "cancelMacro";
+            cancelMacro.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            cancelMacro.Size = new Size(79, 37);
+            cancelMacro.TabIndex = 66;
+            cancelMacro.Text = "Cancel";
             // 
-            // proceedToAssign
+            // saveMacro
             // 
-            proceedToAssign.BorderRadius = 4;
-            proceedToAssign.CustomizableEdges = customizableEdges13;
-            proceedToAssign.DisabledState.BorderColor = Color.DarkGray;
-            proceedToAssign.DisabledState.CustomBorderColor = Color.DarkGray;
-            proceedToAssign.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            proceedToAssign.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            proceedToAssign.Font = new Font("Segoe UI", 9F);
-            proceedToAssign.ForeColor = Color.White;
-            proceedToAssign.Location = new Point(260, 376);
-            proceedToAssign.Name = "proceedToAssign";
-            proceedToAssign.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            proceedToAssign.Size = new Size(79, 37);
-            proceedToAssign.TabIndex = 65;
-            proceedToAssign.Text = "Next";
+            saveMacro.BorderRadius = 4;
+            saveMacro.CustomizableEdges = customizableEdges29;
+            saveMacro.DisabledState.BorderColor = Color.DarkGray;
+            saveMacro.DisabledState.CustomBorderColor = Color.DarkGray;
+            saveMacro.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            saveMacro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            saveMacro.Font = new Font("Segoe UI", 9F);
+            saveMacro.ForeColor = Color.White;
+            saveMacro.Location = new Point(260, 376);
+            saveMacro.Name = "saveMacro";
+            saveMacro.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            saveMacro.Size = new Size(79, 37);
+            saveMacro.TabIndex = 65;
+            saveMacro.Text = "Next";
             // 
-            // guna2TextBox2
+            // captio
             // 
-            guna2TextBox2.BackColor = Color.Transparent;
-            guna2TextBox2.BorderColor = Color.Transparent;
-            guna2TextBox2.BorderThickness = 0;
-            guna2TextBox2.CustomizableEdges = customizableEdges15;
-            guna2TextBox2.DefaultText = "Select the finger combination you want to use for this mapping.";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.FromArgb(10, 10, 12);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(15, 26);
-            guna2TextBox2.Margin = new Padding(6);
-            guna2TextBox2.Multiline = true;
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PasswordChar = '\0';
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.ReadOnly = true;
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox2.Size = new Size(324, 70);
-            guna2TextBox2.TabIndex = 64;
+            captio.BackColor = Color.Transparent;
+            captio.BorderColor = Color.Transparent;
+            captio.BorderThickness = 0;
+            captio.CustomizableEdges = customizableEdges31;
+            captio.DefaultText = "Select the finger combination you want to use for this mapping.";
+            captio.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            captio.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            captio.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            captio.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            captio.FillColor = Color.FromArgb(10, 10, 12);
+            captio.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            captio.Font = new Font("Segoe UI", 9F);
+            captio.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            captio.Location = new Point(15, 26);
+            captio.Margin = new Padding(6);
+            captio.Multiline = true;
+            captio.Name = "captio";
+            captio.PasswordChar = '\0';
+            captio.PlaceholderText = "";
+            captio.ReadOnly = true;
+            captio.SelectedText = "";
+            captio.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            captio.Size = new Size(324, 70);
+            captio.TabIndex = 64;
             // 
             // Macro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(10, 10, 12);
             ClientSize = new Size(367, 450);
-            Controls.Add(fingerList);
-            Controls.Add(cancelRecord);
-            Controls.Add(proceedToAssign);
-            Controls.Add(guna2TextBox2);
-            Controls.Add(recordedCombinationTextBox2);
+            Controls.Add(modifierKeyList);
+            Controls.Add(cancelMacro);
+            Controls.Add(saveMacro);
+            Controls.Add(captio);
+            Controls.Add(recordedMacro);
             Name = "Macro";
             ShowIcon = false;
             Text = "Macro";
-            fingerList.ResumeLayout(false);
+            modifierKeyList.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2TextBox recordedCombinationTextBox2;
-        private FlowLayoutPanel fingerList;
+        private Guna.UI2.WinForms.Guna2TextBox recordedMacro;
+        private FlowLayoutPanel modifierKeyList;
         private Guna.UI2.WinForms.Guna2Button ShiftButton;
         private Guna.UI2.WinForms.Guna2Button ControlButton;
         private Guna.UI2.WinForms.Guna2Button AltButton;
         private Guna.UI2.WinForms.Guna2Button WindowsButton;
-        private Guna.UI2.WinForms.Guna2Button cancelRecord;
-        private Guna.UI2.WinForms.Guna2Button proceedToAssign;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2Button cancelMacro;
+        private Guna.UI2.WinForms.Guna2Button saveMacro;
+        private Guna.UI2.WinForms.Guna2TextBox captio;
     }
 }
