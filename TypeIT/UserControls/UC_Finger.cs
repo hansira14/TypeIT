@@ -40,6 +40,8 @@ namespace TypeIT.UserControls
             this.MouseLeave += Mapping_MouseLeave;
             mapping.MouseEnter += Mapping_MouseEnter;
             mapping.MouseLeave += Mapping_MouseLeave;
+            combinationCount.MouseEnter += Mapping_MouseEnter;
+            combinationCount.MouseLeave += Mapping_MouseLeave;
         }
 
         private void Mapping_MouseEnter(object sender, EventArgs e)
@@ -176,17 +178,10 @@ namespace TypeIT.UserControls
                 hoverControl.PopulateTable();
             }
 
-            string currentText = mapping.Text;
-            if (currentText.Contains(" +"))
-            {
-                currentText = currentText.Substring(0, currentText.IndexOf(" +"));
-            }
-            mapping.Text = currentText;
-
             if (combinationCount > 0)
             {
                 this.combinationCount.Text = $"+{combinationCount}";
-                // Calculate position right after mapping text
+
                 Size textSize = TextRenderer.MeasureText(mapping.Text, mapping.Font);
                 this.combinationCount.Location = new Point(mapping.Left + textSize.Width + 2, mapping.Top);
                 this.combinationCount.Visible = true;
