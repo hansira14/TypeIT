@@ -135,7 +135,7 @@ namespace TypeIT
 
                 var commandControl = new UC_Commands(fingerCombination, command);
                 commandControl.Dock = DockStyle.Top;
-                
+
                 // Add context menu handling
                 commandControl.MouseClick += (sender, e) =>
                 {
@@ -145,7 +145,7 @@ namespace TypeIT
                         contextMenuStrip1.Show(commandControl, e.Location);
                     }
                 };
-                
+
                 keyMaps.Controls.Add(commandControl);
             }
             //keyMaps.PerformLayout();
@@ -359,7 +359,7 @@ namespace TypeIT
         private string GetProfilePath(string profileName)
         {
             string projectFolder = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)
-                .Parent.Parent.Parent.Parent.FullName;
+                .Parent.Parent.Parent.FullName;
             string folderPath = Path.Combine(projectFolder, "DefaultKeyMappingProfiles");
             return Path.Combine(folderPath, $"{profileName}.json");
         }
@@ -386,7 +386,7 @@ namespace TypeIT
                 case "Commands":
                     foreach (var command in KeyboardConstants.CommonCombinations)
                     {
-                        var commandControl = new UC_Commands(command.Key, string.Join(" + ", command.Value));
+                        var commandControl = new UC_Commands(command.Key, string.Join("", command.Value));
                         commandControl.ParentForm = this;
                         commandControl.Dock = DockStyle.Top;
                         toBeAssignedList2.Controls.Add(commandControl);

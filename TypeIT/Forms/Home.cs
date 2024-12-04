@@ -77,13 +77,15 @@ namespace TypeIT
                             MessageBox.Show($"Successfully established default connection with \"Type It Wireless Keyboard\".",
                             "Default Connection Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             connectedDevice = BTDevice;
+                            typeITDeviceFound = true; //found the device
+                            isConnected = typeITDeviceFound;
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Error creating a default connection to \"Type It Wireless Keyboard\".:\nError Message: {ex.Message}", "Default Connection Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    typeITDeviceFound = true; //found the device
+
                     break; //break for loop, already found the device
                 }
             }
@@ -133,6 +135,14 @@ namespace TypeIT
         private async void Form1_Load(object sender, EventArgs e)
         {
             bool autoconnect = await checkTypeITConnection();
+
+            int contentWidth = content.ClientSize.Width;
+            int contentHeight = content.ClientSize.Height;
+            int deviceWidth = device.Width;
+            int deviceHeight = device.Height;
+            int newDeviceX = (contentWidth - deviceWidth) / 2;
+            int newDeviceY = (contentHeight - deviceHeight) / 2 - 50;
+            device.Location = new Point(newDeviceX, newDeviceY);
             device.Visible = autoconnect;
             notConnected.Visible = !autoconnect;
         }
@@ -186,7 +196,12 @@ namespace TypeIT
 
         private void menu_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show($"{this.Size}");
+            //MessageBox.Show($"{this.Size} // {content.Size}");
+            content.Controls.Clear();
+            content.Controls.Add(device);
+            content.Controls.Add(notConnected);
+            device.Visible = isConnected;
+            notConnected.Visible = !isConnected;
         }
     }
 }

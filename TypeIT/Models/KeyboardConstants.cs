@@ -79,8 +79,8 @@ namespace TypeIT.Models
             {"Bold", new[] {"^", "B"}},                   // Ctrl+B
             {"Italic", new[] {"^", "I"}},                 // Ctrl+I
             {"Underline", new[] {"^", "U"}},              // Ctrl+U
-            {"Close", new[] {"%", "F4"}},                 // Alt+F4
-            {"Switch Window", new[] {"%", "TAB"}},        // Alt+Tab
+            {"Close", new[] {"%", "{F4}"}},                 // Alt+F4
+            {"Switch Window", new[] {"%", "{TAB}"}},        // Alt+Tab
             {"Windows Menu", new[] {"^", "{ESC}"}},       // Ctrl+Esc
             {"Lock Windows", new[] {"#", "L"}},           // Win+L
             {"Task Manager", new[] {"^", "+", "{ESC}"}},  // Ctrl+Shift+Esc
@@ -95,4 +95,4 @@ namespace TypeIT.Models
             {"WIN", "#"}
         };
     }
-} 
+}

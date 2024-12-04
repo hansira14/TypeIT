@@ -70,14 +70,14 @@
             main.Location = new Point(0, 0);
             main.Margin = new Padding(2);
             main.Name = "main";
-            main.Size = new Size(1213, 703);
+            main.Size = new Size(1370, 804);
             main.TabIndex = 0;
             // 
             // profile
             // 
             profile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             profile.Image = (Image)resources.GetObject("profile.Image");
-            profile.Location = new Point(1133, 32);
+            profile.Location = new Point(1291, 32);
             profile.Margin = new Padding(2);
             profile.Name = "profile";
             profile.Padding = new Padding(15);
@@ -105,10 +105,10 @@
             content.Controls.Add(device);
             content.Controls.Add(notConnected);
             content.Dock = DockStyle.Bottom;
-            content.Location = new Point(0, 59);
+            content.Location = new Point(0, 160);
             content.Margin = new Padding(2);
             content.Name = "content";
-            content.Size = new Size(1213, 644);
+            content.Size = new Size(1370, 644);
             content.TabIndex = 1;
             // 
             // device
@@ -223,7 +223,7 @@
             notConnected.Image = (Image)resources.GetObject("notConnected.Image");
             notConnected.Location = new Point(0, -31);
             notConnected.Name = "notConnected";
-            notConnected.Size = new Size(1213, 675);
+            notConnected.Size = new Size(1370, 675);
             notConnected.SizeMode = PictureBoxSizeMode.Zoom;
             notConnected.TabIndex = 4;
             notConnected.TabStop = false;
@@ -234,11 +234,11 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1213, 703);
+            ClientSize = new Size(1370, 804);
             Controls.Add(main);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
-            MinimumSize = new Size(1035, 495);
             Name = "Home";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

@@ -199,7 +199,7 @@
             Main.Name = "Main";
             Main.RowCount = 1;
             Main.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            Main.Size = new Size(1173, 636);
+            Main.Size = new Size(1326, 740);
             Main.TabIndex = 2;
             // 
             // panelMenu
@@ -212,7 +212,7 @@
             panelMenu.Location = new Point(3, 3);
             panelMenu.Name = "panelMenu";
             panelMenu.Padding = new Padding(0, 16, 0, 16);
-            panelMenu.Size = new Size(404, 630);
+            panelMenu.Size = new Size(458, 734);
             panelMenu.TabIndex = 12;
             // 
             // keySet
@@ -230,7 +230,7 @@
             keySet.Name = "keySet";
             keySet.Padding = new Padding(12);
             keySet.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            keySet.Size = new Size(404, 550);
+            keySet.Size = new Size(458, 654);
             keySet.TabIndex = 9;
             // 
             // keyMaps
@@ -241,7 +241,7 @@
             keyMaps.Location = new Point(12, 277);
             keyMaps.Name = "keyMaps";
             keyMaps.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            keyMaps.Size = new Size(380, 261);
+            keyMaps.Size = new Size(434, 365);
             keyMaps.TabIndex = 18;
             keyMaps.Paint += keyMaps_Paint;
             // 
@@ -251,13 +251,13 @@
             blank.Dock = DockStyle.Top;
             blank.Location = new Point(12, 124);
             blank.Name = "blank";
-            blank.Size = new Size(380, 153);
+            blank.Size = new Size(434, 153);
             blank.TabIndex = 17;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(125, 62);
+            label1.Location = new Point(156, 67);
             label1.Name = "label1";
             label1.Size = new Size(115, 15);
             label1.TabIndex = 3;
@@ -274,7 +274,7 @@
             panel7.Location = new Point(12, 52);
             panel7.Name = "panel7";
             panel7.Padding = new Padding(0, 14, 0, 14);
-            panel7.Size = new Size(380, 72);
+            panel7.Size = new Size(434, 72);
             panel7.TabIndex = 16;
             // 
             // activationKeyPanel
@@ -291,7 +291,7 @@
             activationKeyPanel.Margin = new Padding(0);
             activationKeyPanel.Name = "activationKeyPanel";
             activationKeyPanel.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            activationKeyPanel.Size = new Size(285, 44);
+            activationKeyPanel.Size = new Size(339, 44);
             activationKeyPanel.TabIndex = 14;
             // 
             // setActivationKey
@@ -301,7 +301,7 @@
             setActivationKey.FlatStyle = FlatStyle.Flat;
             setActivationKey.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             setActivationKey.ForeColor = Color.FromArgb(19, 150, 255);
-            setActivationKey.Location = new Point(185, 0);
+            setActivationKey.Location = new Point(239, 0);
             setActivationKey.Margin = new Padding(2, 0, 2, 0);
             setActivationKey.Name = "setActivationKey";
             setActivationKey.Padding = new Padding(12);
@@ -327,7 +327,7 @@
             // panel5
             // 
             panel5.Dock = DockStyle.Right;
-            panel5.Location = new Point(285, 14);
+            panel5.Location = new Point(339, 14);
             panel5.Name = "panel5";
             panel5.Size = new Size(8, 44);
             panel5.TabIndex = 16;
@@ -343,7 +343,7 @@
             assignMapping.Dock = DockStyle.Right;
             assignMapping.Font = new Font("Segoe UI", 9F);
             assignMapping.ForeColor = Color.White;
-            assignMapping.Location = new Point(293, 14);
+            assignMapping.Location = new Point(347, 14);
             assignMapping.Name = "assignMapping";
             assignMapping.ShadowDecoration.CustomizableEdges = customizableEdges6;
             assignMapping.Size = new Size(87, 44);
@@ -363,7 +363,7 @@
             guna2Panel3.Margin = new Padding(0);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel3.Size = new Size(380, 40);
+            guna2Panel3.Size = new Size(434, 40);
             guna2Panel3.TabIndex = 0;
             // 
             // setList
@@ -373,7 +373,7 @@
             setList.Location = new Point(0, 0);
             setList.Margin = new Padding(0);
             setList.Name = "setList";
-            setList.Size = new Size(295, 82);
+            setList.Size = new Size(349, 82);
             setList.TabIndex = 3;
             setList.WrapContents = false;
             // 
@@ -388,7 +388,7 @@
             addSet.IconColor = Color.White;
             addSet.IconFont = FontAwesome.Sharp.IconFont.Regular;
             addSet.IconSize = 12;
-            addSet.Location = new Point(295, 0);
+            addSet.Location = new Point(349, 0);
             addSet.Margin = new Padding(0);
             addSet.Name = "addSet";
             addSet.Size = new Size(85, 40);
@@ -413,7 +413,7 @@
             recordCombination.Location = new Point(0, 64);
             recordCombination.Name = "recordCombination";
             recordCombination.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            recordCombination.Size = new Size(404, 550);
+            recordCombination.Size = new Size(458, 654);
             recordCombination.TabIndex = 0;
             recordCombination.Visible = false;
             // 
@@ -788,7 +788,7 @@
             assignMenu.Name = "assignMenu";
             assignMenu.Padding = new Padding(12);
             assignMenu.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            assignMenu.Size = new Size(404, 550);
+            assignMenu.Size = new Size(458, 654);
             assignMenu.TabIndex = 10;
             assignMenu.Visible = false;
             // 
@@ -802,7 +802,7 @@
             toBeAssignedList2.Margin = new Padding(3, 0, 3, 3);
             toBeAssignedList2.Name = "toBeAssignedList2";
             toBeAssignedList2.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            toBeAssignedList2.Size = new Size(380, 280);
+            toBeAssignedList2.Size = new Size(434, 384);
             toBeAssignedList2.TabIndex = 63;
             // 
             // toBeAssignedList
@@ -813,7 +813,7 @@
             toBeAssignedList.Location = new Point(12, 258);
             toBeAssignedList.Name = "toBeAssignedList";
             toBeAssignedList.Padding = new Padding(0, 14, 0, 0);
-            toBeAssignedList.Size = new Size(380, 280);
+            toBeAssignedList.Size = new Size(434, 384);
             toBeAssignedList.TabIndex = 17;
             // 
             // macroPanel
@@ -825,7 +825,7 @@
             macroPanel.Margin = new Padding(0);
             macroPanel.Name = "macroPanel";
             macroPanel.Padding = new Padding(0, 8, 0, 0);
-            macroPanel.Size = new Size(380, 43);
+            macroPanel.Size = new Size(434, 43);
             macroPanel.TabIndex = 66;
             macroPanel.Visible = false;
             // 
@@ -848,7 +848,7 @@
             addNewMacro.Margin = new Padding(0);
             addNewMacro.Name = "addNewMacro";
             addNewMacro.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            addNewMacro.Size = new Size(380, 29);
+            addNewMacro.Size = new Size(434, 29);
             addNewMacro.TabIndex = 65;
             addNewMacro.Text = "Add new macro";
             // 
@@ -863,7 +863,7 @@
             panel8.Margin = new Padding(1);
             panel8.Name = "panel8";
             panel8.Padding = new Padding(8, 7, 8, 7);
-            panel8.Size = new Size(380, 40);
+            panel8.Size = new Size(434, 40);
             panel8.TabIndex = 9;
             // 
             // pictureBox2
@@ -900,7 +900,7 @@
             panel9.Location = new Point(8, 32);
             panel9.Margin = new Padding(1);
             panel9.Name = "panel9";
-            panel9.Size = new Size(364, 1);
+            panel9.Size = new Size(418, 1);
             panel9.TabIndex = 9;
             // 
             // panel6
@@ -913,7 +913,7 @@
             panel6.Location = new Point(12, 111);
             panel6.Name = "panel6";
             panel6.Padding = new Padding(8, 8, 18, 18);
-            panel6.Size = new Size(380, 64);
+            panel6.Size = new Size(434, 64);
             panel6.TabIndex = 7;
             // 
             // combinationLabel
@@ -937,7 +937,7 @@
             keyChoices.Controls.Add(keyTypeList);
             keyChoices.CustomizableEdges = customizableEdges45;
             keyChoices.FillColor = Color.DarkGray;
-            keyChoices.Location = new Point(239, 13);
+            keyChoices.Location = new Point(241, 13);
             keyChoices.MaximumSize = new Size(133, 116);
             keyChoices.MinimumSize = new Size(133, 38);
             keyChoices.Name = "keyChoices";
@@ -1091,7 +1091,7 @@
             recordedCombinationTextBox2.ReadOnly = true;
             recordedCombinationTextBox2.SelectedText = "";
             recordedCombinationTextBox2.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            recordedCombinationTextBox2.Size = new Size(380, 60);
+            recordedCombinationTextBox2.Size = new Size(434, 60);
             recordedCombinationTextBox2.TabIndex = 62;
             recordedCombinationTextBox2.Visible = false;
             // 
@@ -1103,7 +1103,7 @@
             panel1.Location = new Point(12, 12);
             panel1.Margin = new Padding(3, 3, 3, 33);
             panel1.Name = "panel1";
-            panel1.Size = new Size(380, 39);
+            panel1.Size = new Size(434, 39);
             panel1.TabIndex = 58;
             // 
             // closeAssign
@@ -1115,7 +1115,7 @@
             closeAssign.IconColor = Color.White;
             closeAssign.IconFont = FontAwesome.Sharp.IconFont.Auto;
             closeAssign.IconSize = 18;
-            closeAssign.Location = new Point(354, 0);
+            closeAssign.Location = new Point(408, 0);
             closeAssign.Name = "closeAssign";
             closeAssign.Size = new Size(26, 39);
             closeAssign.TabIndex = 0;
@@ -1153,9 +1153,9 @@
             panelPreview.Controls.Add(saveChanges);
             panelPreview.Controls.Add(pictureBox1);
             panelPreview.Dock = DockStyle.Fill;
-            panelPreview.Location = new Point(413, 3);
+            panelPreview.Location = new Point(467, 3);
             panelPreview.Name = "panelPreview";
-            panelPreview.Size = new Size(757, 630);
+            panelPreview.Size = new Size(856, 734);
             panelPreview.TabIndex = 13;
             // 
             // assignOptions
@@ -1168,7 +1168,7 @@
             assignOptions.Controls.Add(singleKeyButton);
             assignOptions.CustomizableEdges = customizableEdges55;
             assignOptions.FillColor = Color.Transparent;
-            assignOptions.Location = new Point(0, 130);
+            assignOptions.Location = new Point(0, 127);
             assignOptions.Margin = new Padding(0);
             assignOptions.Name = "assignOptions";
             assignOptions.ShadowDecoration.CustomizableEdges = customizableEdges56;
@@ -1225,7 +1225,7 @@
             rightPinky.AllowDrop = true;
             rightPinky.BackColor = Color.Transparent;
             rightPinky.combinationMappings = null;
-            rightPinky.Location = new Point(388, 275);
+            rightPinky.Location = new Point(446, 326);
             rightPinky.Margin = new Padding(1, 0, 1, 0);
             rightPinky.MaximumSize = new Size(110, 30);
             rightPinky.MinimumSize = new Size(110, 30);
@@ -1239,7 +1239,7 @@
             rightRing.AllowDrop = true;
             rightRing.BackColor = Color.Transparent;
             rightRing.combinationMappings = null;
-            rightRing.Location = new Point(415, 219);
+            rightRing.Location = new Point(471, 263);
             rightRing.Margin = new Padding(1, 0, 1, 0);
             rightRing.MaximumSize = new Size(110, 30);
             rightRing.MinimumSize = new Size(110, 30);
@@ -1253,7 +1253,7 @@
             rightMiddle.AllowDrop = true;
             rightMiddle.BackColor = Color.Transparent;
             rightMiddle.combinationMappings = null;
-            rightMiddle.Location = new Point(535, 178);
+            rightMiddle.Location = new Point(606, 219);
             rightMiddle.Margin = new Padding(1, 0, 1, 0);
             rightMiddle.MaximumSize = new Size(110, 30);
             rightMiddle.MinimumSize = new Size(110, 30);
@@ -1267,7 +1267,7 @@
             rightIndex.AllowDrop = true;
             rightIndex.BackColor = Color.Transparent;
             rightIndex.combinationMappings = null;
-            rightIndex.Location = new Point(612, 209);
+            rightIndex.Location = new Point(696, 250);
             rightIndex.Margin = new Padding(1, 0, 1, 0);
             rightIndex.MaximumSize = new Size(110, 30);
             rightIndex.MinimumSize = new Size(110, 30);
@@ -1281,7 +1281,7 @@
             rightThumb.AllowDrop = true;
             rightThumb.BackColor = Color.Transparent;
             rightThumb.combinationMappings = null;
-            rightThumb.Location = new Point(658, 293);
+            rightThumb.Location = new Point(741, 346);
             rightThumb.Margin = new Padding(1, 0, 1, 0);
             rightThumb.MaximumSize = new Size(110, 30);
             rightThumb.MinimumSize = new Size(110, 30);
@@ -1295,7 +1295,7 @@
             leftThumb.AllowDrop = true;
             leftThumb.BackColor = Color.Transparent;
             leftThumb.combinationMappings = null;
-            leftThumb.Location = new Point(38, 112);
+            leftThumb.Location = new Point(44, 139);
             leftThumb.Margin = new Padding(1, 0, 1, 0);
             leftThumb.MaximumSize = new Size(110, 30);
             leftThumb.MinimumSize = new Size(110, 30);
@@ -1309,7 +1309,7 @@
             leftIndex.AllowDrop = true;
             leftIndex.BackColor = Color.Transparent;
             leftIndex.combinationMappings = null;
-            leftIndex.Location = new Point(109, 53);
+            leftIndex.Location = new Point(126, 76);
             leftIndex.Margin = new Padding(1, 0, 1, 0);
             leftIndex.MaximumSize = new Size(110, 30);
             leftIndex.MinimumSize = new Size(110, 30);
@@ -1323,7 +1323,7 @@
             leftRing.AllowDrop = true;
             leftRing.BackColor = Color.Transparent;
             leftRing.combinationMappings = null;
-            leftRing.Location = new Point(308, 87);
+            leftRing.Location = new Point(353, 111);
             leftRing.Margin = new Padding(1, 0, 1, 0);
             leftRing.MaximumSize = new Size(110, 30);
             leftRing.MinimumSize = new Size(110, 30);
@@ -1337,7 +1337,7 @@
             leftMiddle.AllowDrop = true;
             leftMiddle.BackColor = Color.Transparent;
             leftMiddle.combinationMappings = null;
-            leftMiddle.Location = new Point(254, 33);
+            leftMiddle.Location = new Point(289, 50);
             leftMiddle.Margin = new Padding(1, 0, 1, 0);
             leftMiddle.MaximumSize = new Size(110, 30);
             leftMiddle.MinimumSize = new Size(110, 30);
@@ -1351,7 +1351,7 @@
             leftPinky.AllowDrop = true;
             leftPinky.BackColor = Color.Transparent;
             leftPinky.combinationMappings = null;
-            leftPinky.Location = new Point(326, 136);
+            leftPinky.Location = new Point(366, 168);
             leftPinky.Margin = new Padding(1, 0, 1, 0);
             leftPinky.MaximumSize = new Size(110, 30);
             leftPinky.MinimumSize = new Size(110, 30);
@@ -1362,6 +1362,7 @@
             // 
             // discardChanges
             // 
+            discardChanges.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             discardChanges.BackColor = Color.FromArgb(0, 0, 0, 0);
             discardChanges.BorderRadius = 4;
             discardChanges.CustomizableEdges = customizableEdges57;
@@ -1372,7 +1373,7 @@
             discardChanges.FillColor = Color.Transparent;
             discardChanges.Font = new Font("Segoe UI", 9F);
             discardChanges.ForeColor = Color.White;
-            discardChanges.Location = new Point(530, 557);
+            discardChanges.Location = new Point(612, 653);
             discardChanges.Name = "discardChanges";
             discardChanges.ShadowDecoration.CustomizableEdges = customizableEdges58;
             discardChanges.Size = new Size(79, 37);
@@ -1383,6 +1384,7 @@
             // 
             // saveChanges
             // 
+            saveChanges.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             saveChanges.BorderRadius = 4;
             saveChanges.CustomizableEdges = customizableEdges59;
             saveChanges.DisabledState.BorderColor = Color.DarkGray;
@@ -1391,7 +1393,7 @@
             saveChanges.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             saveChanges.Font = new Font("Segoe UI", 9F);
             saveChanges.ForeColor = Color.White;
-            saveChanges.Location = new Point(616, 557);
+            saveChanges.Location = new Point(698, 653);
             saveChanges.Name = "saveChanges";
             saveChanges.ShadowDecoration.CustomizableEdges = customizableEdges60;
             saveChanges.Size = new Size(116, 37);
@@ -1407,13 +1409,14 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(757, 630);
+            pictureBox1.Size = new Size(856, 734);
             pictureBox1.TabIndex = 34;
             pictureBox1.TabStop = false;
             // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.BackColor = Color.Black;
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { deleteToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(108, 26);
@@ -1431,7 +1434,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1173, 636);
+            ClientSize = new Size(1326, 740);
             Controls.Add(Main);
             ForeColor = Color.White;
             Name = "Customize";
@@ -1522,7 +1525,6 @@
         private UserControls.UC_Finger rightMiddle;
         private UserControls.UC_Finger rightIndex;
         private UserControls.UC_Finger rightThumb;
-        private UserControls.UC_Finger leftThumb;
         private UserControls.UC_Finger leftIndex;
         private UserControls.UC_Finger leftRing;
         private FlowLayoutPanel fingerList;
@@ -1544,5 +1546,6 @@
         private Panel macroPanel;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem deleteToolStripMenuItem;
+        private UserControls.UC_Finger leftThumb;
     }
 }

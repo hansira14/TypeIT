@@ -5,10 +5,10 @@
       "activation key": "S1110000000E",
       "mappings": {
         "S1000000000E": [
-          "G"
+          "^{ESCAPE}visual studio code{ENTER}"
         ],
         "S0010000000E": [
-          "Cut"
+          "^{ESCAPE}frozen throne.exe{ENTER}"
         ],
         "S0100000000E": [
           "^ \u002B C"
