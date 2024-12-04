@@ -338,7 +338,12 @@ namespace TypeIT
 
         private void PopulateToBeAssignedList()
         {
+            toBeAssignedList.Visible = false;
+            toBeAssignedList2.Visible = false;
             toBeAssignedList.Controls.Clear();
+            toBeAssignedList2.Controls.Clear();
+
+
 
             switch (currentKeyMapType)
             {
@@ -347,6 +352,7 @@ namespace TypeIT
                     foreach (var key in KeyboardConstants.FunctionKeys) AddKeyControl(key.Key, key.Value, FunctionKeysColor);
                     foreach (var key in KeyboardConstants.SpecialKeys) AddKeyControl(key.Key, key.Value, SpecialKeysColor);
                     foreach (var key in KeyboardConstants.ModifierKeys) AddKeyControl(key.Key, key.Value, ModifierKeysColor);
+                    toBeAssignedList.Visible = true;
                     break;
 
                 case "Commands":
@@ -355,11 +361,13 @@ namespace TypeIT
                         var commandControl = new UC_Commands(command.Key, string.Join(" + ", command.Value));
                         commandControl.ParentForm = this;
                         commandControl.Dock = DockStyle.Top;
-                        toBeAssignedList.Controls.Add(commandControl);
+                        toBeAssignedList2.Controls.Add(commandControl);
                     }
+                    toBeAssignedList2.Visible = true;
                     break;
 
                 case "Macros":
+                    toBeAssignedList2.Visible = true;
                     // HELP
                     break;
             }
