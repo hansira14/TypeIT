@@ -44,16 +44,25 @@ namespace TypeIT.UserControls
 
         private void Mapping_MouseEnter(object sender, EventArgs e)
         {
+            mapping.ForeColor = Color.FromArgb(94, 148, 255);
             // Ensure combinations are up-to-date before showing hover
             LoadCombinations();
             
             if (combinationMappings.Count > 0)
             {
                 hoverControl.combinations = combinationMappings;
+                
+                // Get mouse position relative to screen
+                Point mousePosition = Control.MousePosition;
+                
+                // Convert screen coordinates to control's parent coordinates
+                Point locationInParent = this.Parent.PointToClient(mousePosition);
+                
                 hoverControl.Location = new Point(
-                    mapping.Right + 5,
-                    mapping.Top - (hoverControl.Height - mapping.Height) / 2
+                    locationInParent.X + 5, // Add small offset from cursor
+                    locationInParent.Y + 5
                 );
+                
                 hoverControl.PopulateTable();
                 hoverControl.BringToFront();
                 hoverControl.Visible = true;
@@ -63,6 +72,7 @@ namespace TypeIT.UserControls
         private void Mapping_MouseLeave(object sender, EventArgs e)
         {
             hoverControl.Visible = false;
+            mapping.ForeColor = Color.White;
         }
 
         private void UC_Finger_DragDrop(object sender, DragEventArgs e)

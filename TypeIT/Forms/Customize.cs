@@ -424,7 +424,9 @@ namespace TypeIT
         {
             foreach (var mapping in fingerMappings.Values)
             {
-                mapping.Control.mapping.Text = "";
+                mapping.Control.mapping.Text = "Assign";
+                mapping.Control.mapping.ForeColor = Color.Gray;
+                mapping.Control.mapping.Font = new Font(mapping.Control.mapping.Font, FontStyle.Regular);
             }
 
             if (currentSet?.KeyMappings == null) return;
@@ -449,6 +451,8 @@ namespace TypeIT
                             if (activeFingers == 1)
                             {
                                 finger.Control.mapping.Text = string.Join(" + ", mapping.Value);
+                                finger.Control.mapping.ForeColor = Color.White;
+                                finger.Control.mapping.Font = new Font(finger.Control.mapping.Font, FontStyle.Bold);
                                 finger.Control.LoadCombinations();
                             }
                         }

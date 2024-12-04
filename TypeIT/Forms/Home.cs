@@ -147,7 +147,7 @@ namespace TypeIT
             int newDeviceY = (contentHeight - deviceHeight) / 2 - 50;
             device.Location = new Point(newDeviceX, newDeviceY);
 
-            if(profileList != null)
+            if (profileList != null)
             {
                 content.Height = (int)(this.Height - (profileList.currentProf.Height * 1.5 + profileList.Location.Y));
             }
@@ -168,7 +168,7 @@ namespace TypeIT
             if (customizeForm == null || customizeForm.IsDisposed)
             {
                 customizeForm = new Customize(this);
-                if(connectedDevice!=null) customizeForm.SerialComm = connectedDevice.serialComm;
+                if (connectedDevice != null) customizeForm.SerialComm = connectedDevice.serialComm;
             }
             openForm(customizeForm);
         }
@@ -176,12 +176,17 @@ namespace TypeIT
         private void ProfileList_ProfileSelected(object sender, KeyMappingProfile selectedProfile)
         {
 
-            Program.CurrentSelectedMappingProfile = selectedProfile; 
+            Program.CurrentSelectedMappingProfile = selectedProfile;
             if (currentForm is Customize customizeForm)
             {
 
                 customizeForm.PopulateSets();
             }
+        }
+
+        private void menu_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{this.Size}");
         }
     }
 }

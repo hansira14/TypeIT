@@ -34,10 +34,12 @@
             // mapping
             // 
             mapping.AutoSize = true;
-            mapping.Location = new Point(20, 17);
+            mapping.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            mapping.ForeColor = Color.White;
+            mapping.Location = new Point(7, 8);
             mapping.Margin = new Padding(2, 0, 2, 0);
             mapping.Name = "mapping";
-            mapping.Size = new Size(38, 15);
+            mapping.Size = new Size(40, 15);
             mapping.TabIndex = 0;
             mapping.Text = "label1";
             mapping.Click += mapping_Click;
@@ -47,13 +49,13 @@
             AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.IndianRed;
+            BackColor = Color.Transparent;
             Controls.Add(mapping);
             Margin = new Padding(2, 1, 2, 1);
-            MaximumSize = new Size(110, 47);
-            MinimumSize = new Size(110, 47);
+            MaximumSize = new Size(110, 30);
+            MinimumSize = new Size(110, 30);
             Name = "UC_Finger";
-            Size = new Size(110, 47);
+            Size = new Size(110, 30);
             DragDrop += UC_Finger_DragDrop;
             DragOver += UC_Finger_DragOver;
             ResumeLayout(false);

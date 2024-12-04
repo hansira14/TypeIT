@@ -68,19 +68,19 @@
             main.Dock = DockStyle.Fill;
             main.ForeColor = Color.White;
             main.Location = new Point(0, 0);
-            main.Margin = new Padding(2, 2, 2, 2);
+            main.Margin = new Padding(2);
             main.Name = "main";
-            main.Size = new Size(1181, 682);
+            main.Size = new Size(1213, 703);
             main.TabIndex = 0;
             // 
             // profile
             // 
             profile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             profile.Image = (Image)resources.GetObject("profile.Image");
-            profile.Location = new Point(1101, 32);
-            profile.Margin = new Padding(2, 2, 2, 2);
+            profile.Location = new Point(1133, 32);
+            profile.Margin = new Padding(2);
             profile.Name = "profile";
-            profile.Padding = new Padding(15, 15, 15, 15);
+            profile.Padding = new Padding(15);
             profile.Size = new Size(32, 48);
             profile.SizeMode = PictureBoxSizeMode.Zoom;
             profile.TabIndex = 5;
@@ -91,23 +91,24 @@
             // 
             menu.Image = (Image)resources.GetObject("menu.Image");
             menu.Location = new Point(43, 32);
-            menu.Margin = new Padding(2, 2, 2, 2);
+            menu.Margin = new Padding(2);
             menu.Name = "menu";
-            menu.Padding = new Padding(15, 15, 15, 15);
+            menu.Padding = new Padding(15);
             menu.Size = new Size(20, 48);
             menu.SizeMode = PictureBoxSizeMode.Zoom;
             menu.TabIndex = 6;
             menu.TabStop = false;
+            menu.Click += menu_Click_1;
             // 
             // content
             // 
             content.Controls.Add(device);
             content.Controls.Add(notConnected);
             content.Dock = DockStyle.Bottom;
-            content.Location = new Point(0, 38);
-            content.Margin = new Padding(2, 2, 2, 2);
+            content.Location = new Point(0, 59);
+            content.Margin = new Padding(2);
             content.Name = "content";
-            content.Size = new Size(1181, 644);
+            content.Size = new Size(1213, 644);
             content.TabIndex = 1;
             // 
             // device
@@ -120,9 +121,9 @@
             device.CustomizableEdges = customizableEdges3;
             device.FillColor = Color.FromArgb(33, 34, 37);
             device.Location = new Point(470, 170);
-            device.Margin = new Padding(2, 2, 2, 2);
+            device.Margin = new Padding(2);
             device.Name = "device";
-            device.Padding = new Padding(24, 24, 24, 24);
+            device.Padding = new Padding(24);
             device.ShadowDecoration.CustomizableEdges = customizableEdges4;
             device.Size = new Size(376, 442);
             device.TabIndex = 0;
@@ -133,7 +134,7 @@
             pictureBox3.Dock = DockStyle.Fill;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(24, 100);
-            pictureBox3.Margin = new Padding(2, 2, 2, 2);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(328, 258);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -146,7 +147,7 @@
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(24, 24);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(328, 76);
             panel1.TabIndex = 0;
@@ -197,9 +198,9 @@
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Dock = DockStyle.Right;
             guna2Panel1.Location = new Point(283, 15);
-            guna2Panel1.Margin = new Padding(2, 2, 2, 2);
+            guna2Panel1.Margin = new Padding(2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Padding = new Padding(12, 12, 12, 12);
+            guna2Panel1.Padding = new Padding(12);
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(45, 45);
             guna2Panel1.TabIndex = 0;
@@ -209,7 +210,7 @@
             pictureBox4.Dock = DockStyle.Fill;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(12, 12);
-            pictureBox4.Margin = new Padding(2, 2, 2, 2);
+            pictureBox4.Margin = new Padding(2);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(21, 21);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -222,7 +223,7 @@
             notConnected.Image = (Image)resources.GetObject("notConnected.Image");
             notConnected.Location = new Point(0, -31);
             notConnected.Name = "notConnected";
-            notConnected.Size = new Size(1181, 675);
+            notConnected.Size = new Size(1213, 675);
             notConnected.SizeMode = PictureBoxSizeMode.Zoom;
             notConnected.TabIndex = 4;
             notConnected.TabStop = false;
@@ -233,10 +234,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1181, 682);
+            ClientSize = new Size(1213, 703);
             Controls.Add(main);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MinimumSize = new Size(1035, 495);
             Name = "Home";
             ShowIcon = false;

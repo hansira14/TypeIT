@@ -151,6 +151,7 @@
             leftPinky = new UserControls.UC_Finger();
             discardChanges = new Guna.UI2.WinForms.Guna2Button();
             saveChanges = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
             assignOptions = new Guna.UI2.WinForms.Guna2Panel();
             combinationButton = new Guna.UI2.WinForms.Guna2Button();
             singleKeyButton = new Guna.UI2.WinForms.Guna2Button();
@@ -171,6 +172,7 @@
             recordCombination.SuspendLayout();
             fingerList.SuspendLayout();
             panelPreview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             assignOptions.SuspendLayout();
             SuspendLayout();
             // 
@@ -1100,6 +1102,7 @@
             panelPreview.Controls.Add(leftPinky);
             panelPreview.Controls.Add(discardChanges);
             panelPreview.Controls.Add(saveChanges);
+            panelPreview.Controls.Add(pictureBox1);
             panelPreview.Controls.Add(assignOptions);
             panelPreview.Dock = DockStyle.Fill;
             panelPreview.Location = new Point(413, 3);
@@ -1110,146 +1113,146 @@
             // rightPinky
             // 
             rightPinky.AllowDrop = true;
-            rightPinky.BackColor = Color.IndianRed;
+            rightPinky.BackColor = Color.Transparent;
             rightPinky.combinationMappings = null;
-            rightPinky.Location = new Point(592, 414);
+            rightPinky.Location = new Point(388, 275);
             rightPinky.Margin = new Padding(1, 0, 1, 0);
-            rightPinky.MaximumSize = new Size(110, 47);
-            rightPinky.MinimumSize = new Size(110, 47);
+            rightPinky.MaximumSize = new Size(110, 30);
+            rightPinky.MinimumSize = new Size(110, 30);
             rightPinky.Name = "rightPinky";
             rightPinky.ParentForm = null;
-            rightPinky.Size = new Size(110, 47);
+            rightPinky.Size = new Size(110, 30);
             rightPinky.TabIndex = 33;
             // 
             // rightRing
             // 
             rightRing.AllowDrop = true;
-            rightRing.BackColor = Color.IndianRed;
+            rightRing.BackColor = Color.Transparent;
             rightRing.combinationMappings = null;
-            rightRing.Location = new Point(508, 355);
+            rightRing.Location = new Point(415, 219);
             rightRing.Margin = new Padding(1, 0, 1, 0);
-            rightRing.MaximumSize = new Size(110, 47);
-            rightRing.MinimumSize = new Size(110, 47);
+            rightRing.MaximumSize = new Size(110, 30);
+            rightRing.MinimumSize = new Size(110, 30);
             rightRing.Name = "rightRing";
             rightRing.ParentForm = null;
-            rightRing.Size = new Size(110, 47);
+            rightRing.Size = new Size(110, 30);
             rightRing.TabIndex = 32;
             // 
             // rightMiddle
             // 
             rightMiddle.AllowDrop = true;
-            rightMiddle.BackColor = Color.IndianRed;
+            rightMiddle.BackColor = Color.Transparent;
             rightMiddle.combinationMappings = null;
-            rightMiddle.Location = new Point(412, 292);
+            rightMiddle.Location = new Point(535, 178);
             rightMiddle.Margin = new Padding(1, 0, 1, 0);
-            rightMiddle.MaximumSize = new Size(110, 47);
-            rightMiddle.MinimumSize = new Size(110, 47);
+            rightMiddle.MaximumSize = new Size(110, 30);
+            rightMiddle.MinimumSize = new Size(110, 30);
             rightMiddle.Name = "rightMiddle";
             rightMiddle.ParentForm = null;
-            rightMiddle.Size = new Size(110, 47);
+            rightMiddle.Size = new Size(110, 30);
             rightMiddle.TabIndex = 31;
             // 
             // rightIndex
             // 
             rightIndex.AllowDrop = true;
-            rightIndex.BackColor = Color.IndianRed;
+            rightIndex.BackColor = Color.Transparent;
             rightIndex.combinationMappings = null;
-            rightIndex.Location = new Point(345, 355);
+            rightIndex.Location = new Point(612, 209);
             rightIndex.Margin = new Padding(1, 0, 1, 0);
-            rightIndex.MaximumSize = new Size(110, 47);
-            rightIndex.MinimumSize = new Size(110, 47);
+            rightIndex.MaximumSize = new Size(110, 30);
+            rightIndex.MinimumSize = new Size(110, 30);
             rightIndex.Name = "rightIndex";
             rightIndex.ParentForm = null;
-            rightIndex.Size = new Size(110, 47);
+            rightIndex.Size = new Size(110, 30);
             rightIndex.TabIndex = 30;
             // 
             // rightThumb
             // 
             rightThumb.AllowDrop = true;
-            rightThumb.BackColor = Color.IndianRed;
+            rightThumb.BackColor = Color.Transparent;
             rightThumb.combinationMappings = null;
-            rightThumb.Location = new Point(221, 396);
+            rightThumb.Location = new Point(658, 293);
             rightThumb.Margin = new Padding(1, 0, 1, 0);
-            rightThumb.MaximumSize = new Size(110, 47);
-            rightThumb.MinimumSize = new Size(110, 47);
+            rightThumb.MaximumSize = new Size(110, 30);
+            rightThumb.MinimumSize = new Size(110, 30);
             rightThumb.Name = "rightThumb";
             rightThumb.ParentForm = null;
-            rightThumb.Size = new Size(110, 47);
+            rightThumb.Size = new Size(110, 30);
             rightThumb.TabIndex = 29;
             // 
             // leftThumb
             // 
             leftThumb.AllowDrop = true;
-            leftThumb.BackColor = Color.IndianRed;
+            leftThumb.BackColor = Color.Transparent;
             leftThumb.combinationMappings = null;
-            leftThumb.Location = new Point(584, 189);
+            leftThumb.Location = new Point(38, 112);
             leftThumb.Margin = new Padding(1, 0, 1, 0);
-            leftThumb.MaximumSize = new Size(110, 47);
-            leftThumb.MinimumSize = new Size(110, 47);
+            leftThumb.MaximumSize = new Size(110, 30);
+            leftThumb.MinimumSize = new Size(110, 30);
             leftThumb.Name = "leftThumb";
             leftThumb.ParentForm = null;
-            leftThumb.Size = new Size(110, 47);
+            leftThumb.Size = new Size(110, 30);
             leftThumb.TabIndex = 28;
             // 
             // leftIndex
             // 
             leftIndex.AllowDrop = true;
-            leftIndex.BackColor = Color.IndianRed;
+            leftIndex.BackColor = Color.Transparent;
             leftIndex.combinationMappings = null;
-            leftIndex.Location = new Point(499, 130);
+            leftIndex.Location = new Point(109, 53);
             leftIndex.Margin = new Padding(1, 0, 1, 0);
-            leftIndex.MaximumSize = new Size(110, 47);
-            leftIndex.MinimumSize = new Size(110, 47);
+            leftIndex.MaximumSize = new Size(110, 30);
+            leftIndex.MinimumSize = new Size(110, 30);
             leftIndex.Name = "leftIndex";
             leftIndex.ParentForm = null;
-            leftIndex.Size = new Size(110, 47);
+            leftIndex.Size = new Size(110, 30);
             leftIndex.TabIndex = 27;
             // 
             // leftRing
             // 
             leftRing.AllowDrop = true;
-            leftRing.BackColor = Color.IndianRed;
+            leftRing.BackColor = Color.Transparent;
             leftRing.combinationMappings = null;
-            leftRing.Location = new Point(403, 68);
+            leftRing.Location = new Point(308, 87);
             leftRing.Margin = new Padding(1, 0, 1, 0);
-            leftRing.MaximumSize = new Size(110, 47);
-            leftRing.MinimumSize = new Size(110, 47);
+            leftRing.MaximumSize = new Size(110, 30);
+            leftRing.MinimumSize = new Size(110, 30);
             leftRing.Name = "leftRing";
             leftRing.ParentForm = null;
-            leftRing.Size = new Size(110, 47);
+            leftRing.Size = new Size(110, 30);
             leftRing.TabIndex = 26;
             // 
             // leftMiddle
             // 
             leftMiddle.AllowDrop = true;
-            leftMiddle.BackColor = Color.IndianRed;
+            leftMiddle.BackColor = Color.Transparent;
             leftMiddle.combinationMappings = null;
-            leftMiddle.Location = new Point(336, 130);
+            leftMiddle.Location = new Point(254, 33);
             leftMiddle.Margin = new Padding(1, 0, 1, 0);
-            leftMiddle.MaximumSize = new Size(110, 47);
-            leftMiddle.MinimumSize = new Size(110, 47);
+            leftMiddle.MaximumSize = new Size(110, 30);
+            leftMiddle.MinimumSize = new Size(110, 30);
             leftMiddle.Name = "leftMiddle";
             leftMiddle.ParentForm = null;
-            leftMiddle.Size = new Size(110, 47);
+            leftMiddle.Size = new Size(110, 30);
             leftMiddle.TabIndex = 25;
             // 
             // leftPinky
             // 
             leftPinky.AllowDrop = true;
-            leftPinky.BackColor = Color.IndianRed;
+            leftPinky.BackColor = Color.Transparent;
             leftPinky.combinationMappings = null;
-            leftPinky.Location = new Point(213, 171);
+            leftPinky.Location = new Point(326, 136);
             leftPinky.Margin = new Padding(1, 0, 1, 0);
-            leftPinky.MaximumSize = new Size(110, 47);
-            leftPinky.MinimumSize = new Size(110, 47);
+            leftPinky.MaximumSize = new Size(110, 30);
+            leftPinky.MinimumSize = new Size(110, 30);
             leftPinky.Name = "leftPinky";
             leftPinky.ParentForm = null;
-            leftPinky.Size = new Size(110, 47);
+            leftPinky.Size = new Size(110, 30);
             leftPinky.TabIndex = 24;
             // 
             // discardChanges
             // 
-            discardChanges.BackColor = Color.Transparent;
+            discardChanges.BackColor = Color.FromArgb(0, 0, 0, 0);
             discardChanges.BorderRadius = 4;
             discardChanges.CustomizableEdges = customizableEdges49;
             discardChanges.DisabledState.BorderColor = Color.DarkGray;
@@ -1286,6 +1289,17 @@
             saveChanges.Text = "Save changes";
             saveChanges.Visible = false;
             saveChanges.Click += saveChanges_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(757, 630);
+            pictureBox1.TabIndex = 34;
+            pictureBox1.TabStop = false;
             // 
             // assignOptions
             // 
@@ -1382,6 +1396,7 @@
             recordCombination.ResumeLayout(false);
             fingerList.ResumeLayout(false);
             panelPreview.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             assignOptions.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -1459,5 +1474,6 @@
         private Guna.UI2.WinForms.Guna2TextBox recordedCombinationTextBox2;
         private Label combinationLabel;
         private Guna.UI2.WinForms.Guna2Panel toBeAssignedList2;
+        private PictureBox pictureBox1;
     }
 }
